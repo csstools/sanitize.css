@@ -1,0 +1,60 @@
+/*! sanitize.css v0.0.1 | MIT License */
+
+/* ==================================
+   Reset
+   ================================== */
+
+
+* {
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	list-style: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	cursor: default;
+	-webkit-text-size-adjust: 100%;
+	word-wrap: break-word;
+}
+
+/* ==================================
+   Sanitize
+   ================================== */
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:active, a:hover {
+	outline: 0;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
