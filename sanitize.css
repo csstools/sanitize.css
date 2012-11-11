@@ -5,16 +5,17 @@
    ================================== */
 
 * {
-	-webkit-appearance: none;
 	background: none;
-	border: 0;
+	border: 0 solid;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
 	font-style: inherit;
 	font-weight: inherit;
 	line-height: inherit;
-	list-style: inherit;
 	margin: 0;
 	padding: 0;
 	text-decoration: inherit;
@@ -23,6 +24,7 @@
 
 html {
 	cursor: default;
+	line-height: 1;
 	-webkit-text-size-adjust: 100%;
 	word-wrap: break-word;
 }
@@ -121,7 +123,7 @@ textarea {
 }
 
 /*
- * Remove most spacing between table cells.
+ * Improves most spacing between table cells.
  */
 
 table {
