@@ -2,6 +2,24 @@
 
 Render elements consistently. Style with best practices.
 
+
+
+### Sass usage
+
+```scss
+import 'vendors/sanitize.scss';
+```
+
+[Download sanitize.scss](https://rawgit.com/jonathantneal/sanitize.css/master/sanitize.scss)
+
+
+
+### CSS usage
+
+```scss
+import 'vendors/sanitize.css';
+```
+
 [Download sanitize.css](https://rawgit.com/jonathantneal/sanitize.css/master/dist/sanitize.css)
 
 
@@ -17,6 +35,14 @@ Render elements consistently. Style with best practices.
 - Content may be hidden from the screen but not screenreaders ([reference](http://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)) ([reference](https://www.drupal.org/node/897638)) ([code](sanitize.scss#L140-L149)).
 
 To give you even more control, [sanitize.scss](sanitize.scss) allows you to define your own defaults for box-sizing, font family, monospace font family, text rendering, selection background color, and smaller font size - all without over-declaring them later.
+
+```scss
+// overwrite defaults in sanitize.scss
+$default-font-family: "Open Sans";
+$default-text-rendering: optimizeSpeed;
+
+import 'vendors/sanitize.scss';
+```
 
 - **$default-box-sizing**: the default box-sizing is `border-box`.
 - **$default-font-family**: the default font family is `sans-serif`.
