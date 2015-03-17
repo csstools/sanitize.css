@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<title>Sanitize CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="sanitize.css" rel="stylesheet">
+<style>
+
+:root {
+	background: #EEE;
+	height: 100%;
+}
+
+body {
+	background: #FFF;
+	margin: 0 auto;
+	max-width: 50rem;
+	min-height: 100%;
+	padding: 10%;
+}
+
+h1 {
+	font-size: 300%;
+}
+
+h1 + subhead {
+	color: rgba(0,0,0,.5);
+	display: block;
+	font-style: italic;
+	line-height: 1.25;
+	margin-bottom: 2rem;
+}
+
+h1 + subhead > span {
+	display: inline-block;
+}
+
+p {
+	line-height: 2;
+	margin-top: 1rem;
+}
+
+.btn {
+	background: linear-gradient(to bottom, #3498DB, #2980B9);
+	border-radius: 1em;
+	color: #FFF;
+	display: inline-block;
+	margin-bottom: .5em;
+	padding: .5em 1em;
+}
+
+</style>
+
+<header>
+	<h1>
+		Sanitize.css
+	</h1>
+
+	<subhead>
+		<span>Render elements consistently.</span>
+		<span>Style with best practices.</span>
+	</subhead>
+</header>
+
+<main>
+	<p>
+		<strong>Sanitize.css</strong> makes browsers render elements consistently and allows you to style with today’s best practices out-of-the-box.
+	</p>
+
+	<p>
+		CSS inheritance is assigned universally so that styles cascade naturally and consistently. Wherever possible, the box model operates more intuitively.
+	</p>
+
+	<p>
+		Every normalization and opinionated default is carefully documented. Visit the GitHub page to learn more about these optimizations and others.
+	</p>
+
+	<p>
+		<a class="btn" href="https://github.com/jonathantneal/sanitize.css">View GitHub</a>
+		<a class="btn" href="https://rawgit.com/jonathantneal/sanitize.css/feature/1.1/dist/sanitize.css">Download CSS</a>
+	</p>
+</main>
