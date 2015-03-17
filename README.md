@@ -4,23 +4,31 @@ Render elements consistently. Style with best practices.
 
 
 
-### Sass usage
+## Installation
 
-```scss
-import 'vendors/sanitize.scss';
+**Bower**
+
+```sh
+bower install --save sanitize-css
 ```
 
-[Download sanitize.scss](https://rawgit.com/jonathantneal/sanitize.css/master/sanitize.scss)
+**NPM**
 
-
-
-### CSS usage
-
-```scss
-import 'vendors/sanitize.css';
+```sh
+npm install sanitize.css
 ```
 
-[Download sanitize.css](https://rawgit.com/jonathantneal/sanitize.css/master/dist/sanitize.css)
+**Sass**
+
+```scss
+@import 'vendors/sanitize.scss';
+```
+
+**CSS**
+
+```css
+@import url(vendors/sanitize.css);
+```
 
 
 
