@@ -88,6 +88,15 @@ subhead > span {
 	padding: .5em 1em;
 }
 
+.chatter {
+	color: #555;
+}
+
+.chatter a {
+	box-shadow: 0 1px 0 0 #55F;
+	color: #55F;
+}
+
 span[data-keyword] { color: #A71D5D; }
 span[data-method]  { color: #0086B3; }
 span[data-string]  { color: #ED6A43; }
@@ -115,7 +124,8 @@ span[data-string]  { color: #ED6A43; }
 	</p>
 
 	<p>
-		Every normalization and opinionated default is carefully documented. Visit the GitHub page to learn more about these optimizations and others.
+		Every normalization and opinionated default is carefully documented.
+		Visit the GitHub page to learn more about these optimizations and others.
 	</p>
 
 	<h2>Installation</h2>
@@ -147,4 +157,34 @@ span[data-string]  { color: #ED6A43; }
 		<a class="btn" href="https://rawgit.com/jonathantneal/sanitize.css/master/sanitize.scss">Download SCSS</a>
 		<a class="btn" href="https://rawgit.com/jonathantneal/sanitize.css/master/dist/sanitize.css">Download CSS</a>
 	</p>
+
+	<h2>Why another CSS base?</h2>
+
+	<div class="chatter">
+		<p>
+			I’m sharing this because I need these styles all too often, and maybe you do too.
+		</p>
+
+		<p>
+			I started writing CSS with Eric Meyer’s excellent <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a>. reset.css resolved frustrating inconsistencies between browsers by giving them all the same empty canvas. <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and I eventually wrote <a href="http://necolas.github.io/normalize.css/">normalize.css</a> with a new approach; style the bare minimum to keep every browser looking the same, and when in doubt follow the standard. Nicolas has since turned normalize.css into a household web standard.
+		</p>
+		<p>
+			Since then, years have passed and CSS has changed dramatically.
+			I don’t need to hurt my brain calculating the combined values of padding and width. I don’t have to remember that having no border style eliminates the border width.
+			CSS gives me a way to fix the box model and the border.
+			CSS gives me a way to define the baseline I used most of the time.
+			I don’t want to regurgitate this every time I write a new CSS file.
+		</p>
+		<p>
+			I’ve been using sanitize.css for a little over two years on my own projects.
+			It follows in the footsteps of normalize.css and reset.css — standardizing browsers while giving me the canvas I want to play with.
+		</p>
+		<p>
+			These are the baseline styles many of us end up writing anyway, especially if you listen to the two biggest influences on this project <a href="https://twitter.com/paul_irish">Paul Irish</a> and <a href="https://twitter.com/chriscoyier">Chris Coyier</a>. These two have dedicated themselves to web development, teaching, and advocacy for years, and have constantly shared their tastes with us.
+			Most of the time, I’ve simply dropped them into this CSS file.
+		</p>
+		<p>
+			I hope it helps you as much as it helps me.
+		</p>
+	</div>
 </main>
