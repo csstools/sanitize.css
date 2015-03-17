@@ -66,3 +66,9 @@ import 'vendors/sanitize.scss';
 At present, we support the current and previous major releases of popular web browsers. When a new version is released, we begin supporting that version and stop supporting the third most recent version.
 
 These browsers currently include Android 4.3-4.4+, Chrome 39-40+, Firefox 34-35+, Internet Explorer 10-11+, iOS 7-8+, Safari 7-8+, Windows Phone 8.1+.
+
+
+
+## License
+
+**sanitize.css** is dedicated to the [public domain](LICENSE.md).
