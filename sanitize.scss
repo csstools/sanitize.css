@@ -1,11 +1,11 @@
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 
-@if not variable-exists(default-box-sizing) { $default-box-sizing: border-box; }
-@if not variable-exists(default-font-family) { $default-font-family: sans-serif; }
-@if not variable-exists(default-text-rendering) { $default-text-rendering: optimizeLegibility; }
-@if not variable-exists(default-monospace-font-family) { $default-monospace-font-family: monospace; }
-@if not variable-exists(default-selection-background-color) { $default-selection-background-color: #B3D4FC; }
-@if not variable-exists(default-small-font-size) { $default-small-font-size: 75%; }
+$default-box-sizing: border-box !default;
+$default-font-family: sans-serif !default;
+$default-text-rendering: optimizeLegibility !default;
+$default-monospace-font-family: monospace !default;
+$default-selection-background-color: #B3D4FC !default;
+$default-small-font-size: 75% !default;
 
 
 
