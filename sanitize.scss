@@ -1,0 +1,149 @@
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+
+@if not variable-exists(default-box-sizing) { $default-box-sizing: border-box; }
+@if not variable-exists(default-font-family) { $default-font-family: sans-serif; }
+@if not variable-exists(default-text-rendering) { $default-text-rendering: optimizeLegibility; }
+@if not variable-exists(default-monospace-font-family) { $default-monospace-font-family: monospace; }
+@if not variable-exists(default-selection-background-color) { $default-selection-background-color: #B3D4FC; }
+@if not variable-exists(default-small-font-size) { $default-small-font-size: 75%; }
+
+
+
+/*
+ * Normalization
+ */
+
+details,  // Firefox 35+, Internet Explorer 11+, Windows Phone 8.1+
+main,     // Android 4.3-, Internet Explorer 11+, Windows Phone 8.1+
+summary { // Firefox 35+, Internet Explorer 11+, Windows Phone 8.1+
+	display: block;
+}
+
+:root { // iOS 8+
+	text-size-adjust: 100%;
+}
+
+progress { // Internet Explorer 11+, Windows Phone 8.1+
+	display: inline-block;
+}
+
+small { // All browsers
+	font-size: $default-small-font-size;
+}
+
+textarea { // Internet Explorer 11+
+	overflow: auto;
+}
+
+[hidden],              // Internet Explorer 10-
+audio:not([controls]), // Chrome 40+, iOS 8+, Safari 8+
+template {             // Android 4.3-, Internet Explorer 11+, iOS 7-, Safari 7-, Windows Phone 8.1+
+	display: none;
+}
+
+/*
+ * Universal inheritance
+ */
+
+*,
+::after,
+::before {
+	border-style: inherit;
+	box-sizing: inherit;
+	color: inherit;
+	cursor: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+:root {
+	cursor: initial;
+	border-style: initial;
+}
+
+/*
+ * Opinionated defaults
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	box-sizing: $default-box-sizing;
+	font-family: $default-font-family;
+	text-rendering: $default-text-rendering;
+}
+
+a,
+button,
+input,
+label,
+select {
+	cursor: pointer;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: $default-monospace-font-family, monospace;
+}
+
+input:not([type]),
+input[type="email"]:not([disabled]),
+input[type="number"]:not([disabled]),
+input[type="password"]:not([disabled]),
+input[type="search"]:not([disabled]),
+input[type="text"]:not([disabled]),
+p:not([disabled]),
+pre:not([disabled]),
+textarea:not([disabled]) {
+	cursor: auto;
+}
+
+nav ul {
+	list-style: none;
+}
+
+pre {
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+
+::selection {
+	background-color: $default-selection-background-color; // required when declaring ::selection
+	text-shadow: none;
+}
+
+[disabled] {
+	cursor: default;
+}
+
+[unselectable] {
+	user-select: none;
+}
+
+@media screen {
+	[hidden~="screen"] {
+		display: inherit;
+	}
+
+	[hidden~="screen"]:not(:active):not(:focus):not(:target) {
+		clip: rect(0 0 0 0) !important;
+		position: absolute !important;
+	}
+}
