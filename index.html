@@ -49,6 +49,10 @@ p {
 	padding: .5em 1em;
 }
 
+span[data-keyword] { color: #A71D5D; }
+span[data-method]  { color: #0086B3; }
+span[data-string]  { color: #ED6A43; }
+
 </style>
 
 <header>
@@ -66,6 +70,34 @@ p {
 	<p>
 		<strong>Sanitize.css</strong> makes browsers render elements consistently and allows you to style with today’s best practices out-of-the-box.
 	</p>
+
+	<section>
+		<h2>Use with CSS</h2>
+		<pre>
+<span data-keyword>@import</span> <span data-method>url</span>(<span data-string>vendors/sanitize.css</span>);
+		</pre>
+	</section>
+
+	<section>
+		<h2>Use with Sass</h2>
+		<pre>
+<span data-keyword>@import</span> <span data-string>'vendors/sanitize.scss'</span>;
+		</pre>
+	</section>
+
+	<section>
+		<h2>Install with Bower</h2>
+		<pre>
+bower install --save sanitize-css
+		</pre>
+	</section>
+
+	<section>
+		<h2>Install with NPM</h2>
+		<pre>
+npm install sanitize.css
+		</pre>
+	</section>
 
 	<p>
 		CSS inheritance is assigned universally so that styles cascade naturally and consistently. Wherever possible, the box model operates more intuitively.
