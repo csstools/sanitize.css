@@ -2,7 +2,7 @@
 
 Render elements consistently. Style with best practices.
 
-[Download sanitize.css](https://rawgit.com/jonathantneal/sanitize.css/feature/1.1/dist/sanitize.css)
+[Download sanitize.css](https://rawgit.com/jonathantneal/sanitize.css/master/dist/sanitize.css)
 
 
 
