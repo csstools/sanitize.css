@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<title>Sanitize CSS</title>
+<title>sanitize.css</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="sanitize.css" rel="stylesheet">
@@ -16,36 +16,75 @@ body {
 	margin: 0 auto;
 	max-width: 50rem;
 	min-height: 100%;
-	padding: 10%;
+}
+
+@media screen and (max-width: 639px) {
+	body {
+		padding: 10%;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	body {
+		padding: 4rem;
+	}
 }
 
 h1 {
 	font-size: 300%;
 }
 
-h1 + subhead {
-	color: rgba(0,0,0,.5);
-	display: block;
-	font-style: italic;
+h2,
+hr {
+	padding-top: 1.5rem;
+}
+
+h2,
+subhead {
 	line-height: 1.25;
 	margin-bottom: 2rem;
 }
 
-h1 + subhead > span {
-	display: inline-block;
+h2,
+hr {
+	box-shadow: 0 -.5rem 0 0 rgba(0,0,0,.1);
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+
+h3,
+p,
+pre {
+	margin-top: 1rem;
 }
 
 p {
 	line-height: 2;
-	margin-top: 1rem;
+}
+
+pre {
+	background-color: #F8F8F8;
+	color: #333;
+	line-height: 1.5;
+	padding: 0.75em .625em;
+}
+
+subhead {
+	color: rgba(0,0,0,.5);
+	display: block;
+	font-style: italic;
+}
+
+subhead > span {
+	display: inline-block;
 }
 
 .btn {
 	background: linear-gradient(to bottom, #3498DB, #2980B9);
-	border-radius: 1em;
+	border-radius: .25em;
 	color: #FFF;
 	display: inline-block;
-	margin-bottom: .5em;
+	margin: 0 .25em .25em;
 	padding: .5em 1em;
 }
 
@@ -57,7 +96,7 @@ span[data-string]  { color: #ED6A43; }
 
 <header>
 	<h1>
-		Sanitize.css
+		sanitize.css
 	</h1>
 
 	<subhead>
@@ -68,36 +107,8 @@ span[data-string]  { color: #ED6A43; }
 
 <main>
 	<p>
-		<strong>Sanitize.css</strong> makes browsers render elements consistently and allows you to style with today’s best practices out-of-the-box.
+		<strong>sanitize.css</strong> makes browsers render elements consistently and allows you to style with today’s best practices out-of-the-box.
 	</p>
-
-	<section>
-		<h2>Use with CSS</h2>
-		<pre>
-<span data-keyword>@import</span> <span data-method>url</span>(<span data-string>vendors/sanitize.css</span>);
-		</pre>
-	</section>
-
-	<section>
-		<h2>Use with Sass</h2>
-		<pre>
-<span data-keyword>@import</span> <span data-string>'vendors/sanitize.scss'</span>;
-		</pre>
-	</section>
-
-	<section>
-		<h2>Install with Bower</h2>
-		<pre>
-bower install --save sanitize-css
-		</pre>
-	</section>
-
-	<section>
-		<h2>Install with NPM</h2>
-		<pre>
-npm install sanitize.css
-		</pre>
-	</section>
 
 	<p>
 		CSS inheritance is assigned universally so that styles cascade naturally and consistently. Wherever possible, the box model operates more intuitively.
@@ -107,8 +118,33 @@ npm install sanitize.css
 		Every normalization and opinionated default is carefully documented. Visit the GitHub page to learn more about these optimizations and others.
 	</p>
 
+	<h2>Installation</h2>
+
+	<section>
+		<h3>Use with CSS</h3>
+		<pre><span data-keyword>@import</span> <span data-method>url</span>(<span data-string>vendors/sanitize.css</span>);</pre>
+	</section>
+
+	<section>
+		<h3>Use with Sass</h3>
+		<pre><span data-keyword>@import</span> <span data-string>'vendors/sanitize.scss'</span>;</pre>
+	</section>
+
+	<section>
+		<h3>Install with Bower</h3>
+		<pre>bower install --save sanitize-css</pre>
+	</section>
+
+	<section>
+		<h3>Install with NPM</h3>
+		<pre>npm install sanitize.css</pre>
+	</section>
+
+	<hr>
+
 	<p>
 		<a class="btn" href="https://github.com/jonathantneal/sanitize.css">View GitHub</a>
+		<a class="btn" href="https://rawgit.com/jonathantneal/sanitize.css/master/sanitize.scss">Download SCSS</a>
 		<a class="btn" href="https://rawgit.com/jonathantneal/sanitize.css/master/dist/sanitize.css">Download CSS</a>
 	</p>
 </main>
