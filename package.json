@@ -2,17 +2,14 @@
   "name": "sanitize.css",
   "version": "1.0.0",
   "description": "Render elements consistently. Style with best practices.",
+  "author": "Jonathan Neal",
   "license": "CC0",
-  "main": "gulpfile.js",
+  "main": "dist/sanitize.css",
   "homepage": "https://github.com/jonathantneal/sanitize.css",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jonathantneal/sanitize.css.git"
   },
-  "author": "Jonathan Neal",
   "bugs": {
     "url": "https://github.com/jonathantneal/sanitize.css/issues"
   },
