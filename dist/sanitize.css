@@ -1,9 +1,10 @@
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,textarea{overflow:auto}
 details,main,summary{display:block}
-:root{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;cursor:initial;border-style:initial;box-sizing:border-box;font-family:sans-serif;text-rendering:optimizeLegibility}
+:root{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;cursor:initial;border-style:initial;box-sizing:border-box;font-family:sans-serif;text-rendering:optimizeLegibility; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;}
 progress{display:inline-block}
 small{font-size:75%}
+img { border: 0; }
 [hidden],audio:not([controls]),template{display:none}
 *,::after,::before{border-style:inherit;box-sizing:inherit;color:inherit;cursor:inherit;font-family:inherit;font-size:inherit;line-height:inherit;text-decoration:inherit;vertical-align:inherit}
 *{margin:0;padding:0}
@@ -19,5 +20,7 @@ textarea{resize:vertical}
 [unselectable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 @media screen{[hidden~=screen]{display:inherit}
 [hidden~=screen]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0)!important;position:absolute!important}
-}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select {*font-size:100%;}
+legend {color:#000;}
 /*# sourceMappingURL=sanitize.css.map */
