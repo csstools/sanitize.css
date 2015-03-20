@@ -4,7 +4,14 @@
   "description": "Render elements consistently. Style with best practices.",
   "author": "Jonathan Neal",
   "license": "CC0",
+  "main": "index.js",
   "style": "dist/sanitize.css",
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md",
+    "sanitize.scss"
+  ],
   "homepage": "https://github.com/jonathantneal/sanitize.css",
   "repository": {
     "type": "git",
@@ -22,7 +29,6 @@
     "gulp-sourcemaps": "^1.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "build": "gulp"
   }
 }
