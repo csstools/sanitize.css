@@ -21,6 +21,8 @@ $default-vertical-align: top !default;
  */
 
 :root {
+	-ms-overflow-style: -ms-autohiding-scrollbar; // IE11+
+	overflow-y: scroll; // All browsers without overlaying scrollbars
 	text-size-adjust: 100%; // iOS 8+
 }
 
