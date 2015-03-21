@@ -10,7 +10,9 @@
     "dist",
     "LICENSE.md",
     "README.md",
-    "sanitize.scss"
+    "sanitize.scss",
+    "index.js",
+    "gulpfile.js"
   ],
   "homepage": "https://github.com/jonathantneal/sanitize.css",
   "repository": {
