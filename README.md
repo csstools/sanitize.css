@@ -38,6 +38,7 @@ npm install sanitize.css
 - The box model is more intuitive with border-box ([reference](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)) ([reference](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)) ([code](sanitize.scss#L131)).
 - Smaller font-sizes display consistently across browsers ([reference](https://github.com/servo/servo/issues/3423#issuecomment-56321664)) ([code](sanitize.scss#L69)).
 - Monospace fonts render consistently ([reference](http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/)) ([code](sanitize.scss#L168)).
+- -- Border width works as expected ([reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values)) ([code](sanitize.scss#L117)).
 - Text selections containing a drop shadow remain legible ([reference](https://twitter.com/miketaylr/status/12228805301)) ([code](sanitize.scss#L216)).
 - Content may be hidden from the screen but not screenreaders ([reference](http://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)) ([reference](https://www.drupal.org/node/897638)) ([code](sanitize.scss#L221-L230)).
 
