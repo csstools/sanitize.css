@@ -31,7 +31,7 @@ audio:not([controls]) {
 }
 
 details {
-	display: block; // Firefox 35+, Internet Explorer 11+, Windows Phone 8.1+
+	display: block; // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
 }
 
 input {
@@ -54,7 +54,7 @@ main {
 }
 
 summary {
-	display: block; // Firefox 35+, Internet Explorer 11+, Windows Phone 8.1+
+	display: block; // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
 }
 
 pre {
@@ -92,15 +92,19 @@ textarea {
  */
 
 *,
-::after,
-::before {
+*::before,
+*::after {
 	box-sizing: inherit;
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+* {
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
+	font-style: inherit;
 	line-height: inherit;
-	text-decoration: inherit;
-	vertical-align: inherit;
 }
 
 
@@ -134,20 +138,6 @@ textarea {
 	line-height: $default-line-height;
 	text-rendering: $default-text-rendering;
 	vertical-align: $default-vertical-align;
-}
-
-// style cursor to match native experience
-
-* {
-	cursor: inherit;
-}
-
-a,
-button,
-input,
-select,
-textarea {
-	cursor: initial;
 }
 
 // specify or remove the background color on inputs
