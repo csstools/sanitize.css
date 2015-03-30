@@ -1,6 +1,5 @@
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,textarea{overflow:auto}
-:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font-family:sans-serif;line-height:1.5em;text-rendering:optimizeLegibility;vertical-align:top}
 [hidden],audio:not([controls]),template{display:none}
 details,main,summary{display:block}
 input[type=number]{width:auto}
@@ -10,11 +9,14 @@ progress{display:inline-block}
 small{font-size:75%}
 textarea{resize:vertical}
 [unselectable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-*,::after,::before{box-sizing:inherit;text-decoration:inherit;vertical-align:inherit;border-style:solid;border-width:0}
-*{color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;line-height:inherit;margin:0;padding:0}
-button,input,select,textarea{background:0 0}
+*,::after,::before{box-sizing:inherit;border-style:solid;border-width:0}
+*{font-size:inherit;line-height:inherit;margin:0;padding:0}
+::after,::before{text-decoration:inherit;vertical-align:inherit}
+:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
+a{text-decoration:none}
+audio,canvas,iframe,img,svg,video{vertical-align:middle}
+button,input,select,textarea{background-color:transparent;color:inherit;font-family:inherit;font-style:inherit;font-weight:inherit;min-height:1.5em}
 code,kbd,pre,samp{font-family:monospace,monospace}
-input{min-height:1.5em}
 nav ol,nav ul{list-style:none}
 select{-moz-appearance:none;-webkit-appearance:none}
 select::-ms-expand{display:none}
