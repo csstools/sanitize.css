@@ -161,7 +161,19 @@ samp {
 // match input height with line height
 
 input {
-	min-height: $default-line-height;
+  @if($default-line-height == 'normal' or $default-line-height == 'initial' or $default-line-height == 'inherit') { // line height normal, initial or inherit
+    vertical-align: baseline; // vertically align input
+
+  } @elseif(unitless($default-line-height) and $default-line-height != 0) { // if line height is unitless and is not 0
+    min-height: $default-line-height + em; // adds 'em' unit to input min-height
+
+  } @elseif (unit($default-line-height) == '%') { // if line height unit is %
+    line-height: normal; // vertically center input text
+    vertical-align: baseline; // vertically align input
+
+  } @else { // if line height is a number with an unit like em, rem etc.
+    min-height: $default-line-height;
+  }
 }
 
 // specify nav list style
