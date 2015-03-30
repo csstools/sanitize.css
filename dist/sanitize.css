@@ -1,6 +1,6 @@
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,textarea{overflow:auto}
-:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font-family:sans-serif;line-height:1.5em;text-rendering:optimizeLegibility;vertical-align:top}
+:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font-family:sans-serif;line-height:1.5;text-rendering:optimizeLegibility;vertical-align:top}
 [hidden],audio:not([controls]),template{display:none}
 details,main,summary{display:block}
 input[type=number]{width:auto}
