@@ -7,6 +7,7 @@ $root-font-size: 16px !default;
 $root-line-height: 1.5 !default;
 $root-text-rendering: optimizeLegibility !default;
 
+$body-background-color: #FFFFFF !default;
 $anchor-text-decoration: none !default;
 $form-element-background-color: transparent !default;
 $form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
@@ -143,6 +144,12 @@ textarea {
 	cursor: $root-cursor;
 	font: #{$root-font-size}/#{$root-line-height} $root-font-family;
 	text-rendering: $root-text-rendering;
+}
+
+// specify the body background color
+
+body {
+	background-color: $body-background-color;
 }
 
 // specify the text decoration of anchors
