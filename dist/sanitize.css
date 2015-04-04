@@ -15,7 +15,8 @@ textarea{resize:vertical}
 :root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
 a{text-decoration:none}
 audio,canvas,iframe,img,svg,video{vertical-align:middle}
-button,input,select,textarea{background-color:transparent;color:inherit;font-family:inherit;font-style:inherit;font-weight:inherit;min-height:1.5em}
+button,input,select,textarea{background-color:transparent;color:inherit;font-family:inherit;font-style:inherit;font-weight:inherit}
+button,input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=range]),select,textarea{min-height:1.5em}
 code,kbd,pre,samp{font-family:monospace,monospace}
 nav ol,nav ul{list-style:none}
 select{-moz-appearance:none;-webkit-appearance:none}
