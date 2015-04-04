@@ -186,7 +186,10 @@ textarea {
 // specify the minimum height of form elements
 
 button,
-input,
+:not([type="checkbox"]),
+:not([type="color"]),
+:not([type="radio"]),
+:not([type="range"]),
 select,
 textarea {
 	min-height: $form-element-min-height;
