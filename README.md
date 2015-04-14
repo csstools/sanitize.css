@@ -1,5 +1,8 @@
 # sanitize.css
 
+[![npm-image](https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square)](https://www.npmjs.com/package/sanitize.css)
+![bower-image](https://img.shields.io/bower/v/sanitize.css.svg?style=flat-square)
+
 Render elements consistently. Style with best practices.
 
 
