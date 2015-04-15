@@ -1,11 +1,13 @@
 # sanitize.css
 
-[![npm-image](https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square)](https://www.npmjs.com/package/sanitize.css)
-![bower-image](https://img.shields.io/bower/v/sanitize.css.svg?style=flat-square)
+[![npm][npm-image]][npm-url]
+![bower][bower-image]
+
+[npm-image]: https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/sanitize.css
+[bower-image]: https://img.shields.io/bower/v/sanitize-css.svg?style=flat-square
 
 Render elements consistently. Style with best practices.
-
-
 
 ## Installation
 
@@ -32,8 +34,6 @@ npm install sanitize.css
 ```css
 @import url(vendors/sanitize.css);
 ```
-
-
 
 ## Highlights
 
@@ -62,15 +62,11 @@ import 'vendors/sanitize.scss';
 - **$default-selection-background-color**: the default selection background color is `#B3D4FC`.
 - **$default-small-font-size**: the default small font size is `75%`.
 
-
-
 ## Support
 
 At present, we support the current and previous major releases of popular web browsers. When a new version is released, we begin supporting that version and stop supporting the third most recent version.
 
 These browsers currently include Android 4.3-4.4+, Chrome 39-40+, Firefox 34-35+, Internet Explorer 10-11+, iOS 7-8+, Safari 7-8+, Windows Phone 8.1+.
-
-
 
 ## License
 
