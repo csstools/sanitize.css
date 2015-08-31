@@ -8,6 +8,7 @@ $root-line-height: 1.5 !default;
 $root-text-rendering: optimizeLegibility !default;
 
 $html-background-color: #FFFFFF !default;
+$html-color: #000000 !default;
 $anchor-text-decoration: none !default;
 $form-element-background-color: transparent !default;
 $form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
@@ -28,17 +29,21 @@ $textarea-resize: vertical !default;
  */
 
 :root {
-	-ms-overflow-style: -ms-autohiding-scrollbar; // IE11+
+	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
 	overflow-y: scroll; // All browsers without overlaying scrollbars
-	text-size-adjust: 100%; // iOS 8+
+	-webkit-text-size-adjust: 100%; // iOS 8+
 }
 
 audio:not([controls]) {
-	display: none; // Chrome 40+, iOS 8+, Safari 8+
+	display: none; // Chrome 44-, iOS 8+, Safari 9+
+}
+
+button {
+	overflow: visible; // Internet Explorer 11-
 }
 
 details {
-	display: block; // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
+	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
 }
 
 input {
@@ -47,29 +52,29 @@ input {
 	}
 
 	&[type="search"] {
-		-webkit-appearance: textfield; // Safari 8+
+		-webkit-appearance: textfield; // Chrome 45+, Safari 9+
 
 		&::-webkit-search-cancel-button,
 		&::-webkit-search-decoration {
-			-webkit-appearance: none; // Safari 8+
+			-webkit-appearance: none; // Chrome 45+, Safari 9+
 		}
 	}
 }
 
 main {
-	display: block; // Android 4.3-, Internet Explorer 11+, Windows Phone 8.1+
+	display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
 }
 
 summary {
-	display: block; // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
+	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
 }
 
 pre {
-	overflow: auto; // Internet Explorer 11+
+	overflow: auto; // Internet Explorer 11-
 }
 
 progress {
-	display: inline-block; // Internet Explorer 11+, Windows Phone 8.1+
+	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
 }
 
 small {
@@ -77,22 +82,16 @@ small {
 }
 
 template {
-	display: none; // Android 4.3-, Internet Explorer 11+, iOS 7-, Safari 7-, Windows Phone 8.1+
+	display: none; // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
 }
 
 textarea {
-	overflow: auto; // Internet Explorer 11+
+	overflow: auto; // Edge 12+, Internet Explorer 11-
 }
 
 [hidden] {
 	display: none; // Internet Explorer 10-
 }
-
-[unselectable] {
-	user-select: none; // Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+
-}
-
-
 
 /*
  * Universal inheritance
@@ -105,6 +104,7 @@ textarea {
 }
 
 * {
+	background-color: inherit;
 	font-size: inherit;
 	line-height: inherit;
 }
@@ -121,7 +121,7 @@ textarea {
  * Opinionated defaults
  */
 
-// specify solid border style of all elements
+// specify the border style and width of all elements
 
 *,
 ::before,
@@ -130,7 +130,7 @@ textarea {
 	border-width: 0;
 }
 
-// remove margin and padding of all elements
+// remove the margin and padding of all elements
 
 * {
 	margin: 0;
@@ -146,10 +146,11 @@ textarea {
 	text-rendering: $root-text-rendering;
 }
 
-// specify the html background color
+// specify the background color of html
 
 html {
 	background-color: $html-background-color;
+	color: $html-color;
 }
 
 // specify the text decoration of anchors
@@ -158,7 +159,7 @@ a {
 	text-decoration: $anchor-text-decoration;
 }
 
-// specify media element style
+// specify the alignment of media elements
 
 audio,
 canvas,
@@ -178,7 +179,7 @@ textarea {
 	background-color: $form-element-background-color;
 }
 
-// specify inheritance of form elements
+// specify the inherited color and font of form elements
 
 button,
 input,
@@ -230,50 +231,67 @@ nav ul {
 	list-style: $nav-list-style;
 }
 
-// style select like a standard input
+// specify the standard appearance of selects
 
 select {
-	-moz-appearance: none;    // Firefox 36+
-	-webkit-appearance: none; // Chrome 41+
+	-moz-appearance: none;    // Firefox 40+
+	-webkit-appearance: none; // Chrome 45+
 
 	&::-ms-expand {
-		display: none;        // Internet Explorer 11+
+		display: none;        // Edge 12+, Internet Explorer 11-
 	}
 
 	&::-ms-value {
-		color: currentColor;  // Internet Explorer 11+
+		color: currentColor;  // Edge 12+, Internet Explorer 11-
 	}
 }
 
-// specify the border styles of tables
+// specify the border styling of tables
 
 table {
 	border-collapse: $table-border-collapse;
 	border-spacing: $table-border-spacing;
 }
 
-// specify textarea resizability
+// specify the resizability of textareas
 
 textarea {
 	resize: $textarea-resize;
 }
 
-// specify text selection background color and omit drop shadow
+// specify the background color and drop shadow of text selections
 
 ::selection {
 	background-color: $selection-background-color; // required when declaring ::selection
 	text-shadow: $selection-text-shadow;
 }
 
-// hide content from screens but not screenreaders
+// specify the progress cursor of updating elements
 
-@media screen {
-	[hidden~="screen"] {
-		display: inherit;
-	}
+[aria-busy="true"] {
+	cursor: progress;
+}
 
-	[hidden~="screen"]:not(:active):not(:focus):not(:target) {
-		clip: rect(0 0 0 0) !important;
-		position: absolute !important;
+// specify the pointer cursor of trigger elements
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+
+[aria-disabled] {
+	cursor: default;
+}
+
+// specify the style of visually hidden yet accessible elements
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+
+	&:focus {
+		clip: auto;
 	}
 }

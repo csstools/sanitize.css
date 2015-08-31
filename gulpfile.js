@@ -12,9 +12,6 @@ gulp.task('default', function () {
 		.pipe(sass({
 			outputStyle: 'expanded'
 		}))
-		.pipe(postcss([ autoprefixer({
-			browsers: ['last 2 version']
-		}) ]))
 		.pipe(minifyCSS({
 			keepBreaks: true
 		}))
