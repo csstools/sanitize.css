@@ -64,7 +64,7 @@ import 'vendors/sanitize.scss';
 - **$root-box-sizing**: the default box-sizing is `border-box`.
 - **$root-cursor**: the default cursor is `default`.
 - **$root-font-family**: the default font family is `sans-serif`.
-- **$root-font-size**: the default font size `16px`.
+- **$root-font-size**: the default font size `100%`.
 - **$root-line-height**: the default line height is `1.5`.
 - **$root-text-rendering**: the default text-rendering is `optimizeLegibility`.
 - **$html-background-color**: the default background color is `#FFFFFF`.
