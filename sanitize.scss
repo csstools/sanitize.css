@@ -1,4 +1,4 @@
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*! sanitize.css v2.0.0 | CC0 1.0 Public Domain | github.com/jonathantneal/sanitize.css */
 
 $root-box-sizing: border-box !default;
 $root-cursor: default !default;
@@ -16,6 +16,7 @@ $media-element-vertical-align: middle !default;
 $monospace-font-family: monospace !default;
 $nav-list-style: none !default;
 $selection-background-color: #B3D4FC !default;
+$selection-color: invert($selection-background-color) !default;
 $selection-text-shadow: none !default;
 $small-font-size: 75% !default;
 $table-border-collapse: collapse !default;
@@ -258,10 +259,11 @@ textarea {
 	resize: $textarea-resize;
 }
 
-// specify the background color and drop shadow of text selections
+// specify the background color, font color and drop shadow of text selections
 
 ::selection {
 	background-color: $selection-background-color; // required when declaring ::selection
+	color: $selection-color;
 	text-shadow: $selection-text-shadow;
 }
 

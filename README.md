@@ -55,7 +55,7 @@ To give you even more control, [sanitize.scss](sanitize.scss) allows you to defi
 
 ```scss
 // overwrite defaults in sanitize.scss
-$root-font-family: "Open Sans";
+$root-font-family: "Open Sans", sans-serif;
 $root-text-rendering: optimizeSpeed;
 
 import 'vendors/sanitize.scss';
