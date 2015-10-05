@@ -1,6 +1,9 @@
 ## 2.1.0 (2015-10-05)
 
 - Added: CSS version
+- Updated: Use percentage font-size on :root
+- Updated: Documentation
+- Removed: background-color inheritance
 
 ## 2.0.0 (2015-09-03)
 
