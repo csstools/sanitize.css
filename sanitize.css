@@ -1,0 +1,273 @@
+/* sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+
+/*
+ * Normalization
+ */
+
+:root {
+	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+	overflow-y: scroll; // All browsers without overlaying scrollbars
+	-webkit-text-size-adjust: 100%; // iOS 8+
+}
+
+audio:not([controls]) {
+	display: none; // Chrome 44-, iOS 8+, Safari 9+
+}
+
+button {
+	overflow: visible; // Internet Explorer 11-
+}
+
+details {
+	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+input {
+	@nest &[type="number"] {
+		width: auto; // Firefox 36+
+	}
+
+	@nest &[type="search"] {
+		-webkit-appearance: textfield; // Chrome 45+, Safari 9+
+
+		@nest &::-webkit-search-cancel-button,
+		@nest &::-webkit-search-decoration {
+			-webkit-appearance: none; // Chrome 45+, Safari 9+
+		}
+	}
+}
+
+main {
+	display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+summary {
+	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+pre {
+	overflow: auto; // Internet Explorer 11-
+}
+
+progress {
+	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
+}
+
+small {
+	font-size: var(--small-font-size, 75%); // All browsers
+}
+
+template {
+	display: none; // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
+}
+
+textarea {
+	overflow: auto; // Edge 12+, Internet Explorer 11-
+}
+
+[hidden] {
+	display: none; // Internet Explorer 10-
+}
+
+/*
+ * Universal inheritance
+ */
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+* {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+
+
+/*
+ * Opinionated defaults
+ */
+
+// specify the border style and width of all elements
+
+*,
+::before,
+::after {
+	border-style: solid;
+	border-width: 0;
+}
+
+// remove the margin and padding of all elements
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// specify the root styles of the document
+
+:root {
+	box-sizing: var(--root-box-sizing, border-box);
+	cursor: var(--root-cursor, default);
+	font: var(--root-font-size, 100%)/var(--root-line-height, 1.5) var(--font-family, sans-serif);
+	text-rendering: var(--root-text-rendering, optimizeLegibility);
+}
+
+// specify the background color of html
+
+html {
+	background-color: var(--html-background-color, #ffffff);
+	color: var(--html-color, #000000);
+}
+
+// specify the text decoration of anchors
+
+a {
+	text-decoration: var(--anchor-text-decoration, none);
+}
+
+// specify the alignment of media elements
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: var(--media-element-vertical-align, middle);
+}
+
+// specify the background color of form elements
+
+button,
+input,
+select,
+textarea {
+	background-color: var(--form-element-background-color, transparent);
+}
+
+// specify the inherited color and font of form elements
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+// specify the minimum height of form elements
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	min-height: var(--form-element-min-height, 1.5em);
+}
+
+// specify the font family of code elements
+
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--monospace-font-family, monospace), monospace;
+}
+
+// specify the list style of nav lists
+
+nav ol,
+nav ul {
+	list-style: var(--nav-list-style, none);
+}
+
+// specify the standard appearance of selects
+
+select {
+	-moz-appearance: none;    // Firefox 40+
+	-webkit-appearance: none; // Chrome 45+
+
+	@nest &::-ms-expand {
+		display: none;        // Edge 12+, Internet Explorer 11-
+	}
+
+	@nest &::-ms-value {
+		color: currentColor;  // Edge 12+, Internet Explorer 11-
+	}
+}
+
+// specify the border styling of tables
+
+table {
+	border-collapse: var(--table-border-collapse, collapse);
+	border-spacing: var(--table-border-spacing, 0);
+}
+
+// specify the resizability of textareas
+
+textarea {
+	resize: var(--textarea-resize, vertical);
+}
+
+// specify the background color, font color, and drop shadow of text selections
+
+::selection {
+	background-color: var(--selection-background-color, #b3d4fc); // required when declaring ::selection
+	color: var(--selection-background-color, #4c2b03);
+	text-shadow: var(--selection-text-shadow, none);
+}
+
+// specify the progress cursor of updating elements
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+// specify the pointer cursor of trigger elements
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+
+[aria-disabled] {
+	cursor: default;
+}
+
+// specify the style of visually hidden yet accessible elements
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+
+	@nest &:focus {
+		clip: auto;
+	}
+}
