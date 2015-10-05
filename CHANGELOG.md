@@ -1,3 +1,7 @@
+## 2.1.0 (2015-10-05)
+
+- Added: CSS version
+
 ## 2.0.0 (2015-09-03)
 
 - Added: Visually hidden element style `[hidden][aria-hidden="false"]`
