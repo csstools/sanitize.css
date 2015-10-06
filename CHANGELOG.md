@@ -1,4 +1,8 @@
-## 2.1.0 (2015-10-05)
+## 2.1.1 (2015-10-05)
+
+- Updated: bower.json
+
+## 2.1.1 (2015-10-05)
 
 - Added: CSS version
 - Updated: Use percentage font-size on :root
