@@ -2,8 +2,9 @@
 
 - Added: Normalization for **iOS 8+**
 - Added: `background-repeat` for all elements
-- Changed: background color and color for `:root` previously `html`
-- Changed: `::selection` color to `#ffffff`
+- Added: CONTRIBUTING.md
+- Updated: background color and color for `:root` previously `html`
+- Updated: `::selection` color to `#ffffff`
 
 ## 2.1.1 (2015-10-05)
 
