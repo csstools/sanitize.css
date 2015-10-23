@@ -1,10 +1,10 @@
 {
   "name": "sanitize-css",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Render elements consistently. Style with best practices.",
-  "license": "CC0",
+  "license": "CC0-1.0",
   "main": "dist/sanitize.css",
-  "homepage": "http://jonathantneal.github.io/sanitize.css",
+  "homepage": "http://10up.github.io/sanitize.css",
   "authors": [
     "Jonathan Neal <jonathantneal@hotmail.com>"
   ],
@@ -17,7 +17,6 @@
     "reset"
   ],
   "ignore": [
-    "gulpfile.js",
     "package.json"
   ]
 }
