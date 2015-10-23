@@ -1,3 +1,10 @@
+## 3.0.0 (2015-10-23)
+
+- Added: Normalization for **iOS 8+**
+- Added: `background-repeat` for all elements
+- Changed: background color and color for `:root` previously `html`
+- Changed: `::selection` color to `#ffffff`
+
 ## 2.1.1 (2015-10-05)
 
 - Updated: bower.json

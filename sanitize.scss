@@ -1,22 +1,23 @@
-/*! sanitize.css v2.0.0 | CC0 1.0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 
+$root-background-color: #FFFFFF !default;
 $root-box-sizing: border-box !default;
+$root-color: #000000 !default;
 $root-cursor: default !default;
 $root-font-family: sans-serif !default;
 $root-font-size: 100% !default;
 $root-line-height: 1.5 !default;
 $root-text-rendering: optimizeLegibility !default;
 
-$html-background-color: #FFFFFF !default;
-$html-color: #000000 !default;
 $anchor-text-decoration: none !default;
+$background-repeat: no-repeat !default;
 $form-element-background-color: transparent !default;
 $form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
 $media-element-vertical-align: middle !default;
 $monospace-font-family: monospace !default;
 $nav-list-style: none !default;
 $selection-background-color: #B3D4FC !default;
-$selection-color: invert($selection-background-color) !default;
+$selection-color: #ffffff !default;
 $selection-text-shadow: none !default;
 $small-font-size: 75% !default;
 $table-border-collapse: collapse !default;
@@ -29,25 +30,32 @@ $textarea-resize: vertical !default;
  * Normalization
  */
 
-:root {
-	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
-	overflow-y: scroll; // All browsers without overlaying scrollbars
-	-webkit-text-size-adjust: 100%; // iOS 8+
-}
-
 audio:not([controls]) {
 	display: none; // Chrome 44-, iOS 8+, Safari 9+
 }
 
 button {
 	overflow: visible; // Internet Explorer 11-
+	-webkit-appearance: button; // iOS 8+
 }
 
 details {
 	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
 }
 
+html {
+	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+	overflow-y: scroll; // All browsers without overlaying scrollbars
+	-webkit-text-size-adjust: 100%; // iOS 8+
+}
+
 input {
+	-webkit-border-radius: 0; // iOS 8+
+
+	&[type="button"], &[type="reset"], &[type="submit"] {
+		-webkit-appearance: button; // iOS 8+
+	}
+
 	&[type="number"] {
 		width: auto; // Firefox 36+
 	}
@@ -66,10 +74,6 @@ main {
 	display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
 }
 
-summary {
-	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-}
-
 pre {
 	overflow: auto; // Internet Explorer 11-
 }
@@ -80,6 +84,14 @@ progress {
 
 small {
 	font-size: $small-font-size; // All browsers
+}
+
+summary {
+	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+svg:not(:root) {
+	overflow: hidden; // Internet Explorer 11-
 }
 
 template {
@@ -130,9 +142,10 @@ textarea {
 	border-width: 0;
 }
 
-// remove the margin and padding of all elements
+// specify the core styles of all elements
 
 * {
+	background-repeat: $background-repeat;
 	margin: 0;
 	padding: 0;
 }
@@ -140,17 +153,12 @@ textarea {
 // specify the root styles of the document
 
 :root {
+	background-color: $root-background-color;
 	box-sizing: $root-box-sizing;
+	color: $root-color;
 	cursor: $root-cursor;
 	font: #{$root-font-size}/#{$root-line-height} $root-font-family;
 	text-rendering: $root-text-rendering;
-}
-
-// specify the background color of html
-
-html {
-	background-color: $html-background-color;
-	color: $html-color;
 }
 
 // specify the text decoration of anchors
@@ -260,6 +268,12 @@ textarea {
 }
 
 // specify the background color, font color and drop shadow of text selections
+
+::-moz-selection {
+	background-color: $selection-background-color; // required when declaring ::selection
+	color: $selection-color;
+	text-shadow: $selection-text-shadow;
+}
 
 ::selection {
 	background-color: $selection-background-color; // required when declaring ::selection
