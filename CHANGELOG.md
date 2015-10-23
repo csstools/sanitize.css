@@ -5,16 +5,16 @@
 ## 2.1.1 (2015-10-05)
 
 - Added: CSS version
-- Updated: Use percentage font-size on :root
+- Updated: Use percentage `font-size` on `:root`
 - Updated: Documentation
-- Removed: background-color inheritance
+- Removed: `background-color` inheritance
 
 ## 2.0.0 (2015-09-03)
 
 - Added: Visually hidden element style `[hidden][aria-hidden="false"]`
 - Added: Currently updating element style `[aria-busy="true"]`
 - Added: Trigger element style `[aria-controls]`
-- Added: Color style for `<html>`
+- Added: Color style for `html`
 - Added: CHANGELOG.md
 - Removed: Standards-breaking visually hidden style `[hidden~="screen"]`
 - Removed: Standards-breaking IE-proprietary style `[unselectable="on"]`
