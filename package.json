@@ -2,6 +2,14 @@
   "name": "sanitize.css",
   "version": "2.1.1",
   "description": "Render elements consistently. Style with best practices.",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "stylus",
+    "normalize",
+    "postcss"
+  ],
   "author": "Jonathan Neal",
   "license": "CC0-1.0",
   "main": "index.js",
@@ -10,9 +18,9 @@
     "dist",
     "LICENSE.md",
     "README.md",
+    "sanitize.css",
     "sanitize.scss",
-    "index.js",
-    "gulpfile.js"
+    "sanitize.styl"
   ],
   "homepage": "https://github.com/10up/sanitize.css",
   "repository": {
@@ -28,6 +36,10 @@
     "postcss-cssnext": "^2.2.0"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
+  },
+  "engines": {
+    "iojs": ">=2.0.0",
+    "node": ">=0.12.0"
   }
 }

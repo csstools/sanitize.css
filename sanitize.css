@@ -37,8 +37,7 @@ input {
 	@nest &[type="search"] {
 		-webkit-appearance: textfield; /* Chrome 45+, Safari 9+ */
 
-		@nest &::-webkit-search-cancel-button,
-		@nest &::-webkit-search-decoration {
+		@nest &::-webkit-search-cancel-button, &::-webkit-search-decoration {
 			-webkit-appearance: none; /* Chrome 45+, Safari 9+ */
 		}
 	}
@@ -242,12 +241,6 @@ textarea {
 }
 
 /* specify the background color, font color, and drop shadow of text selections */
-
-::-moz-selection {
-	background-color: var(--selection-background-color, #b3d4fc); /* required when declaring ::selection */
-	color: var(--selection-background-color, #4c2b03);
-	text-shadow: var(--selection-text-shadow, none);
-}
 
 ::selection {
 	background-color: var(--selection-background-color, #b3d4fc); /* required when declaring ::selection */
