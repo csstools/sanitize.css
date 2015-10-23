@@ -13,8 +13,8 @@ gulp.task('development', function() {
 	return gulp.src('sanitize.scss')
 			.pipe(sourcemaps.init())
 			.pipe(sass({
-							outputStyle: 'expanded'
-						}))
+				outputStyle: 'expanded'
+			}))
 			.pipe(postcss(processors))
 			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('./dist'));
@@ -24,8 +24,8 @@ gulp.task('minified', function() {
 	return gulp.src('sanitize.scss')
 			.pipe(sourcemaps.init())
 			.pipe(sass({
-							outputStyle: 'expanded'
-						}))
+				outputStyle: 'expanded'
+			}))
 			.pipe(minifyCSS())
 			.pipe(postcss(processors))
 			.pipe(rename({suffix: '.min'}))
