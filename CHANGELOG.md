@@ -6,6 +6,7 @@
 - Updated: background color and color for `:root` previously `html`
 - Updated: `::selection` color to `#ffffff`
 - Updated: dist from CSS source using PostCSS, cssnext, and cssnano
+- Updated: Documentation
 
 ## 2.1.1 (2015-10-05)
 
