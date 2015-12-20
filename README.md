@@ -72,7 +72,7 @@ import 'vendors/sanitize.scss';
 ```
 
 ```stylus
-// overwrite defaults in sanitize.scss
+// overwrite defaults in sanitize.styl
 root-font-family = "Open Sans", sans-serif
 root-text-rendering = optimizeSpeed
 

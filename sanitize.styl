@@ -27,7 +27,7 @@ textarea-resize ?= vertical
 // Function form-element-min-height(root-line-height: int)
 form-element-min-height(root-line-height)
 	if unit(root-line-height) == ''
-		{root-line-height}em
+		unit(root-line-height, em)
 	else if unit(root-line-height) != '%'
 		root-line-height
 	else
