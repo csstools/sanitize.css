@@ -1,0 +1,262 @@
+/*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css
+
+$root-background-color: #FFFFFF !default
+$root-box-sizing: border-box !default
+$root-color: #000000 !default
+$root-cursor: default !default
+$root-font-family: sans-serif !default
+$root-font-size: 100% !default
+$root-line-height: 1.5 !default
+$root-text-rendering: optimizeLegibility !default
+
+$anchor-text-decoration: none !default
+$background-repeat: no-repeat !default
+$form-element-background-color: transparent !default
+$form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != "%", $root-line-height, null)) !default
+$media-element-vertical-align: middle !default
+$monospace-font-family: monospace !default
+$nav-list-style: none !default
+$selection-background-color: #B3D4FC !default
+$selection-color: #ffffff !default
+$selection-text-shadow: none !default
+$small-font-size: 75% !default
+$table-border-collapse: collapse !default
+$table-border-spacing: 0 !default
+$textarea-resize: vertical !default
+
+/*
+ * Normalization
+
+audio:not([controls])
+  display: none // Chrome 44-, iOS 8+, Safari 9+
+
+button
+  overflow: visible // Internet Explorer 11-
+  -webkit-appearance: button // iOS 8+
+
+details
+  display: block // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+
+html
+  -ms-overflow-style: -ms-autohiding-scrollbar // Edge 12+, Internet Explorer 11-
+  overflow-y: scroll // All browsers without overlaying scrollbars
+  -webkit-text-size-adjust: 100% // iOS 8+
+
+input
+  -webkit-border-radius: 0 // iOS 8+
+
+  &[type="button"], &[type="reset"], &[type="submit"]
+    -webkit-appearance: button // iOS 8+
+
+  &[type="number"]
+    width: auto // Firefox 36+
+
+  &[type="search"]
+    -webkit-appearance: textfield // Chrome 45+, Safari 9+
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration
+      -webkit-appearance: none // Chrome 45+, Safari 9+
+
+main
+  display: block // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+
+pre
+  overflow: auto // Internet Explorer 11-
+
+progress
+  display: inline-block // Internet Explorer 11-, Windows Phone 8.1+
+
+small
+  font-size: $small-font-size // All browsers
+
+summary
+  display: block // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+
+svg:not(:root)
+  overflow: hidden // Internet Explorer 11-
+
+template
+  display: none // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
+
+textarea
+  overflow: auto // Edge 12+, Internet Explorer 11-
+
+[hidden]
+  display: none // Internet Explorer 10-
+
+/*
+ * Universal inheritance
+
+*,
+::before,
+::after
+  box-sizing: inherit
+
+*
+  font-size: inherit
+  line-height: inherit
+
+::before,
+::after
+  text-decoration: inherit
+  vertical-align: inherit
+
+/*
+ * Opinionated defaults
+
+// specify the border style and width of all elements
+
+*,
+::before,
+::after
+  border-style: solid
+  border-width: 0
+
+// specify the core styles of all elements
+
+*
+  background-repeat: $background-repeat
+  margin: 0
+  padding: 0
+
+// specify the root styles of the document
+
+\:root
+  background-color: $root-background-color
+  box-sizing: $root-box-sizing
+  color: $root-color
+  cursor: $root-cursor
+  font: #{$root-font-size}/#{$root-line-height} $root-font-family
+  text-rendering: $root-text-rendering
+
+// specify the text decoration of anchors
+
+a
+  text-decoration: $anchor-text-decoration
+
+// specify the alignment of media elements
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: $media-element-vertical-align
+
+// specify the background color of form elements
+
+button,
+input,
+select,
+textarea
+  background-color: $form-element-background-color
+
+// specify the inherited color and font of form elements
+
+button,
+input,
+select,
+textarea
+  color: inherit
+  font-family: inherit
+  font-style: inherit
+  font-weight: inherit
+
+// specify the minimum height of form elements
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea
+  min-height: $form-element-min-height
+
+// specify the font family of code elements
+
+code,
+kbd,
+pre,
+samp
+  font-family: $monospace-font-family, monospace
+
+// specify the list style of nav lists
+
+nav ol,
+nav ul
+  list-style: $nav-list-style
+
+// specify the standard appearance of selects
+
+select
+  -moz-appearance: none // Firefox 40+
+  -webkit-appearance: none // Chrome 45+
+
+  &::-ms-expand
+    display: none // Edge 12+, Internet Explorer 11-
+
+  &::-ms-value
+    color: currentColor // Edge 12+, Internet Explorer 11-
+
+// specify the border styling of tables
+
+table
+  border-collapse: $table-border-collapse
+  border-spacing: $table-border-spacing
+
+// specify the resizability of textareas
+
+textarea
+  resize: $textarea-resize
+
+// specify the background color, font color and drop shadow of text selections
+
+::-moz-selection
+  background-color: $selection-background-color // required when declaring ::selection
+  color: $selection-color
+  text-shadow: $selection-text-shadow
+
+::selection
+  background-color: $selection-background-color // required when declaring ::selection
+  color: $selection-color
+  text-shadow: $selection-text-shadow
+
+// specify the progress cursor of updating elements
+
+[aria-busy="true"]
+  cursor: progress
+
+// specify the pointer cursor of trigger elements
+
+[aria-controls]
+  cursor: pointer
+
+// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+
+[aria-disabled]
+  cursor: default
+
+// specify the style of visually hidden yet accessible elements
+
+[hidden][aria-hidden="false"]
+  clip: rect(0 0 0 0)
+  display: inherit
+  position: absolute
+
+  &:focus
+    clip: auto
