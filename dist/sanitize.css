@@ -284,4 +284,18 @@ textarea {
 	clip: auto;
 }
 
+/* remove delay from tapping on clickable elements */
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation;
+	    touch-action: manipulation;
+}
+
 /*# sourceMappingURL=sanitize.css.map */
