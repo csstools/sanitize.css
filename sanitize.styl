@@ -318,4 +318,14 @@ textarea
 	&:focus
 		clip auto
 
+// remove delay from tapping on clickable elements
 
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex]
+	touch-action: manipulation;
