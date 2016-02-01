@@ -1,22 +1,24 @@
 {
   "name": "sanitize-css",
-  "version": "3.0.0",
   "description": "Render elements consistently. Style with best practices.",
-  "license": "CC0-1.0",
   "main": "dist/sanitize.css",
-  "homepage": "http://10up.github.io/sanitize.css",
-  "authors": [
-    "Jonathan Neal <jonathantneal@hotmail.com>"
-  ],
-  "keywords": [
-    "base",
-    "border-box",
-    "css",
-    "inherit",
-    "normalize",
-    "reset"
-  ],
+  "license": "CC0-1.0",
   "ignore": [
     "package.json"
-  ]
+  ],
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "stylus",
+    "normalize",
+    "reset",
+    "postcss",
+    "cssnext",
+    "stylelint"
+  ],
+  "authors": [
+    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)"
+  ],
+  "homepage": "http://10up.github.io/sanitize.css"
 }

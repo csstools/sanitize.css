@@ -57,24 +57,24 @@ To give you complete control, **sanitize.css** is available in three flavors; CS
 /* overwrite defaults in sanitize.css */
 :root {
 	--root-font-family: "Open Sans", sans-serif;
-	--root-text-rendering: optimizeSpeed;
+	--root-color: #333;
 }
 
-import url('vendors/sanitize.css');
+import url("vendors/sanitize.css");
 ```
 
 ```scss
 // overwrite defaults in sanitize.scss
 $root-font-family: "Open Sans", sans-serif;
-$root-text-rendering: optimizeSpeed;
+$root-color: #333;
 
-import 'vendors/sanitize.scss';
+import "vendors/sanitize.scss";
 ```
 
 ```stylus
 // overwrite defaults in sanitize.styl
 root-font-family = "Open Sans", sans-serif
-root-text-rendering = optimizeSpeed
+root-color = #333
 
 @import "vendors/sanitize.styl"
 ```
