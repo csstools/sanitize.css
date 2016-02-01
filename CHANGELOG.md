@@ -1,3 +1,12 @@
+## 3.1.0 (2015-02-01)
+
+- Added: Project configuration (.editorconfig)
+- Added: Style linting rules and tests
+- Added: `touch-action: manipulation` to remove delays during mobile tapping
+- Removed: `text-rendering` due to performance issues
+- Updated: `::selection` color variable corrected to `--selection-color`
+- Updated: Use direct nesting
+
 ## 3.0.0 (2015-10-23)
 
 - Added: Normalization for **iOS 8+**
