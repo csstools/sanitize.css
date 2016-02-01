@@ -1,4 +1,4 @@
-/*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*! sanitize.css v3.1.1 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 
 /*
  * Normalization
@@ -9,8 +9,8 @@ audio:not([controls]) {
 }
 
 button {
-	overflow: visible; /* Internet Explorer 11- */
 	-webkit-appearance: button; /* iOS 8+ */
+	overflow: visible; /* Internet Explorer 11- */
 }
 
 details {
@@ -27,7 +27,9 @@ input {
 	-webkit-border-radius: 0 /* iOS 8+ */
 }
 
-input[type="button"], input[type="reset"], input[type="submit"] {
+input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
 	-webkit-appearance: button;/* iOS 8+ */
 }
 
@@ -39,7 +41,8 @@ input[type="search"] {
 	-webkit-appearance: textfield;/* Chrome 45+, Safari 9+ */
 }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;/* Chrome 45+, Safari 9+ */
 }
 
@@ -131,7 +134,6 @@ textarea {
 	color: #000000;
 	cursor: default;
 	font: 100%/1.5 sans-serif;
-	text-rendering: optimizeLegibility;
 }
 
 /* specify the text decoration of anchors */
@@ -244,13 +246,13 @@ textarea {
 
 ::-moz-selection {
 	background-color: #b3d4fc; /* required when declaring ::selection */
-	color: #4c2b03;
+	color: #ffffff;
 	text-shadow: none;
 }
 
 ::selection {
 	background-color: #b3d4fc; /* required when declaring ::selection */
-	color: #4c2b03;
+	color: #ffffff;
 	text-shadow: none;
 }
 

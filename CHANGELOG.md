@@ -1,3 +1,7 @@
+## 3.1.1 (2015-02-01)
+
+- Updated: `box-sizing` variable corrected to `border-box` in sass, scss, styl
+
 ## 3.1.0 (2015-02-01)
 
 - Added: Project configuration (.editorconfig)
