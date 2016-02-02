@@ -1,0 +1,377 @@
+/*! sanitize.css v3.1.1 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+
+/*
+ * Normalization
+ */
+
+audio:not([controls]) {
+	display: none; // Chrome 44-, iOS 8+, Safari 9+
+}
+
+button {
+	-webkit-appearance: button; // iOS 8+
+	overflow: visible; // Internet Explorer 11-
+}
+
+details {
+	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+html {
+	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+	overflow-y: scroll; // All browsers without overlaying scrollbars
+	-webkit-text-size-adjust: 100%; // iOS 8+
+}
+
+input {
+	-webkit-border-radius: 0; // iOS 8+
+
+	&[type="button"],
+	&[type="reset"],
+	&[type="submit"] {
+		-webkit-appearance: button; // iOS 8+
+	}
+
+	&[type="number"] {
+		width: auto; // Firefox 36+
+	}
+
+	&[type="search"] {
+		-webkit-appearance: textfield; // Chrome 45+, Safari 9+
+
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration {
+			-webkit-appearance: none; // Chrome 45+, Safari 9+
+		}
+	}
+}
+
+main {
+	display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+pre {
+	overflow: auto; // Internet Explorer 11-
+}
+
+progress {
+	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
+}
+
+.define-small-font-size(@small-font-size, 75%) {
+	font-size: @small-font-size;
+}
+
+small {
+  .define-small-font-size(); // All browsers
+}
+
+summary {
+	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+svg:not(:root) {
+	overflow: hidden; // Internet Explorer 11-
+}
+
+template {
+	display: none; // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
+}
+
+textarea {
+	overflow: auto; // Edge 12+, Internet Explorer 11-
+}
+
+[hidden] {
+	display: none; // Internet Explorer 10-
+}
+
+/*
+ * Universal inheritance
+ */
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+* {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+
+
+/*
+ * Opinionated defaults
+ */
+
+// specify the border style and width of all elements
+
+*,
+::before,
+::after {
+	border-style: solid;
+	border-width: 0;
+}
+
+// specify the core styles of all elements
+.define-background-repeat(@background-repeat: no-repeat) {
+	background: @background-repeat;
+}
+
+* {
+	.define-background-repeat();
+	margin: 0;
+	padding: 0;
+}
+
+// specify the root styles of the document
+
+.define-root-background-color(@root-background-color: #ffffff) {
+	background-color: @root-background-color;
+}
+
+.define-root-box-sizing(@root-box-sizing: border-box) {
+	box-sizing: @root-box-sizing;
+}
+
+.define-root-color(@root-color: #000000) {
+	color: @root-color;
+}
+
+.define-root-cursor(@root-cursor: default) {
+	cursor: @root-cursor;
+}
+
+.define-root-line-height(@root-line-height: 1.5) {
+	line-height: @root-line-height;
+}
+
+.define-root-font-size(@root-font-size: 100%, @root-line-height: 1.5) {
+	font-size: @root-font-size / @root-line-height;
+}
+
+.define-root-font-family(@root-font-family: sans-serif) {
+	font-family: @root-font-family;
+}
+
+:root {
+	.define-root-background-color();
+	.define-root-box-sizing();
+	.define-root-color();
+	.define-root-cursor();
+	.define-root-font-size();
+	.define-root-font-family();
+}
+
+// specify the text decoration of anchors
+.define-anchor-text-decoration(@anchor-text-decoration: none) {
+	text-decoration: @anchor-text-decoration;
+}
+
+a {
+	.define-anchor-text-decoration();
+}
+
+// specify the alignment of media elements
+.define-media-element-vertical-align(@media-element-vertical-align, middle) {
+	vertical-align: @media-element-vertical-align;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	.define-media-element-vertical-align();
+}
+
+// specify the background color of form elements
+.define-form-element-background-color(@form-element-background-color: transparent) {
+	background-color: @form-element-background-color;
+}
+
+button,
+input,
+select,
+textarea {
+	.define-form-element-background-color();
+}
+
+// specify the inherited color and font of form elements
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+// specify the minimum height of form elements
+.define-form-element-min-height(@form-element-min-height: 1.5em) {
+	min-height: @form-element-min-height;
+}
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	.define-form-element-min-height();
+}
+
+// specify the font family of code elements
+.define-monospace-font-family(@monospace-font-family: monospace) {
+	font-family: @monospace-font-family;
+}
+
+code,
+kbd,
+pre,
+samp {
+	.define-monospace-font-family();
+}
+
+// specify the list style of nav lists
+.define-nav-list-style(@define-nav-list-style: none) {
+	list-style: @define-nav-list-style;
+}
+
+nav ol,
+nav ul {
+	.define-nav-list-style();
+}
+
+// specify the standard appearance of selects
+
+select {
+	-moz-appearance: none;    // Firefox 40+
+	-webkit-appearance: none; // Chrome 45+
+
+	&::-ms-expand {
+		display: none;        // Edge 12+, Internet Explorer 11-
+	}
+
+	&::-ms-value {
+		color: currentColor;  // Edge 12+, Internet Explorer 11-
+	}
+}
+
+// specify the border styling of tables
+.define-table-border-collapse(@table-border-collapse: collapse) {
+	border-collapse: @table-border-collapse;
+}
+
+.define-table-border-spacing(@table-border-spacing: 0) {
+	border-spacing: @table-border-spacing;
+}
+
+table {
+	.define-table-border-collapse();
+	.define-table-border-spacing();
+}
+
+// specify the resizability of textareas
+.define-textarea-resize(@textarea-resize: vertical) {
+	resize: @textarea-resize;
+}
+
+textarea {
+	.define-textarea-resize();
+}
+
+// specify the background color, font color, and drop shadow of text selections
+.define-selection-background-color(@selection-background-color: #b3d4fc) {
+	background-color: @selection-background-color;
+}
+
+.define-selection-color(@selection-color: #ffffff) {
+	color: @selection-color;
+}
+
+.define-selection-text-shadow(@selection-text-shadow: none) {
+	text-shadow: @selection-text-shadow;
+}
+
+::-moz-selection {
+	.define-selection-background-color()
+	 // required when declaring ::selection
+	.define-selection-color();
+	.define-selection-text-shadow();
+}
+
+::selection {
+	.define-selection-background-color()
+	 // required when declaring ::selection
+	.define-selection-color();
+	.define-selection-text-shadow();
+}
+
+// specify the progress cursor of updating elements
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+// specify the pointer cursor of trigger elements
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+
+[aria-disabled] {
+	cursor: default;
+}
+
+// specify the style of visually hidden yet accessible elements
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+
+	&:focus {
+		clip: auto;
+	}
+}
+
+// remove delay from tapping on clickable elements
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
