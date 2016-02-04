@@ -1,5 +1,28 @@
 /*! sanitize.css v3.1.1 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 
+@small-font-size: 75%;
+@background-repeat: no-repeat;
+@root-background-color: #ffffff;
+@root-box-sizing: border-box;
+@root-color: #000000;
+@root-cursor: default;
+@root-line-height: 1.5;
+@root-font-size: 100%;
+@root-font-family: sans-serif;
+@anchor-text-decoration: none;
+@media-element-vertical-align: middle;
+@form-element-background-color: transparent;
+@form-element-min-height: 1.5em;
+@monospace-font-family: monospace;
+@define-nav-list-style: none;
+@table-border-collapse: collapse;
+@table-border-spacing: 0;
+@textarea-resize: vertical;
+@selection-background-color: #b3d4fc;
+@selection-color: #ffffff;
+@selection-text-shadow: none;
+
+
 /*
  * Normalization
  */
@@ -58,12 +81,8 @@ progress {
 	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
 }
 
-.define-small-font-size(@small-font-size, 75%) {
-	font-size: @small-font-size;
-}
-
 small {
-  .define-small-font-size(); // All browsers
+  font-size: @small-font-size; // All browsers
 }
 
 summary {
@@ -123,88 +142,44 @@ textarea {
 }
 
 // specify the core styles of all elements
-.define-background-repeat(@background-repeat: no-repeat) {
-	background: @background-repeat;
-}
-
 * {
-	.define-background-repeat();
+	background: @background-repeat;
 	margin: 0;
 	padding: 0;
 }
 
 // specify the root styles of the document
-
-.define-root-background-color(@root-background-color: #ffffff) {
+:root {
 	background-color: @root-background-color;
-}
-
-.define-root-box-sizing(@root-box-sizing: border-box) {
 	box-sizing: @root-box-sizing;
-}
-
-.define-root-color(@root-color: #000000) {
 	color: @root-color;
-}
-
-.define-root-cursor(@root-cursor: default) {
 	cursor: @root-cursor;
-}
-
-.define-root-line-height(@root-line-height: 1.5) {
 	line-height: @root-line-height;
-}
-
-.define-root-font-size(@root-font-size: 100%, @root-line-height: 1.5) {
 	font-size: @root-font-size / @root-line-height;
-}
-
-.define-root-font-family(@root-font-family: sans-serif) {
 	font-family: @root-font-family;
 }
 
-:root {
-	.define-root-background-color();
-	.define-root-box-sizing();
-	.define-root-color();
-	.define-root-cursor();
-	.define-root-font-size();
-	.define-root-font-family();
-}
-
 // specify the text decoration of anchors
-.define-anchor-text-decoration(@anchor-text-decoration: none) {
+a {
 	text-decoration: @anchor-text-decoration;
 }
 
-a {
-	.define-anchor-text-decoration();
-}
-
 // specify the alignment of media elements
-.define-media-element-vertical-align(@media-element-vertical-align, middle) {
-	vertical-align: @media-element-vertical-align;
-}
-
 audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-	.define-media-element-vertical-align();
+	vertical-align: @media-element-vertical-align;
 }
 
 // specify the background color of form elements
-.define-form-element-background-color(@form-element-background-color: transparent) {
-	background-color: @form-element-background-color;
-}
-
 button,
 input,
 select,
 textarea {
-	.define-form-element-background-color();
+	background-color: @form-element-background-color;
 }
 
 // specify the inherited color and font of form elements
@@ -220,10 +195,6 @@ textarea {
 }
 
 // specify the minimum height of form elements
-.define-form-element-min-height(@form-element-min-height: 1.5em) {
-	min-height: @form-element-min-height;
-}
-
 button,
 [type="button"],
 [type="date"],
@@ -243,29 +214,21 @@ button,
 [type="week"],
 select,
 textarea {
-	.define-form-element-min-height();
+	min-height: @form-element-min-height;
 }
 
 // specify the font family of code elements
-.define-monospace-font-family(@monospace-font-family: monospace) {
-	font-family: @monospace-font-family;
-}
-
 code,
 kbd,
 pre,
 samp {
-	.define-monospace-font-family();
+	font-family: @monospace-font-family;
 }
 
 // specify the list style of nav lists
-.define-nav-list-style(@define-nav-list-style: none) {
-	list-style: @define-nav-list-style;
-}
-
 nav ol,
 nav ul {
-	.define-nav-list-style();
+	list-style: @define-nav-list-style;
 }
 
 // specify the standard appearance of selects
@@ -284,53 +247,29 @@ select {
 }
 
 // specify the border styling of tables
-.define-table-border-collapse(@table-border-collapse: collapse) {
+table {
 	border-collapse: @table-border-collapse;
-}
-
-.define-table-border-spacing(@table-border-spacing: 0) {
 	border-spacing: @table-border-spacing;
 }
 
-table {
-	.define-table-border-collapse();
-	.define-table-border-spacing();
-}
-
 // specify the resizability of textareas
-.define-textarea-resize(@textarea-resize: vertical) {
+textarea {
 	resize: @textarea-resize;
 }
 
-textarea {
-	.define-textarea-resize();
-}
-
 // specify the background color, font color, and drop shadow of text selections
-.define-selection-background-color(@selection-background-color: #b3d4fc) {
+::-moz-selection {
 	background-color: @selection-background-color;
-}
-
-.define-selection-color(@selection-color: #ffffff) {
+	 // required when declaring ::selection
 	color: @selection-color;
-}
-
-.define-selection-text-shadow(@selection-text-shadow: none) {
 	text-shadow: @selection-text-shadow;
 }
 
-::-moz-selection {
-	.define-selection-background-color()
-	 // required when declaring ::selection
-	.define-selection-color();
-	.define-selection-text-shadow();
-}
-
 ::selection {
-	.define-selection-background-color()
+	background-color: @selection-background-color;
 	 // required when declaring ::selection
-	.define-selection-color();
-	.define-selection-text-shadow();
+	color: @selection-color;
+	text-shadow: @selection-text-shadow;
 }
 
 // specify the progress cursor of updating elements
