@@ -20,18 +20,6 @@ bower install --save sanitize-css
 npm install sanitize.css
 ```
 
-**Sass**
-
-```scss
-@import 'vendors/sanitize.scss';
-```
-
-**CSS**
-
-```css
-@import url(vendors/sanitize.css);
-```
-
 ## Highlights
 
 - CSS inheritance is universal so that styles are easier to control.
