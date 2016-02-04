@@ -129,11 +129,11 @@ textarea {
 /* specify the root styles of the document */
 
 :root {
-	background-color: var(--html-background-color, #ffffff);
-	box-sizing: var(--html-box-sizing, border-box);
-	color: var(--html-color, #000000);
-	cursor: var(--html-cursor, default);
-	font: var(--html-font-size, 100%)/var(--html-line-height, 1.5) var(--font-family, sans-serif);
+	background-color: var(--root-background-color, #ffffff);
+	box-sizing: var(--root-box-sizing, border-box);
+	color: var(--root-color, #000000);
+	cursor: var(--root-cursor, default);
+	font: var(--root-font-size, 100%)/var(--root-line-height, 1.5) var(--font-family, sans-serif);
 }
 
 /* specify the text decoration of anchors */
