@@ -2,8 +2,7 @@
 
 <img align="right" width="128" height="128" src="http://10up.github.io/sanitize.css/logo.png" alt="">
 
-[![npm][npm-image]][npm-url]
-![bower][bower-image]
+[![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url]
 
 Render elements consistently. Style with best practices.
 
@@ -35,13 +34,13 @@ npm install sanitize.css
 
 ## Highlights
 
-- CSS inheritance is universal so that styles are easier to control ([code](sanitize.css#L86-L101)).
-- The box model is more intuitive with border-box ([reference](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)) ([reference](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)) ([code](sanitize.css#L130)).
-- Smaller font-sizes display consistently across browsers ([reference](https://github.com/servo/servo/issues/3423#issuecomment-56321664)) ([code](sanitize.css#L58-L60)).
-- Monospace fonts render consistently ([reference](http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/)) ([code](sanitize.css#L201-L206)).
-- Border styles work as expected ([reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values)) ([code](sanitize.css#L111-L116)).
-- Text selections containing a drop shadow remain legible ([reference](https://twitter.com/miketaylr/status/12228805301)) ([code](sanitize.css#L245-L249)).
-- Content may be hidden from the screen but not screenreaders ([reference](http://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)) ([reference](https://www.drupal.org/node/897638)) ([code](sanitize.css#L271-L279)).
+- CSS inheritance is universal so that styles are easier to control.
+- The box model is more intuitive with border-box ([reference](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)) ([reference](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)).
+- Smaller font-sizes display consistently across browsers ([reference](https://github.com/servo/servo/issues/3423#issuecomment-56321664)).
+- Monospace fonts render consistently ([reference](http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/)).
+- Border styles work as expected ([reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values)).
+- Text selections containing a drop shadow remain legible ([reference](https://twitter.com/miketaylr/status/12228805301)).
+- Content may be hidden from the screen but not screenreaders ([reference](http://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)) ([reference](https://www.drupal.org/node/897638)).
 
 ## Differences
 
@@ -51,7 +50,7 @@ In **Sanitize.css**, CSS inheritance is assigned universally so that styles casc
 
 ## Options
 
-To give you complete control, **sanitize.css** is available in three flavors; CSS, SCSS, and Stylus. Each flavor allows you to define your own defaults for box-sizing, font family, text rendering, selection, etc. - all without over-declaring them later.
+To give you complete control, **sanitize.css** is available in every major style markup language, including CSS, Less, Sass, SCSS, and Stylus. Each flavor allows you to define your own defaults for every feature — box-sizing, font family, text rendering, selection, etc. — so you never need to re-write these rules later.
 
 ```css
 /* overwrite defaults in sanitize.css */
@@ -63,10 +62,26 @@ To give you complete control, **sanitize.css** is available in three flavors; CS
 import url("vendors/sanitize.css");
 ```
 
+```less
+import "vendors/sanitize.less"
+
+// overwrite defaults in sanitize.less
+@root-font-family: sans-serif;
+@root-color: #333333;
+```
+
+```sass
+// overwrite defaults in sanitize.sass
+$root-font-family: "Open Sans", sans-serif
+$root-color: #333333
+
+import "vendors/sanitize.scss"
+```
+
 ```scss
 // overwrite defaults in sanitize.scss
 $root-font-family: "Open Sans", sans-serif;
-$root-color: #333;
+$root-color: #333333;
 
 import "vendors/sanitize.scss";
 ```
@@ -74,19 +89,18 @@ import "vendors/sanitize.scss";
 ```stylus
 // overwrite defaults in sanitize.styl
 root-font-family = "Open Sans", sans-serif
-root-color = #333
+root-color = #333333
 
 @import "vendors/sanitize.styl"
 ```
 
-- **root-background-color**: the default background color is `#FFFFFF`.
+- **root-background-color**: the default background color is `#ffffff`.
 - **root-box-sizing**: the default box-sizing is `border-box`.
 - **root-color**: the default text color is `#000000`.
 - **root-cursor**: the default cursor is `default`.
 - **root-font-family**: the default font family is `sans-serif`.
 - **root-font-size**: the default font size `100%`.
 - **root-line-height**: the default line height is `1.5`.
-- **root-text-rendering**: the default text-rendering is `optimizeLegibility`.
 - **anchor-text-decoration**: the default anchor text decoration is `none`.
 - **background-repeat**: the default background repeat is `no-repeat`.
 - **form-element-background-color**: the default form background color is `transparent`.
@@ -115,3 +129,4 @@ Currently tested and supported browsers include **Android 4.3-4.4+**, **Chrome 3
 [npm-image]: https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/sanitize.css
 [bower-image]: https://img.shields.io/bower/v/sanitize-css.svg?style=flat-square
+[bower-url]: https://libraries.io/bower/sanitize-css

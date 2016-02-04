@@ -1,6 +1,6 @@
 {
   "name": "sanitize.css",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Render elements consistently. Style with best practices.",
   "main": "index.js",
   "style": "dist/sanitize.css",
@@ -9,6 +9,8 @@
     "LICENSE.md",
     "README.md",
     "sanitize.css",
+    "sanitize.less",
+    "sanitize.sass",
     "sanitize.scss",
     "sanitize.styl"
   ],
@@ -28,17 +30,18 @@
     "iojs": ">=2.0.0",
     "node": ">=0.12.0"
   },
-  "repository": "10up/sanitize.css.git",
+  "repository": "10up/sanitize.css",
   "keywords": [
     "css",
+    "cssnext",
+    "less",
+    "normalize",
+    "postcss",
+    "reset",
     "sass",
     "scss",
-    "stylus",
-    "normalize",
-    "reset",
-    "postcss",
-    "cssnext",
-    "stylelint"
+    "stylelint",
+    "stylus"
   ],
   "author": "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)",
   "license": "CC0-1.0",
