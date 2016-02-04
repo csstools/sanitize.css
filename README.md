@@ -63,7 +63,7 @@ import url("vendors/sanitize.css");
 ```
 
 ```less
-import "vendors/sanitize.less"
+@import "vendors/sanitize.less"
 
 // overwrite defaults in sanitize.less
 @root-font-family: sans-serif;
