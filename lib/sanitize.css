@@ -4,6 +4,11 @@
  * Normalization
  */
 
+abbr[title] {
+	text-decoration: underline; /* Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+ */
+	text-decoration: underline dotted; /* Firefox 40+ */
+}
+
 audio:not([controls]) {
 	display: none; /* Chrome 44-, iOS 8+, Safari 9+ */
 }
@@ -13,6 +18,11 @@ button {
 	overflow: visible; /* Internet Explorer 11- */
 }
 
+button,
+select {
+	text-transform: none; /* Firefox 40+, Internet Explorer 11- */
+}
+
 details {
 	display: block; /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
 }
@@ -20,7 +30,7 @@ details {
 html {
 	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
 	overflow-y: scroll; /* All browsers without overlaying scrollbars */
-	-webkit-text-size-adjust: 100%; /* iOS 8+ */
+	-webkit-text-size-adjust: 100%; /* iOS 8+, Windows Phone 8.1+ */
 }
 
 input {
@@ -56,10 +66,6 @@ pre {
 
 progress {
 	display: inline-block; /* Internet Explorer 11-, Windows Phone 8.1+ */
-}
-
-small {
-	font-size: var(--small-font-size, 75%); /* All browsers */
 }
 
 summary {
@@ -103,11 +109,27 @@ textarea {
 	vertical-align: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
 
 
 /*
  * Opinionated defaults
  */
+
+/* specify the margin and padding of all elements */
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 /* specify the border style and width of all elements */
 
@@ -116,102 +138,6 @@ textarea {
 ::after {
 	border-style: solid;
 	border-width: 0;
-}
-
-/* specify the core styles of all elements */
-
-* {
-	background-repeat: var(--background-repeat, no-repeat);
-	margin: 0;
-	padding: 0;
-}
-
-/* specify the root styles of the document */
-
-:root {
-	background-color: var(--root-background-color, #ffffff);
-	box-sizing: var(--root-box-sizing, border-box);
-	color: var(--root-color, #000000);
-	cursor: var(--root-cursor, default);
-	font: var(--root-font-size, 100%)/var(--root-line-height, 1.5) var(--root-font-family, sans-serif);
-}
-
-/* specify the text decoration of anchors */
-
-a {
-	text-decoration: var(--anchor-text-decoration, none);
-}
-
-/* specify the alignment of media elements */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-	vertical-align: var(--media-element-vertical-align, middle);
-}
-
-/* specify the background color of form elements */
-
-button,
-input,
-select,
-textarea {
-	background-color: var(--form-element-background-color, transparent);
-}
-
-/* specify the inherited color and font of form elements */
-
-button,
-input,
-select,
-textarea {
-	color: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-weight: inherit;
-}
-
-/* specify the minimum height of form elements */
-
-button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
-	min-height: var(--form-element-min-height, 1.5em);
-}
-
-/* specify the font family of code elements */
-
-code,
-kbd,
-pre,
-samp {
-	font-family: var(--monospace-font-family, monospace), monospace;
-}
-
-/* specify the list style of nav lists */
-
-nav ol,
-nav ul {
-	list-style: var(--nav-list-style, none);
 }
 
 /* specify the standard appearance of selects */
@@ -227,27 +153,6 @@ select {
 	&::-ms-value {
 		color: currentColor;  /* Edge 12+, Internet Explorer 11- */
 	}
-}
-
-/* specify the border styling of tables */
-
-table {
-	border-collapse: var(--table-border-collapse, collapse);
-	border-spacing: var(--table-border-spacing, 0);
-}
-
-/* specify the resizability of textareas */
-
-textarea {
-	resize: var(--textarea-resize, vertical);
-}
-
-/* specify the background color, font color, and drop shadow of text selections */
-
-::selection {
-	background-color: var(--selection-background-color, #b3d4fc); /* required when declaring ::selection */
-	color: var(--selection-color, #ffffff);
-	text-shadow: var(--selection-text-shadow, none);
 }
 
 /* specify the progress cursor of updating elements */
@@ -291,4 +196,120 @@ select,
 textarea,
 [tabindex] {
 	touch-action: manipulation;
+}
+
+
+
+/*
+ * Configurable defaults
+ */
+
+/* specify the background repeat of all elements */
+
+* {
+	background-repeat: var(--background-repeat, no-repeat);
+}
+
+/* specify the root styles of the document */
+
+:root {
+	background-color: var(--root-background-color, #ffffff);
+	box-sizing: var(--root-box-sizing, border-box);
+	color: var(--root-color, #000000);
+	cursor: var(--root-cursor, default);
+	font: var(--root-font-size, 100%)/var(--root-line-height, 1.5) var(--root-font-family, sans-serif);
+}
+
+/* specify the text decoration of anchors */
+
+a {
+	text-decoration: var(--anchor-text-decoration, none);
+}
+
+/* specify the alignment of media elements */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: var(--media-element-vertical-align, middle);
+}
+
+/* specify the coloring of form elements */
+
+button,
+input,
+select,
+textarea {
+	background-color: var(--form-element-background-color, transparent);
+	color: var(--form-element-color, inherit);
+}
+
+/* specify the minimum height of form elements */
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	min-height: var(--form-element-min-height, 1.5em);
+}
+
+/* specify the font family of code elements */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--monospace-font-family, monospace), monospace;
+}
+
+/* specify the list style of nav lists */
+
+nav ol,
+nav ul {
+	list-style: var(--nav-list-style, none);
+}
+
+/* specify the font size of small elements */
+
+small {
+	font-size: var(--small-font-size, 75%);
+}
+
+/* specify the border styling of tables */
+
+table {
+	border-collapse: var(--table-border-collapse, collapse);
+	border-spacing: var(--table-border-spacing, 0);
+}
+
+/* specify the resizability of textareas */
+
+textarea {
+	resize: var(--textarea-resize, vertical);
+}
+
+/* specify the background color, font color, and drop shadow of text selections */
+
+::selection {
+	background-color: var(--selection-background-color, #b3d4fc); /* required when declaring ::selection */
+	color: var(--selection-color, #ffffff);
+	text-shadow: var(--selection-text-shadow, none);
 }

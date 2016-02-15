@@ -4,6 +4,11 @@
  * Normalization
  */
 
+abbr[title] {
+	text-decoration: underline; // Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+
+	text-decoration: underline dotted; // Firefox 40+
+}
+
 audio:not([controls]) {
 	display: none; // Chrome 44-, iOS 8+, Safari 9+
 }
@@ -13,6 +18,11 @@ button {
 	overflow: visible; // Internet Explorer 11-
 }
 
+button,
+select {
+	text-transform: none; // Firefox 40+, Internet Explorer 11-
+}
+
 details {
 	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
 }
@@ -20,7 +30,7 @@ details {
 html {
 	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
 	overflow-y: scroll; // All browsers without overlaying scrollbars
-	-webkit-text-size-adjust: 100%; // iOS 8+
+	-webkit-text-size-adjust: 100%; // iOS 8+, Windows Phone 8.1+
 }
 
 input {
@@ -56,10 +66,6 @@ pre {
 
 progress {
 	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
-}
-
-small {
-	font-size: @small-font-size; // All browsers
 }
 
 summary {
@@ -103,11 +109,27 @@ textarea {
 	vertical-align: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
 
 
 /*
  * Opinionated defaults
  */
+
+// specify the margin and padding of all elements
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 // specify the border style and width of all elements
 
@@ -116,102 +138,6 @@ textarea {
 ::after {
 	border-style: solid;
 	border-width: 0;
-}
-
-// specify the core styles of all elements
-
-* {
-	background-repeat: @background-repeat;
-	margin: 0;
-	padding: 0;
-}
-
-// specify the root styles of the document
-
-:root {
-	background-color: @root-background-color;
-	box-sizing: @root-box-sizing;
-	color: @root-color;
-	cursor: @root-cursor;
-	font: @root-font-size/@root-line-height @root-font-family;
-}
-
-// specify the text decoration of anchors
-
-a {
-	text-decoration: @anchor-text-decoration;
-}
-
-// specify the alignment of media elements
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-	vertical-align: @media-element-vertical-align;
-}
-
-// specify the background color of form elements
-
-button,
-input,
-select,
-textarea {
-	background-color: @form-element-background-color;
-}
-
-// specify the inherited color and font of form elements
-
-button,
-input,
-select,
-textarea {
-	color: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-weight: inherit;
-}
-
-// specify the minimum height of form elements
-
-button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
-	min-height: @form-element-min-height;
-}
-
-// specify the font family of code elements
-
-code,
-kbd,
-pre,
-samp {
-	font-family: @monospace-font-family, monospace;
-}
-
-// specify the list style of nav lists
-
-nav ol,
-nav ul {
-	list-style: @nav-list-style;
 }
 
 // specify the standard appearance of selects
@@ -227,33 +153,6 @@ select {
 	&::-ms-value {
 		color: currentColor;  // Edge 12+, Internet Explorer 11-
 	}
-}
-
-// specify the border styling of tables
-
-table {
-	border-collapse: @table-border-collapse;
-	border-spacing: @table-border-spacing;
-}
-
-// specify the resizability of textareas
-
-textarea {
-	resize: @textarea-resize;
-}
-
-// specify the background color, font color, and drop shadow of text selections
-
-::-moz-selection {
-	background-color: @selection-background-color;
-	color: @selection-color;
-	text-shadow: @selection-text-shadow;
-}
-
-::selection {
-	background-color: @selection-background-color;
-	color: @selection-color;
-	text-shadow: @selection-text-shadow;
 }
 
 // specify the progress cursor of updating elements
@@ -301,9 +200,132 @@ textarea,
 
 
 
+/*
+ * Configurable defaults
+ */
+
+// specify the core styles of all elements
+
+* {
+	background-repeat: @background-repeat;
+}
+
+// specify the root styles of the document
+
+:root {
+	background-color: @root-background-color;
+	box-sizing: @root-box-sizing;
+	color: @root-color;
+	cursor: @root-cursor;
+	font: @root-font-size/@root-line-height @root-font-family;
+}
+
+// specify the text decoration of anchors
+
+a {
+	text-decoration: @anchor-text-decoration;
+}
+
+// specify the alignment of media elements
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: @media-element-vertical-align;
+}
+
+// specify the background color of form elements
+
+button,
+input,
+select,
+textarea {
+	background-color: @form-element-background-color;
+	color: @form-element-color;
+}
+
+// specify the minimum height of form elements
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	min-height: @form-element-min-height;
+}
+
+// specify the font family of code elements
+
+code,
+kbd,
+pre,
+samp {
+	font-family: @monospace-font-family, monospace;
+}
+
+// specify the list style of nav lists
+
+nav ol,
+nav ul {
+	list-style: @nav-list-style;
+}
+
+// specify the font size of small elements
+
+small {
+	font-size: @small-font-size;
+}
+
+// specify the border styling of tables
+
+table {
+	border-collapse: @table-border-collapse;
+	border-spacing: @table-border-spacing;
+}
+
+// specify the resizability of textareas
+
+textarea {
+	resize: @textarea-resize;
+}
+
+// specify the background color, font color, and drop shadow of text selections
+
+::-moz-selection {
+	background-color: @selection-background-color;
+	color: @selection-color;
+	text-shadow: @selection-text-shadow;
+}
+
+::selection {
+	background-color: @selection-background-color;
+	color: @selection-color;
+	text-shadow: @selection-text-shadow;
+}
+
+
+
 @anchor-text-decoration: none;
 @background-repeat: no-repeat;
 @form-element-background-color: transparent;
+@form-element-color: inherit;
 @form-element-min-height: 1.5em;
 @media-element-vertical-align: middle;
 @monospace-font-family: monospace;
