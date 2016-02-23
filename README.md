@@ -63,7 +63,7 @@ import url("vendors/sanitize.css");
 $root-font-family: "Open Sans", sans-serif
 $root-color: #333333
 
-import "vendors/sanitize.scss"
+import "vendors/sanitize.sass"
 ```
 
 ```scss
