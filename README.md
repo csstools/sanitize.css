@@ -1,5 +1,7 @@
 # sanitize.css
 
+[![Join the chat at https://gitter.im/10up/sanitize.css](https://badges.gitter.im/10up/sanitize.css.svg)](https://gitter.im/10up/sanitize.css?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <img align="right" width="128" height="128" src="http://10up.github.io/sanitize.css/logo.png" alt="">
 
 [![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url]
