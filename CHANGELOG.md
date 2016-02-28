@@ -1,14 +1,14 @@
-## 3.2.0 (2015-02-03)
+## 3.2.0 (2016-02-03)
 
 - Added: `selection.less`
 - Updated: Use `root`-prefixed values across all formats
 - Updated: Documentation
 
-## 3.1.1 (2015-02-01)
+## 3.1.1 (2016-02-01)
 
 - Updated: `box-sizing` variable corrected to `border-box` in sass, scss, styl
 
-## 3.1.0 (2015-02-01)
+## 3.1.0 (2016-02-01)
 
 - Added: Project configuration (.editorconfig)
 - Added: Style linting rules and tests
