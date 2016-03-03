@@ -3,14 +3,20 @@ var postcss   = require('postcss');
 var reporter  = require('postcss-reporter');
 var stylelint = require('stylelint');
 
+var enc  = 'utf8';
+
+var opts = {
+	from: 'lib/sanitize.css'
+};
+
+var reporterOpts = {
+	clearMessages: true,
+	throwError: true
+};
+
 postcss([
 	stylelint(),
-	reporter({
-		clearMessages: true,
-		throwError: true
-	})
-]).process(fs.readFileSync('sanitize.css', 'utf8'), {
-	from: 'sanitize.css'
-}).catch(function (error) {
+	reporter(reporterOpts)
+]).process(fs.readFileSync(opts.from, enc), opts).catch(function (error) {
 	console.error(error.stack);
 });

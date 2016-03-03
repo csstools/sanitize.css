@@ -1,11 +1,23 @@
-/*! sanitize.css v3.2.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+
+// Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1
 
 /*
  * Normalization
  */
 
+abbr[title] {
+	text-decoration: underline; // Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+
+	text-decoration: underline dotted; // Firefox 40+
+}
+
 audio:not([controls]) {
 	display: none; // Chrome 44-, iOS 8+, Safari 9+
+}
+
+b,
+strong {
+	font-weight: bolder; // Edge 12+, Safari 6.2+, and Chrome 18+
 }
 
 button {
@@ -13,14 +25,35 @@ button {
 	overflow: visible; // Internet Explorer 11-
 }
 
+button,
+input {
+	&::-moz-focus-inner {
+		border: 0; // Firefox 4+
+		padding: 0; // Firefox 4+
+	}
+
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText; // Firefox 4+
+	}
+}
+
+button,
+select {
+	text-transform: none; // Firefox 40+, Internet Explorer 11-
+}
+
 details {
 	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+}
+
+hr {
+	overflow: visible; // Internet Explorer 11-, Edge 12+
 }
 
 html {
 	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
 	overflow-y: scroll; // All browsers without overlaying scrollbars
-	-webkit-text-size-adjust: 100%; // iOS 8+
+	-webkit-text-size-adjust: 100%; // iOS 8+, Windows Phone 8.1+
 }
 
 input {
@@ -56,10 +89,6 @@ pre {
 
 progress {
 	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
-}
-
-small {
-	font-size: @small-font-size; // All browsers
 }
 
 summary {
@@ -103,11 +132,27 @@ textarea {
 	vertical-align: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
 
 
 /*
  * Opinionated defaults
  */
+
+// specify the margin and padding of all elements
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 // specify the border style and width of all elements
 
@@ -118,12 +163,80 @@ textarea {
 	border-width: 0;
 }
 
+// remove the tapping delay from clickable elements
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
+
+// specify the standard appearance of selects
+
+select {
+	-moz-appearance: none;    // Firefox 40+
+	-webkit-appearance: none; // Chrome 45+
+
+	&::-ms-expand {
+		display: none;        // Edge 12+, Internet Explorer 11-
+	}
+
+	&::-ms-value {
+		color: currentColor;  // Edge 12+, Internet Explorer 11-
+	}
+}
+
+// use current current as the default fill of svg elements
+
+svg {
+	fill: currentColor;
+}
+
+// specify the progress cursor of updating elements
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+// specify the pointer cursor of trigger elements
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+
+[aria-disabled] {
+	cursor: default;
+}
+
+// specify the style of visually hidden yet accessible elements
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+
+	&:focus {
+		clip: auto;
+	}
+}
+
+
+
+/*
+ * Configurable defaults
+ */
+
 // specify the core styles of all elements
 
 * {
 	background-repeat: @background-repeat;
-	margin: 0;
-	padding: 0;
 }
 
 // specify the root styles of the document
@@ -160,18 +273,7 @@ input,
 select,
 textarea {
 	background-color: @form-element-background-color;
-}
-
-// specify the inherited color and font of form elements
-
-button,
-input,
-select,
-textarea {
-	color: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-weight: inherit;
+	color: @form-element-color;
 }
 
 // specify the minimum height of form elements
@@ -214,19 +316,10 @@ nav ul {
 	list-style: @nav-list-style;
 }
 
-// specify the standard appearance of selects
+// specify the font size of small elements
 
-select {
-	-moz-appearance: none;    // Firefox 40+
-	-webkit-appearance: none; // Chrome 45+
-
-	&::-ms-expand {
-		display: none;        // Edge 12+, Internet Explorer 11-
-	}
-
-	&::-ms-value {
-		color: currentColor;  // Edge 12+, Internet Explorer 11-
-	}
+small {
+	font-size: @small-font-size;
 }
 
 // specify the border styling of tables
@@ -256,54 +349,12 @@ textarea {
 	text-shadow: @selection-text-shadow;
 }
 
-// specify the progress cursor of updating elements
-
-[aria-busy="true"] {
-	cursor: progress;
-}
-
-// specify the pointer cursor of trigger elements
-
-[aria-controls] {
-	cursor: pointer;
-}
-
-// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
-
-[aria-disabled] {
-	cursor: default;
-}
-
-// specify the style of visually hidden yet accessible elements
-
-[hidden][aria-hidden="false"] {
-	clip: rect(0 0 0 0);
-	display: inherit;
-	position: absolute;
-
-	&:focus {
-		clip: auto;
-	}
-}
-
-// remove delay from tapping on clickable elements
-
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-	touch-action: manipulation;
-}
-
 
 
 @anchor-text-decoration: none;
 @background-repeat: no-repeat;
 @form-element-background-color: transparent;
+@form-element-color: inherit;
 @form-element-min-height: 1.5em;
 @media-element-vertical-align: middle;
 @monospace-font-family: monospace;

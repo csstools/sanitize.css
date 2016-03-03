@@ -1,3 +1,12 @@
+## 3.3.0 (2016-03-03)
+
+- Added: `b` and `strong` normalization
+- Added: `::-moz-focus-inner` normalization
+- Added: `hr` normalization
+- Added: `svg` fill as the current color
+- Updated: Organized rules into normalization, universal inheritance, opinionated defaults, and configurable defaults
+- Updated: Moved source and compiled libraries
+
 ## 3.2.0 (2016-02-03)
 
 - Added: `selection.less`
