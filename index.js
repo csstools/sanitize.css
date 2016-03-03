@@ -5,7 +5,7 @@ var enc  = 'utf8';
 
 var opts = {
 	from: 'lib/sanitize.css',
-	to:   'dist/sanitize.css'
+	to:   'sanitize.css'
 };
 
 cssnext.process(fs.readFileSync(opts.from, enc), opts).then(function (result) {

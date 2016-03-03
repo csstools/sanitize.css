@@ -1,14 +1,23 @@
-## 3.2.0 (2015-02-03)
+## 3.3.0 (2016-03-03)
+
+- Added: `b` and `strong` normalization
+- Added: `::-moz-focus-inner` normalization
+- Added: `hr` normalization
+- Added: `svg` fill as the current color
+- Updated: Organized rules into normalization, universal inheritance, opinionated defaults, and configurable defaults
+- Updated: Moved source and compiled libraries
+
+## 3.2.0 (2016-02-03)
 
 - Added: `selection.less`
 - Updated: Use `root`-prefixed values across all formats
 - Updated: Documentation
 
-## 3.1.1 (2015-02-01)
+## 3.1.1 (2016-02-01)
 
 - Updated: `box-sizing` variable corrected to `border-box` in sass, scss, styl
 
-## 3.1.0 (2015-02-01)
+## 3.1.0 (2016-02-01)
 
 - Added: Project configuration (.editorconfig)
 - Added: Style linting rules and tests

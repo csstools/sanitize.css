@@ -1,4 +1,6 @@
-/*! sanitize.css v3.2.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+
+// Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1
 
 /*
  * Normalization
@@ -11,9 +13,22 @@ abbr[title]
 audio:not([controls])
 	display: none // Chrome 44-, iOS 8+, Safari 9+
 
+b,
+strong
+	font-weight: bolder // Edge 12+, Safari 6.2+, and Chrome 18+
+
 button
 	-webkit-appearance: button // iOS 8+
 	overflow: visible // Internet Explorer 11-
+
+button,
+input
+	&::-moz-focus-inner
+		border: 0; // Firefox 4+
+		padding: 0; // Firefox 4+
+
+	&:-moz-focusring
+		outline: 1px dotted ButtonText; // Firefox 4+
 
 button,
 select
@@ -21,6 +36,9 @@ select
 
 details
 	display: block // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+
+hr
+	overflow: visible // Internet Explorer 11-, Edge 12+
 
 html
 	-ms-overflow-style: -ms-autohiding-scrollbar // Edge 12+, Internet Explorer 11-
@@ -115,6 +133,18 @@ textarea
 	border-style: solid
 	border-width: 0
 
+// remove the tapping delay from clickable elements
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex]
+	touch-action: manipulation
+
 // specify the standard appearance of selects
 
 select
@@ -126,6 +156,11 @@ select
 
 	&::-ms-value
 		color: currentColor  // Edge 12+, Internet Explorer 11-
+
+// use current current as the default fill of svg elements
+
+svg
+	fill: currentColor
 
 // specify the progress cursor of updating elements
 
@@ -151,18 +186,6 @@ select
 
 	&:focus
 		clip: auto
-
-// remove delay from tapping on clickable elements
-
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex]
-	touch-action: manipulation
 
 
 

@@ -61,7 +61,7 @@
 		"selector-list-comma-space-before": "never",
 
 		"rule-nested-empty-line-before": ["always", { except: ["first-nested"], ignore: ["after-comment"] }],
-		"rule-no-duplicate-properties": true,
+		"rule-no-duplicate-properties": null,
 		"rule-no-shorthand-property-overrides": true,
 		"rule-non-nested-empty-line-before": "always",
 		"rule-properties-order": "alphabetical",
