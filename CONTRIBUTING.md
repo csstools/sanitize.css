@@ -13,7 +13,7 @@ Remember, a bug is a _demonstrable problem_ caused by _our_ code.
 
 Pull requests are the greatest contributions, so be sure they are focused in scope, and do avoid unrelated commits.
 
-1. To begin, [fork this project], clone your fork, and add our upstream.
+1. To begin, fork this project, clone your fork, and add our upstream.
    ```bash
    # Clone your fork of the repo into the current directory
    git clone https://github.com/<your-username>/sanitize.css
@@ -53,8 +53,7 @@ Pull requests are the greatest contributions, so be sure they are focused in sco
 
 5. Now [open a pull request] with a clear title and description.
 
-[already been reported]: issues
-[fork this project]:     fork
+[already been reported]: https://github.com/10up/sanitize.css/issues
 [live example]:          http://codepen.io/pen
 [open a pull request]:   https://help.github.com/articles/using-pull-requests/
 [reduced test case]:     https://css-tricks.com/reduced-test-cases/
