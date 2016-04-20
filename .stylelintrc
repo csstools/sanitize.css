@@ -6,7 +6,7 @@
 		"color-hex-length": "long",
 		"color-no-hex": null,
 		"color-no-invalid-hex": true,
-		"color-no-named": true,
+		"color-named": "never",
 
 		"number-leading-zero": "never",
 		"number-max-precision": 8,
@@ -34,7 +34,7 @@
 		"declaration-colon-space-after": "always-single-line",
 		"declaration-colon-space-before": "never",
 		"declaration-no-important": true,
-		"declaration-block-no-single-line": null,
+		"block-no-single-line": null,
 		"declaration-block-semicolon-newline-after": "always",
 		"declaration-block-semicolon-newline-before": "never-multi-line",
 		"declaration-block-semicolon-space-after": "always-single-line",
@@ -61,11 +61,11 @@
 		"selector-list-comma-space-before": "never",
 
 		"rule-nested-empty-line-before": ["always", { except: ["first-nested"], ignore: ["after-comment"] }],
-		"rule-no-duplicate-properties": null,
-		"rule-no-shorthand-property-overrides": true,
+		"declaration-block-no-duplicate-properties": null,
+		"declaration-block-no-shorthand-property-overrides": true,
 		"rule-non-nested-empty-line-before": "always",
-		"rule-properties-order": "alphabetical",
-		"rule-trailing-semicolon": "always",
+		"declaration-block-properties-order": "alphabetical",
+		"declaration-block-trailing-semicolon": "always",
 
 		"root-no-standard-properties": null,
 
