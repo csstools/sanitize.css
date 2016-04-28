@@ -10,7 +10,8 @@
     "lib/sanitize.less",
     "lib/sanitize.sass",
     "lib/sanitize.scss",
-    "lib/sanitize.styl"
+    "lib/sanitize.styl",
+    "lib/sanitize.sss"
   ],
   "dependencies": {},
   "devDependencies": {
