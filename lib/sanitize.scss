@@ -246,7 +246,7 @@ svg {
 	box-sizing: if(variable-exists(root-box-sizing), $root-box-sizing, border-box);
 	color: if(variable-exists(root-color), $root-color, #000000);
 	cursor: if(variable-exists(root-cursor), $root-cursor, default);
-	font: if(variable-exists(root-font-size), $root-font-size, 100%)/#{if(variable-exists(root-line-height), $root-line-height, 1.5)} if(variable-exists(root-font-family), $root-font-family, sans-serif);
+	font: #{if(variable-exists(root-font-size), $root-font-size, 100%)}/#{if(variable-exists(root-line-height), $root-line-height, 1.5)} if(variable-exists(root-font-family), $root-font-family, sans-serif);
 }
 
 // specify the text decoration of anchors
