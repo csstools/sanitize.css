@@ -93,7 +93,7 @@ Controls the page box model inherited by all elements (default: `border-box`)
 
 ##### `root-color`
 
-Controls the page text color inherited by all elements (default: `#ffffff`)
+Controls the page text color inherited by all elements (default: `#000000`)
 
 ##### `root-cursor`
 
