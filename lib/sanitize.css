@@ -191,7 +191,7 @@ select {
 	}
 }
 
-/* use current current as the default fill of svg elements */
+/* use current color as the default fill of svg elements */
 
 svg {
 	fill: currentColor;
