@@ -1,11 +1,12 @@
 {
   "name": "sanitize-css",
-  "description": "Render elements consistently. Style with best practices.",
+  "description": "A best practices alternative to CSS resets",
   "main": "sanitize.css",
-  "license": "CC0-1.0",
-  "ignore": [
-    "package.json"
+  "authors": [
+    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)"
   ],
+  "homepage": "http://10up.github.io/sanitize.css",
+  "license": "CC0-1.0",
   "keywords": [
     "css",
     "sass",
@@ -17,8 +18,12 @@
     "cssnext",
     "stylelint"
   ],
-  "authors": [
-    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)"
-  ],
-  "homepage": "http://10up.github.io/sanitize.css"
+  "ignore": [
+    "node_modules",
+    ".editorconfig",
+    ".travis.yml",
+    "index.js",
+    "test.js",
+    "package.json"
+  ]
 }
