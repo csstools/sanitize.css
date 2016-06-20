@@ -1,31 +1,19 @@
 {
   "name": "sanitize.css",
-  "version": "3.3.0",
-  "description": "Render elements consistently. Follow best practices.",
+  "version": "4.0.0",
+  "description": "The best-practices alternative to CSS resets.",
   "main": "index.js",
   "style": "sanitize.css",
-  "files": [
-    "sanitize.css",
-    "lib/sanitize.css",
-    "lib/sanitize.less",
-    "lib/sanitize.sass",
-    "lib/sanitize.scss",
-    "lib/sanitize.styl",
-    "lib/sanitize.sss"
-  ],
-  "dependencies": {},
   "devDependencies": {
-    "postcss": "^5.0.19",
-    "postcss-cssnext": "^2.4.0",
+    "postcss": "^5.0.21",
     "postcss-reporter": "^1.3.3",
-    "stylelint": "^6.0.2"
+    "stylelint": "^6.5.1",
+    "stylelint-config-10up": "github:jonathantneal/stylelint-config-10up"
   },
   "scripts": {
-    "build": "node index.js",
-    "test": "node test.js"
+    "test": "stylelint sanitize.css"
   },
   "engines": {
-    "iojs": ">=2.0.0",
     "node": ">=0.12.0"
   },
   "repository": "10up/sanitize.css",
@@ -44,5 +32,8 @@
   "author": "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)",
   "license": "CC0-1.0",
   "bugs": "https://github.com/10up/sanitize.css/issues",
-  "homepage": "https://github.com/10up/sanitize.css#readme"
+  "homepage": "https://github.com/10up/sanitize.css#readme",
+  "stylelint": {
+    "extends": "stylelint-config-10up"
+  }
 }

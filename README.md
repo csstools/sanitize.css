@@ -2,193 +2,223 @@
 
 <a href="https://github.com/10up/sanitize.css"><img src="https://10up.github.io/sanitize.css/logo.svg" alt="PostHTML Logo" width="80" height="80" align="right"></a>
 
-> Render elements consistently. Follow best practices.
+> The best-practices alternative to CSS resets.
 
-[![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url] [![gitter][gitter-image]][gitter-url]
+[![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url]
+[![gitter][gitter-image]][gitter-url]
 
-**NPM**
+##### NPM
 
 ```sh
 npm install --save-dev sanitize.css
 ```
 
-**Bower**
+##### Bower
 
 ```sh
 bower install --save sanitize-css
 ```
 
-[sanitize.css] corrects broken and missing styles in all browsers so that elements always render consistently. Next, it adds new default styles based on modern best practices. Finally, it exposes opinionated defaults as governable variables.
+##### CDN
+
+See https://cdnjs.com/libraries/10up-sanitize.css
+
+##### Download
+
+See https://rawgit.com/10up/sanitize.css/release/4.0.0/sanitize.css
+
+[sanitize.css] corrects broken and missing styles while following emerging best
+practices so elements render consistently in all browsers, and you spend
+less time writing rules you’ll likely never change.
+
+## Features
+
+##### Backgrounds should not repeat by default
 
 ```css
-*,
-::before,
-::after {
+* {
+	background-repeat: no-repeat;
+}
+```
+
+##### Box sizing should be inherited and default to border-box
+
+```css
+* {
 	box-sizing: inherit;
 }
 
-:root {
-	box-sizing: var(--root-box-sizing, border-box);
+html {
+	box-sizing: border-box;
 }
 ```
 
-Each new default is easily configurable with variables available in your favorite CSS, Less, Sass, SCSS, and Stylus flavors.
+##### Cursor should only change to hint non-obvious interfaces
 
 ```css
-@import url("node_modules/sanitize.css/sanitize.css");
-
-/* overwrite defaults in sanitize.css */
-:root {
-	--root-box-sizing: border-box;
-	--root-font-family: "Open Sans", sans-serif;
-	--root-color: #333;
+html {
+	cursor: default;
 }
 ```
 
-```less
-@import "node_modules/sanitize.css/sanitize.less";
+##### Regular text should be sans serif with a comfortable line height
 
-// overwrite defaults in sanitize.less
-@root-box-sizing: border-box;
-@root-font-family: sans-serif;
-@root-color: #333333;
+```css
+html {
+	font-family: sans-serif
+	line-height: 1.5;
+}
 ```
 
-```sass
-// overwrite defaults in sanitize.sass
-$root-box-sizing: border-box
-$root-font-family: "Open Sans", sans-serif
-$root-color: #333333
+##### Documents should not use a margin for outer padding
 
-import "node_modules/sanitize.css/sanitize.scss"
+```css
+body {
+	margin: 0;
+}
 ```
 
-```scss
-// overwrite defaults in sanitize.scss
-$root-box-sizing: border-box;
-$root-font-family: "Open Sans", sans-serif;
-$root-color: #333333;
+##### Navigation lists should not include a marker style
 
-import "node_modules/sanitize.css/sanitize.scss";
+```css
+nav ol, nav ul {
+	list-style: none;
+}
 ```
 
-```stylus
-// overwrite defaults in sanitize.styl
-root-box-sizing = border-box;
-root-font-family = "Open Sans", sans-serif
-root-color = #333333
+##### Text selections should not include text shadows
 
-@import "node_modules/sanitize.css/sanitize.styl"
+```css
+::selection {
+	text-shadow: none;
+}
 ```
 
-## Variables
+##### Media elements should align to the text center of other content
 
-##### `root-background-color`
+```css
+audio, canvas, iframe, img, svg, video {
+	vertical-align: middle;
+}
+```
 
-Controls the page background color (default: `#ffffff`)
+##### SVGs should fallback to their surrounding text color
 
-##### `root-box-sizing`
+```css
+svg {
+	fill: currentColor;
+}
+```
 
-Controls the page box model inherited by all elements (default: `border-box`)
+##### Outlines are redundant on hovered links
 
-##### `root-color`
+```css
+:hover {
+	outline-width: 0;
+}
+```
 
-Controls the page text color inherited by all elements (default: `#000000`)
+##### Tables should not include additional border spacing
 
-##### `root-cursor`
+```css
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+```
 
-Controls the default page cursor (default: `default`)
+##### Form controls should be fully style-able
 
-##### `root-font-family`
+```css
+button, input, select, textarea {
+	background-color: transparent;
+	border-style: none;
+	color: inherit;
+	font-size: 1em;
+}
+```
 
-Controls the page font inherited by all elements (default: `sans-serif`)
+##### Textarea should only resize vertically by default
 
-##### `root-font-size`
+```css
+textarea {
+	resize: vertical;
+}
+```
 
-Controls the page text size inherited by all elements (default: `100%`)
+##### ARIA roles should include visual cursor hints
 
-##### `root-line-height`
+```css
+[aria-busy="true"] {
+	cursor: progress;
+}
 
-Controls the page text line height inherited by all elements (default: `1.5`)
+[aria-controls] {
+	cursor: pointer;
+}
 
-##### `background-repeat`
+[aria-disabled] {
+	cursor: default;
+}
+```
 
-Controls how background images are repeated on all elements (default: `no-repeat`)
+##### Single taps should be dispatched immediately on clickable elements
 
-##### `form-element-background-color`
+```css
+a, area, button, input, label, select, textarea, [tabindex] {
+	-ms-touch-action: manipulation; /* 1 */
+	touch-action: manipulation;
+}
+```
 
-Controls the background color of form controls (`button`, `input`, `select`, `textarea`) (default: `transparent`)
+##### Visually hidden content should remain accessible
 
-##### `form-element-color`
+```css
+[hidden][aria-hidden="false"] {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+}
 
-Controls the text color of form controls (`button`, `input`, `select`, `textarea`) (default: `inherit`)
-
-##### `form-element-min-height`
-
-Controls the minimum height of form controls (`button`, `[type="button"]`, `[type="date"]`, `[type="datetime"]`, `[type="datetime-local"]`, `[type="email"]`, `[type="month"]`, `[type="number"]`, `[type="password"]`, `[type="reset"]`, `[type="search"]`, `[type="submit"]`, `[type="tel"]`, `[type="text"]`, `[type="time"]`, `[type="url"]`, `[type="week"]`, `select`, `textarea`) (default: `1.5em`)
-
-##### `media-element-vertical-align`
-
-Controls the vertical align of media elements (`audio`, `canvas`, `iframe`, `img`, `svg`, `video`) (default: `middle`)
-
-##### `monospace-font-family`
-
-Controls the font used by markup elements (`code`, `kbd`, `pre`, `samp`) (default: `monospace`)
-
-##### `nav-list-style`
-
-Controls the list style for navigation lists (`nav ol, nav ul`) (default: `none`)
-
-##### `selection-background-color`
-
-Controls the background color of selected text (default: `#b3d4fc`)
-
-##### `selection-color`
-
-Controls the text color of selected text (default: `#ffffff`)
-
-##### `selection-text-shadow`
-
-Controls the text shadow of selected text (default: `none`)
-
-##### `small-font-size`
-
-Controls the text size of `small` elements (default: `75%`)
-
-##### `table-border-collapse`
-
-Controls how borders collapse within `table` elements (default: `collapse`)
-
-##### `table-border-spacing`
-
-Controls the distance between borders within `table` elements (default: `0`)
-
-##### `textarea-resize`
-
-Controls the resizability of `textarea` elements (default: `vertical`)
+[hidden][aria-hidden="false"]:focus {
+	clip: auto;
+}
+```
 
 ## Differences
 
-[sanitize.css] styles elements more consistently with developers’ expectations and preferences. [normalize.css] styles elements more consistently between browsers. [reset.css] unstyles every element. Both sanitize.css and normalize.css are maintained in sync, and both projects correct browser bugs while carefully testing and documenting every change.
+[sanitize.css] styles elements more consistently with developers’ expectations
+and preferences. [normalize.css] styles elements more consistently between
+browsers. [reset.css] unstyles every element. Both sanitize.css and
+normalize.css are maintained in sync, and both projects correct browser bugs
+while carefully testing and documenting every change.
 
 ## Support
 
-At present, sanitize.css supports the current and previous major releases of common web browsers. When a new version is released, we begin supporting that newer version and stop supporting the third version back. Additionally, many older browsers remain supported without supplementary CSS.
+At present, sanitize.css supports the current and previous major releases of
+popular web browsers. When a new version is released, we begin supporting that
+newer version and stop supporting the third version back. Additionally, many
+older browsers remain supported without supplementary CSS.
 
-Currently tested and supported browsers include **Android 4.3-4.4+**, **Chrome 47-48+**, **Edge 12-13+**, **Firefox 43-44+**, **Internet Explorer 10-11**, **iOS 7-8+**, **Opera 34-35+**, **Safari 8-9+**, and **Windows Phone 8.1+**.
+Currently tested and supported browsers in the latest release include
+**Android 4.3-4.4+**, **Chrome 50-51+**, **Edge 12-13+**, **Firefox 46-47+**,
+**Internet Explorer 10-11**, **iOS 7-8+**, **Opera 37-38+**, **Safari 8-9+**,
+and **Windows Phone 8.1+**.
 
-Additionally tested and supported browsers (requiring no supplementary CSS) include **Internet Explorer 9** and **Safari 7**.
+Additionally tested and supported browsers (requiring little supplementary CSS)
+include **Internet Explorer 9** and **Safari 7**.
 
 ## License
 
 **sanitize.css** is dedicated to the [public domain](LICENSE.md).
 
-[npm-image]: https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/sanitize.css
-[bower-image]: https://img.shields.io/bower/v/sanitize-css.svg?style=flat-square
-[bower-url]: https://libraries.io/bower/sanitize-css
-[gitter-image]: https://img.shields.io/gitter/room/10up/sanitize.css.svg
-[gitter-url]: https://gitter.im/10up/sanitize.css
+[npm-image]:    https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square
+[npm-url]:      https://www.npmjs.com/package/sanitize.css
+[bower-image]:  https://img.shields.io/bower/v/sanitize-css.svg?style=flat-square
+[bower-url]:    https://libraries.io/bower/sanitize-css
+[gitter-image]: https://img.shields.io/gitter/room/10up/sanitize.css.svg?style=flat-square
+[gitter-url]:   https://gitter.im/10up/sanitize.css
+
 [normalize.css]: https://github.com/necolas/normalize.css
-[reset.css]: http://meyerweb.com/eric/tools/css/reset/
-[sanitize.css]: https://github.com/10up/sanitize.css
+[reset.css]:     http://meyerweb.com/eric/tools/css/reset/
+[sanitize.css]:  https://github.com/10up/sanitize.css
