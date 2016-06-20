@@ -2,10 +2,16 @@
 
 <a href="https://github.com/10up/sanitize.css"><img src="https://10up.github.io/sanitize.css/logo.svg" alt="PostHTML Logo" width="80" height="80" align="right"></a>
 
-> The best-practices alternative to CSS resets.
+> The best-practices CSS foundation.
 
 [![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url]
 [![gitter][gitter-image]][gitter-url]
+
+[sanitize.css] is a CSS library that corrects broken and missing styles in all
+browsers, preserving useful defaults rather than unstyling everything. It’s
+developed alongside [normalize.css], so every normalization includes the
+browsers or browser versions being targeted, and every opinionated change is
+marked and documented.
 
 ##### NPM
 
@@ -26,12 +32,6 @@ See https://cdnjs.com/libraries/10up-sanitize.css
 ##### Download
 
 See https://rawgit.com/10up/sanitize.css/release/4.0.0/sanitize.css
-
-[sanitize.css] is a CSS library that corrects broken and missing styles in all
-browsers, preserving useful defaults rather than unstyling everything, so most
-often none of its styles ever need to be overwritten. It’s developed alongside
-[normalize.css], so every normalization includes the browsers or browser
-versions being targeted, and every opinionated change is marked and documented.
 
 ## Features
 
