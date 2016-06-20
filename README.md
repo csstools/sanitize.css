@@ -27,9 +27,11 @@ See https://cdnjs.com/libraries/10up-sanitize.css
 
 See https://rawgit.com/10up/sanitize.css/release/4.0.0/sanitize.css
 
-[sanitize.css] corrects broken and missing styles while following emerging best
-practices so elements render consistently in all browsers, and you spend
-less time writing rules you’ll likely never change.
+[sanitize.css] is a CSS library that corrects broken and missing styles in all
+browsers, preserving useful defaults rather than unstyling everything, so most
+often none of its styles ever need to be overwritten. It’s developed alongside
+[normalize.css], so every normalization includes the browsers or browser
+versions being targeted, and every opinionated change is marked and documented.
 
 ## Features
 
