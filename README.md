@@ -16,7 +16,7 @@ marked and documented.
 ##### NPM
 
 ```sh
-npm install --save-dev sanitize.css
+npm install --save sanitize.css
 ```
 
 ##### Bower
@@ -27,11 +27,7 @@ bower install --save sanitize-css
 
 ##### CDN
 
-See https://cdnjs.com/libraries/10up-sanitize.css
-
-##### Download
-
-See https://rawgit.com/10up/sanitize.css/release/4.0.0/sanitize.css
+https://cdnjs.com/libraries/10up-sanitize.css
 
 ## Features
 
