@@ -3,17 +3,17 @@
 <title>sanitize.css</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="sanitize.css" rel="stylesheet">
+<link href="4.0.0/sanitize.css" rel="stylesheet">
 <style>
-
-:root {
-	background: #EEE;
+html {
+	background-color: #eeeeee;
 	height: 100%;
 }
 
 body {
-	background: #FFF;
-	margin: 0 auto;
+	background-color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 50rem;
 	min-height: 100%;
 }
@@ -36,26 +36,19 @@ h1 {
 
 h2,
 hr {
+	box-shadow: 0 -.5rem 0 0 rgba(0,0,0,.1);
+	font-size: 1.5rem;
+	margin-top: 2rem;
 	padding-top: 1.5rem;
 }
 
-h2,
-subhead {
+h2 {
 	line-height: 1.25;
 	margin-bottom: 2rem;
 }
 
-h2,
 hr {
-	box-shadow: 0 -.5rem 0 0 rgba(0,0,0,.1);
-	font-size: 1.5rem;
-	margin-top: 2rem;
-}
-
-h3,
-p,
-pre {
-	margin-top: 1rem;
+	border-style: none;
 }
 
 p {
@@ -63,121 +56,105 @@ p {
 }
 
 pre {
-	background-color: #F8F8F8;
-	color: #333;
+	overflow-y: scroll;
+}
+
+.btn {
+	background-color: #007dba;
+	border-radius: .25em;
+	color: #ffffff;
+	display: inline-block;
+	margin: 0 .25em .25em;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+#installation a:not([class]), #why a:not([class]) {
+	box-shadow: inset 0 -0.12em 0 0 #ffffff, inset 0 -.16em 0 0 rgba(245, 245, 245, 0.5), inset 0 -.16em 0 0 currentColor;
+	text-decoration: none;
+	text-shadow: .05em 0 #ffffff, -0.05em 0 #ffffff, 1.5px 0 #ffffff, -1.5px 0 #ffffff;
+}
+
+#installation h3 {
+	font-size: 80%;
+	margin-top: 1.5rem;
+	padding-left: .625em;
+}
+
+#installation p, #installation pre {
 	line-height: 1.5;
 	padding: 0.75em .625em;
 }
 
-subhead {
-	color: rgba(0,0,0,.5);
-	display: block;
-	font-style: italic;
+#installation pre {
+	background-color: #f8f8f8;
+	color: #333;
 }
 
-subhead > span {
-	display: inline-block;
+#installation [data-keyword] {
+	color: #a71d5d;
 }
 
-.btn {
-	background: linear-gradient(to bottom, #3498DB, #2980B9);
-	border-radius: .25em;
-	color: #FFF;
-	display: inline-block;
-	margin: 0 .25em .25em;
-	padding: .5em 1em;
+#installation [data-method]  {
+	color: #007ba5;
 }
 
-.chatter {
-	color: #555;
+#installation [data-string]  {
+	color: #c84800;
 }
 
-.chatter a {
-	box-shadow: 0 1px 0 0 #55F;
-	color: #55F;
+#why p {
+	color: #444;
 }
-
-span[data-keyword] { color: #A71D5D; }
-span[data-method]  { color: #0086B3; }
-span[data-string]  { color: #ED6A43; }
-
 </style>
-
 <header>
 	<h1>
 		sanitize.css
 	</h1>
-
-	<subhead>
-		<span>Render elements consistently.</span>
-		<span>Style with best practices.</span>
-	</subhead>
 </header>
-
 <main>
 	<p>
-		<strong>sanitize.css</strong> makes browsers render elements consistently and allows you to style with today’s best practices out-of-the-box.
+		<strong>sanitize.css</strong> is a CSS library that corrects broken
+		and missing styles in all browsers, preserving useful defaults rather
+		than unstyling everything. It’s developed alongside normalize.css, so
+		every normalization includes the browsers or browser versions being
+		targeted, and every opinionated change is marked and documented.
 	</p>
-
-	<p>
-		CSS inheritance is assigned universally so that styles cascade naturally and consistently. Wherever possible, the box model operates more intuitively.
-	</p>
-
-	<p>
-		Every normalization and opinionated default is carefully documented.
-		Visit the GitHub page to learn more about these optimizations and others.
-	</p>
-
-	<h2>Installation</h2>
-
-	<section>
-		<h3>Use with CSS</h3>
-		<pre><span data-keyword>@import</span> <span data-method>url</span>(<span data-string>vendors/sanitize.css</span>);</pre>
-	</section>
-
-	<section>
-		<h3>Use with Sass</h3>
-		<pre><span data-keyword>@import</span> <span data-string>'vendors/sanitize.scss'</span>;</pre>
-	</section>
-
-	<section>
+	<section id="installation">
+		<h2>Installation</h2>
 		<h3>Install with Bower</h3>
 		<pre>bower install --save sanitize-css</pre>
-	</section>
-
-	<section>
 		<h3>Install with NPM</h3>
 		<pre>npm install sanitize.css</pre>
+		<h3>Use with CSS</h3>
+		<pre><span data-keyword>@import</span> <span data-method>url</span>(<span data-string>vendors/sanitize.css</span>);</pre>
+		<h3>Use with a CDN</h3>
+		<p>
+			See <a href="https://cdnjs.com/libraries/10up-sanitize.css">https://cdnjs.com/libraries/10up-sanitize.css</a>
+		</p>
+		<p>
+			<a class="btn" href="https://github.com/10up/sanitize.css">View GitHub</a> <a class="btn" href="https://10up.github.io/sanitize.css/4.0.0/sanitize.css">Download 4.0.0</a>
+		</p>
 	</section>
-
-	<hr>
-
-	<p>
-		<a class="btn" href="https://github.com/10up/sanitize.css">View GitHub</a>
-		<a class="btn" href="https://rawgit.com/10up/sanitize.css/master/lib/sanitize.scss">Download SCSS</a>
-		<a class="btn" href="https://rawgit.com/10up/sanitize.css/master/sanitize.css">Download CSS</a>
-	</p>
-
-	<h2>Why another CSS base?</h2>
-
-	<div class="chatter">
+	<section id="why">
+		<h2>Why another CSS base?</h2>
 		<p>
 			I’m sharing this because I need these styles all too often, and maybe you do too.
 		</p>
 		<p>
-			I started writing CSS with Eric Meyer’s excellent <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a>. reset.css resolved frustrating inconsistencies between browsers by giving them all the same empty canvas. <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and I eventually wrote <a href="http://necolas.github.io/normalize.css/">normalize.css</a> with a new approach; style the bare minimum to keep every browser looking the same, and when in doubt follow the standard. Nicolas has since turned normalize.css into a household web standard.
+			I started writing CSS with Eric Meyer’s excellent <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a>. reset.css resolved frustrating inconsistencies between browsers by giving them all the same empty canvas. <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and I eventually wrote <a href="https://necolas.github.io/normalize.css/">normalize.css</a> with a new approach; style the bare minimum to keep every browser looking the same, and when in doubt follow the standard. Nicolas has since turned normalize.css into a household web standard.
 		</p>
 		<p>
 			Years have passed and CSS has changed dramatically.
 			I don’t need to hurt my brain calculating the combined values of padding and width.
-			I don’t have to remember that having no border style eliminates the border width.
-			CSS gives me a way to fix the box model and the border.
+			I don’t have to remember to update my backgrounds so they stop repeating automatically.
+			CSS gives me a way to fix the box model and the background.
 			CSS gives me a way to define the baseline that I need most of the time.
 		</p>
 		<p>
 			sanitize.css contains the baseline styles many of us end up writing anyway, especially if you listen to the two biggest influences of this project; <a href="https://twitter.com/paul_irish">Paul Irish</a> and <a href="https://twitter.com/chriscoyier">Chris Coyier</a>.
 			These two have dedicated themselves to development and best practices for years.
-			I’ve simply dropped some of their tastes into a file.
+			I’ve simply poured some of their tastes into a file.
 		</p>
 		<p>
 			Sanitize follows in the footsteps of normalize.css and reset.css — standardizing browsers while giving me the canvas I want to play with.
@@ -185,5 +162,5 @@ span[data-string]  { color: #ED6A43; }
 		<p>
 			I hope it helps you as much as it helps me.
 		</p>
-	</div>
+	</section>
 </main>
