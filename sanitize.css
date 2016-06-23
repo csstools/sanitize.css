@@ -112,7 +112,8 @@ body {
  * `section` and `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+section h1,
+article h1 {
 	font-size: 2em;
 	margin: .67em 0;
 }
