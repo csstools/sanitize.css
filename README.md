@@ -27,7 +27,7 @@ bower install --save sanitize-css
 
 ##### CDN
 
-https://cdnjs.com/libraries/jonathantneal-sanitize.css
+[cdnjs](https://cdnjs.com/libraries/10up-sanitize.css)
 
 ## Features
 
