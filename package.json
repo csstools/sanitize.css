@@ -1,6 +1,6 @@
 {
   "name": "sanitize.css",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "The best-practices alternative to CSS resets.",
   "main": "index.js",
   "style": "sanitize.css",

@@ -1,3 +1,7 @@
+## 4.1.0 (2016-07-01)
+
+- Updated: The focus removal on `:hover` now targets `a:hover`.
+
 ## 4.0.0 (2016-06-20)
 
 - Added: All improvements from normalize.css v4.1.1

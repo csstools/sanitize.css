@@ -1,4 +1,4 @@
-/*! sanitize.css v4.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/*! sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
 /* Display definitions
    ========================================================================== */
@@ -309,10 +309,10 @@ a {
 }
 
 /**
- * Remove the outline when hovering in all browsers (opinionated.
+ * Remove the outline when hovering in all browsers (opinionated).
  */
 
-:hover {
+a:hover {
 	outline-width: 0;
 }
 
