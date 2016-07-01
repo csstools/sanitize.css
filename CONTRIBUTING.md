@@ -96,7 +96,7 @@ project:
 	# Navigate to the newly cloned directory
 	cd sanitize.css
 	# Assign the original repo to a remote called "upstream"
-	git remote add upstream https://github.com/10up/sanitize.css
+	git remote add upstream https://github.com/jonathantneal/sanitize.css
 	```
 
 2. If you cloned a while ago, get the latest changes from upstream:

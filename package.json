@@ -16,7 +16,7 @@
   "engines": {
     "node": ">=0.12.0"
   },
-  "repository": "10up/sanitize.css",
+  "repository": "jonathantneal/sanitize.css",
   "keywords": [
     "css",
     "cssnext",
@@ -31,8 +31,8 @@
   ],
   "author": "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)",
   "license": "CC0-1.0",
-  "bugs": "https://github.com/10up/sanitize.css/issues",
-  "homepage": "https://github.com/10up/sanitize.css#readme",
+  "bugs": "https://github.com/jonathantneal/sanitize.css/issues",
+  "homepage": "https://github.com/jonathantneal/sanitize.css#readme",
   "stylelint": {
     "extends": "stylelint-config-10up"
   }
