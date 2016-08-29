@@ -93,7 +93,7 @@ html {
 	font-family: sans-serif; /* 3 */
 	line-height: 1.5; /* 3 */
 	-ms-text-size-adjust: 100%; /* 4 */
-	-webkit-text-size-adjust: 100%; /* 5 */
+	-webkit-text-size-adjust: 100%; /* 4 */
 }
 
 /* Sections (https://www.w3.org/TR/html5/sections.html)
@@ -333,7 +333,7 @@ table {
 
 /**
  * 1. Remove the default styling in all browsers (opinionated).
- * 3. Remove the margin in Firefox and Safari.
+ * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
@@ -344,7 +344,7 @@ textarea {
 	border-style: none; /* 1 */
 	color: inherit; /* 1 */
 	font-size: 1em; /* 1 */
-	margin: 0; /* 3 */
+	margin: 0; /* 2 */
 }
 
 /**
