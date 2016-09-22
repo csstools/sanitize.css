@@ -68,14 +68,6 @@ html {
 }
 ```
 
-##### Documents should not use a margin for outer padding
-
-```css
-body {
-	margin: 0;
-}
-```
-
 ##### Navigation lists should not include a marker style
 
 ```css
