@@ -2,7 +2,7 @@
   "name": "sanitize.css",
   "version": "4.1.0",
   "description": "The best-practices alternative to CSS resets.",
-  "main": "index.js",
+  "main": "sanitize.css",
   "style": "sanitize.css",
   "devDependencies": {
     "postcss": "^5.0.21",
