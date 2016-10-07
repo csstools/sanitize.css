@@ -1,47 +1,17 @@
-/*! sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
 /* Display definitions
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  * 2. Add the correct display in IE.
  */
 
-article,
-aside,
 details, /* 1 */
-figcaption,
-figure,
-footer,
-header,
 main, /* 2 */
-menu,
-nav,
-section,
 summary { /* 1 */
 	display: block;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
 }
 
 /**
@@ -166,15 +136,6 @@ abbr[title] {
 }
 
 /**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-	font-weight: inherit;
-}
-
-/**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
@@ -189,15 +150,6 @@ strong {
 
 dfn {
 	font-style: italic;
-}
-
-/**
- * Add the correct colors in IE 9-.
- */
-
-mark {
-	background-color: #ffff00;
-	color: #000000;
 }
 
 /**
