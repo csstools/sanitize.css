@@ -344,6 +344,7 @@ textarea {
 	border-style: none; /* 1 */
 	color: inherit; /* 1 */
 	font-size: 1em; /* 1 */
+	line-height: inherit; /* 1 */
 	margin: 0; /* 2 */
 }
 
