@@ -398,6 +398,15 @@ html [type="button"], /* 1 */
 }
 
 /**
+ * Remove outline from select box in Firefox
+ */
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000000;
+}
+
+/**
  * Correct the border, margin, and padding in all browsers.
  */
 
