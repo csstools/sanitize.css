@@ -19,8 +19,7 @@ header,
 main, /* 2 */
 menu,
 nav,
-section,
-summary { /* 1 */
+section { /* 1 */
 	display: block;
 }
 
@@ -42,6 +41,14 @@ video {
 audio:not([controls]) {
 	display: none;
 	height: 0;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
 }
 
 /**
@@ -529,6 +536,7 @@ button,
 input,
 label,
 select,
+summary,
 textarea,
 [tabindex] {
 	-ms-touch-action: manipulation; /* 1 */
