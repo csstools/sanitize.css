@@ -133,6 +133,8 @@ button, input, select, textarea {
 	border-style: none;
 	color: inherit;
 	font-size: 1em;
+	line-height: inherit;
+	margin: 0;
 }
 ```
 
