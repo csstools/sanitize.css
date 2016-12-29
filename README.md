@@ -1,12 +1,11 @@
-# sanitize.css
+# sanitize.css <a href="https://github.com/jonathantneal/sanitize.css"><img src="https://jonathantneal.github.io/sanitize.css/logo.svg" alt="sanitize.css logo" width="80" height="80" align="right"></a>
 
-<a href="https://github.com/jonathantneal/sanitize.css"><img src="https://jonathantneal.github.io/sanitize.css/logo.svg" alt="sanitize.css logo" width="80" height="80" align="right"></a>
-
-> The best-practices CSS foundation.
-
-[![npm][npm-image]][npm-url] [![bower][bower-image]][bower-url]
-[![ci][ci-image]][ci-url] [![gitter][gitter-image]][gitter-url]
-[![CDNJS][cdnjs-image]][cdnjs-url]
+[![NPM Version][npm-img]][npm-url]
+[![Bower Version][bow-img]][bow-url]
+[![CDNJS Version][cdn-img]][cdn-url]
+[![Build Status][cli-img]][cli-url]
+[![License][lic-img]][lic-url]
+[![Gitter Chat][git-img]][git-url]
 
 [sanitize.css] is a CSS library that corrects broken and missing styles in all
 browsers, preserving useful defaults rather than unstyling everything. It’s
@@ -25,10 +24,6 @@ npm install --save sanitize.css
 ```sh
 bower install --save sanitize-css
 ```
-
-##### CDN
-
-[cdnjs](https://cdnjs.com/libraries/10up-sanitize.css)
 
 ## Features
 
@@ -213,17 +208,19 @@ include **Internet Explorer 9** and **Safari 7**.
 
 **sanitize.css** is dedicated to the [public domain](LICENSE.md).
 
-[bower-image]:  https://img.shields.io/bower/v/sanitize-css.svg?style=flat-square
-[bower-url]:    https://libraries.io/bower/sanitize-css
-[ci-image]:     https://img.shields.io/travis/jonathantneal/sanitize.css.svg?style=flat-square
-[ci-url]:       https://travis-ci.org/jonathantneal/sanitize.css
-[gitter-image]: https://img.shields.io/gitter/room/jonathantneal/sanitize.css.svg?style=flat-square
-[gitter-url]:   https://gitter.im/jonathantneal/sanitize.css
-[npm-image]:    https://img.shields.io/npm/v/sanitize.css.svg?style=flat-square
-[npm-url]:      https://www.npmjs.com/package/sanitize.css
+[bow-img]: https://img.shields.io/bower/v/sanitize-css.svg
+[bow-url]: https://libraries.io/bower/sanitize-css
+[cdn-img]: https://img.shields.io/cdnjs/v/10up-sanitize.css.svg
+[cdn-url]: https://cdnjs.com/libraries/10up-sanitize.css
+[cli-img]: https://img.shields.io/travis/jonathantneal/sanitize.css.svg
+[cli-url]: https://travis-ci.org/jonathantneal/sanitize.css
+[git-img]: https://img.shields.io/badge/chat-gitter-blue.svg
+[git-url]: https://gitter.im/jonathantneal/sanitize.css
+[lic-img]: https://img.shields.io/npm/l/sanitize.css.svg
+[lic-url]: LICENSE.md
+[npm-img]: https://img.shields.io/npm/v/sanitize.css.svg
+[npm-url]: https://www.npmjs.com/package/sanitize.css
 
 [normalize.css]: https://github.com/necolas/normalize.css
-[reset.css]:     http://meyerweb.com/eric/tools/css/reset/
-[sanitize.css]:  https://github.com/jonathantneal/sanitize.css
-[cdnjs-image]:   https://img.shields.io/cdnjs/v/10up-sanitize.css.svg?style=flat-square
-[cdnjs-url]:     https://cdnjs.com/libraries/10up-sanitize.css
+[reset.css]: http://meyerweb.com/eric/tools/css/reset/
+[sanitize.css]: https://github.com/jonathantneal/sanitize.css
