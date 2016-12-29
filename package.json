@@ -2,29 +2,24 @@
   "name": "sanitize.css",
   "version": "4.1.0",
   "description": "The best-practices CSS foundation",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/sanitize.css",
+  "homepage": "https://jonathantneal.github.io/sanitize.css",
+  "bugs": "https://github.com/jonathantneal/sanitize.css/issues",
   "main": "sanitize.css",
   "style": "sanitize.css",
   "files": [
-    "LICENSE.md",
     "sanitize.css"
   ],
-  "devDependencies": {
-    "postcss": "^5.2.4",
-    "postcss-reporter": "^1.4.1",
-    "stylelint": "^7.3.1",
-    "stylelint-config-10up": "github:jonathantneal/stylelint-config-10up"
-  },
   "scripts": {
     "test": "stylelint sanitize.css"
   },
-  "repository": "jonathantneal/sanitize.css",
-  "contributors": [
-    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)"
-  ],
-  "license": "CC0-1.0",
-  "bugs": "https://github.com/jonathantneal/sanitize.css/issues",
-  "homepage": "https://jonathantneal.github.io/sanitize.css",
+  "devDependencies": {
+    "stylelint": "^7.7.0",
+    "stylelint-config-dev": "^1.0.0"
+  },
   "stylelint": {
-    "extends": "stylelint-config-10up"
+    "extends": "stylelint-config-dev"
   }
 }
