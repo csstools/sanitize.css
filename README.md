@@ -104,33 +104,22 @@ svg {
 }
 ```
 
-##### Outlines are redundant on hovered links
-
-```css
-:hover {
-	outline-width: 0;
-}
-```
-
 ##### Tables should not include additional border spacing
 
 ```css
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
 }
 ```
 
-##### Form controls should be fully style-able
+##### Form controls should be easily style-able
 
 ```css
 button, input, select, textarea {
 	background-color: transparent;
-	border-style: none;
 	color: inherit;
-	font-size: 1em;
+	font-size: inherit;
 	line-height: inherit;
-	margin: 0;
 }
 ```
 
@@ -139,6 +128,15 @@ button, input, select, textarea {
 ```css
 textarea {
 	resize: vertical;
+}
+```
+
+##### Single taps should be dispatched immediately on clickable elements
+
+```css
+a, area, button, input, label, select, summary, textarea, [tabindex] {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
 }
 ```
 
@@ -158,25 +156,16 @@ textarea {
 }
 ```
 
-##### Single taps should be dispatched immediately on clickable elements
-
-```css
-a, area, button, input, label, select, textarea, [tabindex] {
-	-ms-touch-action: manipulation; /* 1 */
-	touch-action: manipulation;
-}
-```
-
 ##### Visually hidden content should remain accessible
 
 ```css
-[hidden][aria-hidden="false"] {
+[aria-hidden="false"][hidden] {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
 }
 
-[hidden][aria-hidden="false"]:focus {
+[aria-hidden="false"]:focus[hidden] {
 	clip: auto;
 }
 ```
