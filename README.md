@@ -165,7 +165,7 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 	position: absolute;
 }
 
-[aria-hidden="false"]:focus[hidden] {
+[aria-hidden="false"][hidden]:focus {
 	clip: auto;
 }
 ```
