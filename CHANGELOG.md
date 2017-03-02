@@ -1,8 +1,17 @@
-## 4.1.0 (2016-07-01)
+# Changes to sanitize.css
 
-- Updated: The focus removal on `:hover` now targets `a:hover`.
+### 5.0.0 (March 1, 2017)
 
-## 4.0.0 (2016-06-20)
+- Added: normalize.css v6 parity, including `summary` display
+- Added: form elements to inherit line-height from html
+- Removed: font styles on `html`
+- Removed: unnecessary `border-spacing` zeroing
+
+### 4.1.0 (July 1, 2016)
+
+- Updated: The focus removal on `:hover` now targets `a:hover`
+
+### 4.0.0 (June 20, 2016)
 
 - Added: All improvements from normalize.css v4.1.1
 - Added: Documentation for each opinionated feature
@@ -14,14 +23,14 @@
 - Updated: `abbr[title]` styled using `border-bottom` over `text-decoration`
 - Updated: Tests and linting
 
-### Why are variables removed in v4?
+#### Why are variables removed in v4?
 
 Variables were there for developers to override styles in sanitize.css without
 editing the original file or overriding the rule. However, you *should* override
 the rule so that your change is explicit, and so that your source maps
 accurately indicate your changes coming from your files.
 
-## 3.3.0 (2016-03-03)
+### 3.3.0 (March 3, 2016)
 
 - Added: `b` and `strong` normalization
 - Added: `::-moz-focus-inner` normalization
@@ -31,17 +40,17 @@ accurately indicate your changes coming from your files.
            opinionated defaults, and configurable defaults
 - Updated: Moved source and compiled libraries
 
-## 3.2.0 (2016-02-03)
+### 3.2.0 (February 3, 2016)
 
 - Added: `selection.less`
 - Updated: Use `root`-prefixed values across all formats
 - Updated: Documentation
 
-## 3.1.1 (2016-02-01)
+## 3.1.1 (February 1, 2016)
 
 - Updated: `box-sizing` variable corrected to `border-box` in sass, scss, styl
 
-## 3.1.0 (2016-02-01)
+### 3.1.0 (February 1, 2016)
 
 - Added: Project configuration (.editorconfig)
 - Added: Style linting rules and tests
@@ -50,7 +59,7 @@ accurately indicate your changes coming from your files.
 - Updated: `::selection` color variable corrected to `--selection-color`
 - Updated: Use direct nesting
 
-## 3.0.0 (2015-10-23)
+### 3.0.0 (October 23, 2015)
 
 - Added: Normalization for **iOS 8+**
 - Added: `background-repeat` for all elements
@@ -60,18 +69,18 @@ accurately indicate your changes coming from your files.
 - Updated: dist from CSS source using PostCSS, cssnext, and cssnano
 - Updated: Documentation
 
-## 2.1.1 (2015-10-05)
+### 2.1.1 (October 5, 2015)
 
 - Updated: bower.json
 
-## 2.1.1 (2015-10-05)
+### 2.1.1 (October 5, 2015)
 
 - Added: CSS version
 - Updated: Use percentage `font-size` on `:root`
 - Updated: Documentation
 - Removed: `background-color` inheritance
 
-## 2.0.0 (2015-09-03)
+### 2.0.0 (September 3, 2015)
 
 - Added: Visually hidden element style `[hidden][aria-hidden="false"]`
 - Added: Currently updating element style `[aria-busy="true"]`
@@ -88,7 +97,7 @@ accurately indicate your changes coming from your files.
 - Updated: Development dependencies
 - Updated: README.md and code documentation
 
-## 1.2.0 (2015-06-16)
+### 1.2.0 (June 16, 2015)
 
 - Added: Control over options via Sass variables
 - Added: Overflow normalization on :root
@@ -97,13 +106,13 @@ accurately indicate your changes coming from your files.
 - Removed: Redundant inheritance in ::before and ::after
 - Removed: redundant cursor inheritance in anchor and form elements
 
-## 1.1.0 (2015-03-20)
+### 1.1.0 (March 20, 2015)
 
 - Added: Form support
 - Updated: Normalization
 - Updated: Border assignment
 
-## 1.0.0 (2012-11-06)
+### 1.0.0 (11 6, 2012)
 
 - Updated: Moved from normalize.css to sanitize.css
 
@@ -116,6 +125,6 @@ Where Normalize.css conservatively follows user agent consensus and results
 in more pre-styled elements, Sanitize.css liberally follows developer
 consensus and results in more unstyled elements.
 
-## 0.0.0 (2011-04-21)
+### 0.0.0 (4 21, 2011)
 
 - Added: Normalize.css

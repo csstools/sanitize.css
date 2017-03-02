@@ -159,14 +159,10 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 ##### Visually hidden content should remain accessible
 
 ```css
-[aria-hidden="false"][hidden] {
+[aria-hidden="false"][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
-}
-
-[aria-hidden="false"][hidden]:focus {
-	clip: auto;
 }
 ```
 
