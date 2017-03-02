@@ -27,14 +27,6 @@ bower install --save sanitize-css
 
 ## Features
 
-##### Backgrounds should not repeat by default
-
-```css
-* {
-	background-repeat: no-repeat;
-}
-```
-
 ##### Box sizing should be inherited and default to border-box
 
 ```css
@@ -47,20 +39,19 @@ html {
 }
 ```
 
+##### Backgrounds should not repeat by default
+
+```css
+* {
+	background-repeat: no-repeat;
+}
+```
+
 ##### Cursor should only change to hint non-obvious interfaces
 
 ```css
 html {
 	cursor: default;
-}
-```
-
-##### Regular text should be sans serif with a comfortable line height
-
-```css
-html {
-	font-family: sans-serif
-	line-height: 1.5;
 }
 ```
 
@@ -168,11 +159,11 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 
 ## Differences
 
-[sanitize.css] styles elements more consistently with developers’ expectations
-and preferences. [normalize.css] styles elements more consistently between
-browsers. [reset.css] unstyles every element. Both sanitize.css and
-normalize.css are maintained in sync, and both projects correct browser bugs
-while carefully testing and documenting every change.
+[normalize.css] and [sanitize.css] correct browser bugs while carefully testing
+and documenting changes. normalize.css styles adhere to css specifications.
+sanitize.css styles adhere to common developer expectations and preferences.
+[reset.css] unstyles all elements. Both sanitize.css and normalize.css are
+maintained in sync.
 
 ## Support
 
