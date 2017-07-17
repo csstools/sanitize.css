@@ -16,10 +16,16 @@
     "test": "stylelint sanitize.css"
   },
   "devDependencies": {
-    "stylelint": "^7.9.0",
-    "stylelint-config-dev": "^1.0.0"
+    "stylelint": "^8.0.0",
+    "stylelint-config-dev": "^2.0.0"
   },
   "stylelint": {
-    "extends": "stylelint-config-dev"
+    "extends": "stylelint-config-dev",
+    "rules": {
+      "font-family-no-duplicate-names": null,
+      "font-weight-notation": null,
+      "property-no-vendor-prefix": null,
+      "selector-no-vendor-prefix": null
+    }
   }
 }
