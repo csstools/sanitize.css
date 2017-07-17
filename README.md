@@ -107,7 +107,6 @@ table {
 
 ```css
 button, input, select, textarea {
-	background-color: transparent;
 	color: inherit;
 	font-size: inherit;
 	line-height: inherit;
