@@ -108,6 +108,7 @@ table {
 ```css
 button, input, select, textarea {
 	color: inherit;
+	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
 }
