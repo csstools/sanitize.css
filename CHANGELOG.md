@@ -1,5 +1,10 @@
 # Changes to sanitize.css
 
+### 6.0.0 (xxx)
+
+- Added: `font-family: inherit` on form elements
+- Removed: `background-color: transparent` from form elements
+
 ### 5.0.0 (March 1, 2017)
 
 - Added: normalize.css v6 parity, including `summary` display
