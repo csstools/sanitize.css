@@ -584,6 +584,7 @@ textarea,
  * inoperable elements (opinionated).
  */
 
-[aria-disabled] {
+[aria-disabled],
+[disabled] {
 	cursor: default;
 }
