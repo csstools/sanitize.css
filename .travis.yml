@@ -1,3 +1,6 @@
+# https://docs.travis-ci.com/user/travis-lint
+
 language: node_js
+
 node_js:
   - stable

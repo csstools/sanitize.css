@@ -1,31 +1,50 @@
 {
   "name": "sanitize.css",
   "version": "6.0.0",
-  "description": "The best-practices CSS foundation",
+  "description": "A best-practices CSS foundation",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "contributors": [
+    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)",
+    "Nicolas Gallagher <nicolas@nicolasgallagher.com> (http://nicolasgallagher.com/)"
+  ],
   "license": "CC0-1.0",
-  "repository": "jonathantneal/sanitize.css",
-  "homepage": "https://jonathantneal.github.io/sanitize.css",
-  "bugs": "https://github.com/jonathantneal/sanitize.css/issues",
+  "repository": "csstools/sanitize.css",
+  "homepage": "https://github.com/csstools/sanitize.css#readme",
+  "bugs": "https://github.com/csstools/sanitize.css/issues",
   "main": "sanitize.css",
   "style": "sanitize.css",
   "files": [
     "sanitize.css"
   ],
   "scripts": {
+    "prepublishOnly": "npm test",
     "test": "stylelint sanitize.css"
   },
   "devDependencies": {
-    "stylelint": "^8.0.0",
-    "stylelint-config-dev": "^2.0.0"
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0"
   },
   "stylelint": {
-    "extends": "stylelint-config-dev",
+    "extends": "stylelint-config-standard",
     "rules": {
-      "font-family-no-duplicate-names": null,
-      "font-weight-notation": null,
-      "property-no-vendor-prefix": null,
-      "selector-no-vendor-prefix": null
+      "font-family-no-duplicate-names": [
+        true,
+        {
+          "ignoreFontFamilyNames": [
+            "monospace"
+          ]
+        }
+      ],
+      "no-descending-specificity": [
+        null
+      ]
     }
-  }
+  },
+  "keywords": [
+    "css",
+    "normalizes",
+    "sanitizes",
+    "browsers",
+    "fixes"
+  ]
 }

@@ -1,9 +1,15 @@
 # Changes to sanitize.css
 
-### 6.0.0 (xxx)
+### 6.0.0 (June 24, 2018)
 
+- Added: `word-break: break-word` to `html`
 - Added: `font-family: inherit` on form elements
-- Removed: `background-color: transparent` from form elements
+- Added: normalize.css updates
+- Added: `box-sizing: border-box` to `*, ::before, ::after`
+- Removed: `box-sizing: border-box` from `html` and `box-sizing: inherit` from
+  `html`
+- Removed: `color: inherit` and `background-color: transparent` from
+  `form`
 
 ### 5.0.0 (March 1, 2017)
 
