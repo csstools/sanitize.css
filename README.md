@@ -3,7 +3,9 @@
 [sanitize.css] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements alongside useful defaults.
 
-## Usage
+## How to get it
+
+**NPM**
 
 ```sh
 npm install --save sanitize.css
@@ -12,6 +14,41 @@ npm install --save sanitize.css
 **Download**
 
 See https://csstools.github.io/sanitize.css/latest/sanitize.css
+
+**CDN**
+
+see https://cdnjs.com/libraries/10up-sanitize.css
+
+## How to use it (NPM + WebPack)
+
+**Import the package**
+
+in CSS (or LESS/SCSS/Stylus)
+
+```css
+@import 'sanitize.css';
+```
+
+or in javascript:
+
+```js
+import 'sanitize.css';
+```
+
+minimally required `webpack.config.js`:
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  }
+}
+```
 
 ## What does it do?
 
