@@ -26,7 +26,7 @@ see https://cdnjs.com/libraries/10up-sanitize.css
 in CSS (or LESS/SCSS/Stylus)
 
 ```css
-@import 'sanitize.css';
+@import '~sanitize.css';
 ```
 
 or in javascript:
