@@ -19,23 +19,21 @@ See https://csstools.github.io/sanitize.css/latest/sanitize.css
 
 see https://cdnjs.com/libraries/10up-sanitize.css
 
-## How to use it (NPM + WebPack)
+### Usage in npm and webpack
 
-**Import the package**
-
-in CSS (or LESS/SCSS/Stylus)
+Import [sanitize.css] in CSS:
 
 ```css
 @import '~sanitize.css';
 ```
 
-or in javascript:
+Alternatively, import [sanitize.css] in JS:
 
 ```js
 import 'sanitize.css';
 ```
 
-minimally required `webpack.config.js`:
+In `webpack.config.js`, be sure to use the appropriate loaders:
 
 ```js
 module.exports = {
