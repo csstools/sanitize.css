@@ -1,5 +1,19 @@
 # Changes to sanitize.css
 
+### 7.0.0 (August 22, 2018)
+
+- Use the default user interface font in all browsers (opinionated).
+- Use the default monospace user interface font in all browsers (opinionated).
+- Use a 4-space tab width in all browsers (opinionated).
+- Fix correction of cursor style of increment and decrement buttons
+  in Safari, not Chrome.
+- Correct the text style of placeholders in Chrome, Edge, and Safari.
+- Remove unnecessary form control margin normalizations in Firefox.
+- Remove opinionated fieldset padding in all browsers.
+- Remove `::-moz-focus-inner` and `:-moz-focusring` normalizations
+  fixed in Firefox 53
+  https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+
 ### 6.0.0 (June 24, 2018)
 
 - Added: `word-break: break-word` to `html`
