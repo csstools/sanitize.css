@@ -91,6 +91,34 @@ html {
 }
 ```
 
+##### The default font is the system ui font
+
+```css
+html {
+  font-family:
+    system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ Segoe UI,
+    /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu,
+    /* Gnome 3+ */ Cantarell,
+    /* KDE Plasma 4+ */ Oxygen,
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+}
+```
+
+##### Tabs appear the same on the web as in a typical editor
+
+```css
+html {
+  tab-size: 4;
+}
+```
+
 ##### Words break to prevent prevent overflow
 
 ```css
@@ -112,6 +140,21 @@ body {
 ```css
 nav ol, nav ul {
   list-style: none;
+}
+```
+
+##### Pre-formatted and code-formatted text uses the monospace system ui font
+
+```css
+code, kbd, pre, samp {
+  font-family:
+    /* macOS 10.10+ */ Menlo,
+    /* Windows 6+ */ Consolas,
+    /* Android 4+ */ Roboto Mono,
+    /* Ubuntu 10.10+ */ Ubuntu Monospace,
+    /* KDE Plasma 4+ */ Oxygen Mono,
+    /* Linux/OpenOffice fallback */ Liberation Mono,
+    /* fallback */ monospace;
 }
 ```
 
@@ -187,7 +230,7 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
   cursor: pointer;
 }
 
-[aria-disabled] {
+[aria-disabled], [disabled] {
   cursor: default;
 }
 ```
@@ -226,11 +269,6 @@ maintained in sync.
 Please read the [contribution guidelines](CONTRIBUTING.md) in order to make the
 contribution process easy and effective for everyone involved.
 
-## Similar Projects
-
-- [normalize.css] - A cross-browser css foundation.
-- [opinionate.css] - A supplement to normalize.css with opinionated rules
-
 ## Acknowledgements
 
 sanitize.css is a project by [Jonathan Neal](https://github.com/jonathantneal),
@@ -239,6 +277,5 @@ built upon normalize.css, a project by
 co-created with [Nicolas Gallagher](https://github.com/necolas).
 
 [normalize.css]: https://github.com/csstools/normalize.css
-[opinionate.css]: https://github.com/adamgruber/opinionate.css
 [reset.css]: http://meyerweb.com/eric/tools/css/reset/
 [sanitize.css]: https://github.com/csstools/sanitize.css

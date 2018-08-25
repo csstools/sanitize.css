@@ -1,4 +1,4 @@
-/*! sanitize.css v7.0.0 | CC0 License | github.com/csstools/sanitize.css */
+/*! sanitize.css v7.0.1 | CC0 License | github.com/csstools/sanitize.css */
 
 /* Document
  * ========================================================================== */
@@ -27,9 +27,9 @@
 }
 
 /**
- * 1. Use the default user interface font in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Use the default cursor in all browsers (opinionated).
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Use the default user interface font in all browsers (opinionated).
+ * 3. Correct the line height in all browsers.
  * 4. Use a 4-space tab width in all browsers (opinionated).
  * 5. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
@@ -37,6 +37,7 @@
  */
 
 html {
+  cursor: default; /* 1 */
   font-family:
     system-ui,
     /* macOS 10.11-10.12 */ -apple-system,
@@ -49,10 +50,10 @@ html {
     /* macOS emoji */ "Apple Color Emoji",
     /* Windows emoji */ "Segoe UI Emoji",
     /* Windows emoji */ "Segoe UI Symbol",
-    /* Linux emoji */ "Noto Color Emoji"; /* 1 */
+    /* Linux emoji */ "Noto Color Emoji"; /* 2 */
 
-  line-height: 1.15; /* 2 */
-  cursor: default; /* 3 */
+  line-height: 1.15; /* 3 */
+  -moz-tab-size: 4; /* 4 */
   tab-size: 4; /* 4 */
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
