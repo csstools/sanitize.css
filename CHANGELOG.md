@@ -1,5 +1,9 @@
 # Changes to sanitize.css
 
+### 7.0.3 (September 4, 2018)
+
+- Fix disabled cursor
+
 ### 7.0.2 (September 4, 2018)
 
 - Restore form control margin normalizations in Firefox

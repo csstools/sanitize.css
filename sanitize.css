@@ -1,4 +1,4 @@
-/*! sanitize.css v7.0.2 | CC0 License | github.com/csstools/sanitize.css */
+/*! sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
 
 /* Document
  * ========================================================================== */
@@ -572,7 +572,7 @@ textarea,
 
 [aria-disabled],
 [disabled] {
-  cursor: disabled;
+  cursor: not-allowed;
 }
 
 /*
