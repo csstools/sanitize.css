@@ -1,4 +1,4 @@
-/*! sanitize.css v7.0.1 | CC0 License | github.com/csstools/sanitize.css */
+/*! sanitize.css v7.0.2 | CC0 License | github.com/csstools/sanitize.css */
 
 /* Document
  * ========================================================================== */
@@ -279,16 +279,6 @@ table {
  * ========================================================================== */
 
 /**
- * Remove the margin in Safari.
- */
-
-button,
-input,
-select {
-  margin: 0;
-}
-
-/**
  * Inherit styling in all browsers (opinionated).
  */
 
@@ -299,6 +289,16 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+/**
+ * Remove the margin in Safari.
+ */
+
+button,
+input,
+select {
+  margin: 0;
 }
 
 /**
@@ -390,15 +390,6 @@ textarea {
 }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Safari.
- */
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
@@ -406,6 +397,15 @@ textarea {
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
 }
 
 /**
@@ -433,6 +433,23 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 /* Interactive

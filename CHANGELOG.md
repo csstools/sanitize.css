@@ -1,5 +1,10 @@
 # Changes to sanitize.css
 
+### 7.0.2 (September 4, 2018)
+
+- Restore form control margin normalizations in Firefox
+- Re-order a few rules (opinionated)
+
 ### 7.0.1 (August 25, 2018)
 
 - Support the 4-space tab width in Firefox (opinionated)
