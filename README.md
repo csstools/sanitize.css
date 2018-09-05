@@ -119,7 +119,7 @@ html {
 }
 ```
 
-##### Words break to prevent prevent overflow
+##### Words break to prevent overflow
 
 ```css
 html {
