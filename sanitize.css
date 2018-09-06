@@ -45,7 +45,7 @@ html {
     /* Android 4+ */ Roboto,
     /* Ubuntu 10.10+ */ Ubuntu,
     /* Gnome 3+ */ Cantarell,
-    /* KDE Plasma 4+ */ Oxygen,
+    /* KDE Plasma 5+ */ Noto Sans,
     /* fallback */ sans-serif,
     /* macOS emoji */ "Apple Color Emoji",
     /* Windows emoji */ "Segoe UI Emoji",
@@ -123,7 +123,7 @@ pre {
     /* Windows 6+ */ Consolas,
     /* Android 4+ */ Roboto Mono,
     /* Ubuntu 10.10+ */ Ubuntu Monospace,
-    /* KDE Plasma 4+ */ Oxygen Mono,
+    /* KDE Plasma 5+ */ Noto Mono,
     /* Linux/OpenOffice fallback */ Liberation Mono,
     /* fallback */ monospace; /* 1 */
 
