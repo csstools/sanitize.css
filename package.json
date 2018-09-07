@@ -1,24 +1,23 @@
 {
-  "name": "sanitize.css",
+  "name": "sanitize-4d.css",
   "version": "7.0.3",
   "description": "A best-practices CSS foundation",
-  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "author": "Takuya Abe <t.abe@4digit.jp>",
   "contributors": [
-    "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)",
-    "Nicolas Gallagher <nicolas@nicolasgallagher.com> (http://nicolasgallagher.com/)"
+    "Takuya Abe <t.abe@4digit.jp>"
   ],
   "license": "CC0-1.0",
-  "repository": "csstools/sanitize.css",
-  "homepage": "https://github.com/csstools/sanitize.css#readme",
-  "bugs": "https://github.com/csstools/sanitize.css/issues",
-  "main": "sanitize.css",
-  "style": "sanitize.css",
+  "repository": "fourdigit/sanitize-4d.css",
+  "homepage": "https://github.com/fourdigit/sanitize-4d.css#readme",
+  "bugs": "https://github.com/fourdigit/sanitize-4d.css/issues",
+  "main": "sanitize-4d.css",
+  "style": "sanitize-4d.css",
   "files": [
-    "sanitize.css"
+    "sanitize-4d.css"
   ],
   "scripts": {
     "prepublishOnly": "npm test",
-    "test": "stylelint sanitize.css"
+    "test": "stylelint sanitize-4d.css"
   },
   "devDependencies": {
     "stylelint": "^9.5.0",
