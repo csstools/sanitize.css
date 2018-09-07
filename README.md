@@ -1,36 +1,29 @@
-# sanitize.css [<img src="https://csstools.github.io/sanitize.css/logo.svg" alt="sanitize" width="90" height="90" align="right">][sanitize.css]
+# sanitize-4d.css [<img src="https://csstools.github.io/sanitize-4d.css/logo.svg" alt="sanitize" width="90" height="90" align="right">][sanitize-4d.css]
 
-[sanitize.css] is a CSS library that provides consistent, cross-browser
+[sanitize-4d.css] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements alongside useful defaults.
+
 
 ## How to get it
 
 **NPM**
 
 ```sh
-npm install --save sanitize.css
+npm install --save @fourdigit/sanitize-4d.css
 ```
-
-**Download**
-
-See https://csstools.github.io/sanitize.css/latest/sanitize.css
-
-**CDN**
-
-see https://cdnjs.com/libraries/10up-sanitize.css
 
 ### Usage in npm and webpack
 
-Import [sanitize.css] in CSS:
+Import [sanitize-4d.css] in CSS:
 
 ```css
-@import '~sanitize.css';
+@import '~@fourdigit/sanitize-4d.css';
 ```
 
-Alternatively, import [sanitize.css] in JS:
+Alternatively, import [sanitize-4d.css] in JS:
 
 ```js
-import 'sanitize.css';
+import '@fourdigit/sanitize-4d.css';
 ```
 
 In `webpack.config.js`, be sure to use the appropriate loaders:
@@ -247,10 +240,10 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 
 ## Differences
 
-[normalize.css] and [sanitize.css] correct browser bugs while carefully testing
+[normalize.css] and [sanitize-4d.css] correct browser bugs while carefully testing
 and documenting changes. normalize.css styles adhere to css specifications.
-sanitize.css styles adhere to common developer expectations and preferences.
-[reset.css] unstyles all elements. Both sanitize.css and normalize.css are
+sanitize-4d.css styles adhere to common developer expectations and preferences.
+[reset.css] unstyles all elements. Both sanitize-4d.css and normalize.css are
 maintained in sync.
 
 ## Browser support
@@ -279,3 +272,4 @@ co-created with [Nicolas Gallagher](https://github.com/necolas).
 [normalize.css]: https://github.com/csstools/normalize.css
 [reset.css]: http://meyerweb.com/eric/tools/css/reset/
 [sanitize.css]: https://github.com/csstools/sanitize.css
+[sanitize-4d.css]: https://github.com/csstools/sanitize-4d.css
