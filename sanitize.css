@@ -60,6 +60,24 @@ html {
   word-break: break-word; /* 6 */
 }
 
+/**
+ * http://creator.dwango.co.jp/14128.html
+ * 1. Font rendering settings;  1x => subpixel、2x or higher => grayscale
+*/
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+}
+@media only screen and
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
 /* Sections
  * ========================================================================== */
 
