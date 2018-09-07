@@ -34,6 +34,7 @@
  * 5. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  * 6. Breaks words to prevent overflow in all browsers (opinionated).
+ * 7. Font rendering settings;  1x => subpixel、2x or higher => grayscale http://creator.dwango.co.jp/14128.html
  */
 
 html {
@@ -58,25 +59,18 @@ html {
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
   word-break: break-word; /* 6 */
-}
-
-/**
- * http://creator.dwango.co.jp/14128.html
- * 1. Font rendering settings;  1x => subpixel、2x or higher => grayscale
-*/
-html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
 }
+
 @media only screen and
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 2dppx) {
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
-
 
 /* Sections
  * ========================================================================== */
