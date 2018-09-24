@@ -520,9 +520,9 @@ template {
  * ========================================================================== */
 
 /*
- * 1. Remove the tapping delay on clickable elements
+ * 1. Remove the tapping delay in IE 10.
+ * 2. Remove the tapping delay on clickable elements
       in all browsers (opinionated).
- * 2. Remove the tapping delay in IE 10.
  */
 
 a,
