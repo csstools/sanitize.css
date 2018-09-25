@@ -1,5 +1,7 @@
 # sanitize-4d.css [<img src="https://csstools.github.io/sanitize-4d.css/logo.svg" alt="sanitize" width="90" height="90" align="right">][sanitize-4d.css]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/fourdigit/sanitize-4d.css.svg)](https://greenkeeper.io/)
+
 [sanitize-4d.css] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements alongside useful defaults.
 
