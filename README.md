@@ -152,6 +152,7 @@ code, kbd, pre, samp {
     /* Windows 6+ */ Consolas,
     /* Android 4+ */ Roboto Mono,
     /* Ubuntu 10.10+ */ Ubuntu Monospace,
+    /* KDE Plasma 5+ */ Noto Mono,
     /* KDE Plasma 4+ */ Oxygen Mono,
     /* Linux/OpenOffice fallback */ Liberation Mono,
     /* fallback */ monospace;
