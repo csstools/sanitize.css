@@ -254,7 +254,7 @@ img {
  * Change the fill color to match the text color in all browsers (opinionated).
  */
 
-svg {
+svg:not([fill]) {
   fill: currentColor;
 }
 
