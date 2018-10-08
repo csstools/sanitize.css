@@ -1,5 +1,11 @@
 # Changes to sanitize.css
 
+### 8.0.0 (October 8, 2018)
+
+- Changed: Apply `aria-disabled` disabled styles when `[aria-disabled="true"]`
+- Changed: Apply `svg { fill: currentColor }` when `svg:not([fill])`
+- Fixed: Apply appropriate system font fallbacks for KDE Plasma
+
 ### 7.0.3 (September 4, 2018)
 
 - Fix disabled cursor

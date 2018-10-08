@@ -102,7 +102,7 @@ html {
     /* Android 4+ */ Roboto,
     /* Ubuntu 10.10+ */ Ubuntu,
     /* Gnome 3+ */ Cantarell,
-    /* KDE Plasma 4+ */ Oxygen,
+    /* KDE Plasma 5+ */ Noto Sans,
     /* fallback */ sans-serif,
     /* macOS emoji */ "Apple Color Emoji",
     /* Windows emoji */ "Segoe UI Emoji",
@@ -180,7 +180,7 @@ audio, canvas, iframe, img, svg, video {
 ##### SVGs fallback to the current text color
 
 ```css
-svg {
+svg:not([fill]) {
   fill: currentColor;
 }
 ```
@@ -231,7 +231,7 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
   cursor: pointer;
 }
 
-[aria-disabled], [disabled] {
+[aria-disabled="true"], [disabled] {
   cursor: default;
 }
 ```
