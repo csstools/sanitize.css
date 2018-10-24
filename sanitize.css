@@ -8,11 +8,16 @@
  * 2. Add border box sizing in all browsers (opinionated).
  */
 
+html {
+  background-repeat: no-repeat; /* 1 */
+  box-sizing: border-box; /* 2 */
+}
+
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat; /* 1 */
-  box-sizing: border-box; /* 2 */
+  background-repeat: inherit; /* 1 */
+  box-sizing: inherit; /* 2 */
 }
 
 /**
