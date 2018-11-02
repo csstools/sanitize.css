@@ -10,4 +10,4 @@ deploy:
   email: vinhpq.tn@gmail.com
   api_key: e6309f85-6f7d-4458-9b96-52bb4f3c9ede
   on:
-    tags: true
+    all_branches: true
