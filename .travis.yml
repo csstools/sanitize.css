@@ -1,13 +1,10 @@
-# https://docs.travis-ci.com/user/travis-lint
-
 language: node_js
-
 node_js:
-  - stable
-
+- stable
 deploy:
   provider: npm
   email: vinhpq.tn@gmail.com
-  api_key: e6309f85-6f7d-4458-9b96-52bb4f3c9ede
+  api_key:
+    secure: Xv7PkyZXZ8wy7KFSRrjvbQPW7U6hUwxWzxIRQW27cRV1twmX19jafhD8fJA4Y4JKY50uvakPJcf94k8FqKojkCqxrlUzd8iMzCPOZW6UtwWRPigVg0ppmnFR/VtM/VQp9/A2XHJ8IDDcbOmk7ONvjo0+NrlYa+THi2j44sqWJKQWaMb1pfvNJUuvipJySOe4o8ae7GsUdVSPk/6eQUYqLC4Idf8O/KfYZMWWUEIw469SHFr8BvcGeKHcFH2YgpUPa9QPl17rELmg85HGH8VdNdgUBjpktOh+Coe+w8B+exZO6tgd94cBrMtE3sxxhjw98atEo/hwmlakd9e0RiNqYHsp8++0RQvEs+GhWnjg8FRj0/J4eOkMcaeWTM94UT1b9eW8VRDeCID2vmuVYuAYNxpmaHw0HqiUIWdU3EPrCekni01bOzy8Y1XkxscPSmcwEXa2KoHp2XiYNkDjLJarUF17dcuteo0yviyGYrSUNTHCOMxzoNUHh4rfh0xJWcjkERfRsgs9oV5cG+3X4ZEYZpJxUsffe0ZdQIgRKwLLQ4I4xpJr3mmRYu51mF1StJB91xV1H34YoTMZaS6OvTctcARJ2dRjm+tcTywXEVzdKvSTC8ZA/47rOMpD0eUEyijhctDClxVT8h72c+rhJzpP/pg8qzIEZ6KKCtyjWyKWrm8=
   on:
-    all_branches: true
+    branch: master
