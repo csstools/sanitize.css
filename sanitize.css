@@ -277,6 +277,15 @@ table {
   border-collapse: collapse;
 }
 
+dl {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+dd {
+  margin-inline-start: 40px;
+}
+
 /* Forms
  * ========================================================================== */
 
