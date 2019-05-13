@@ -1,5 +1,9 @@
 # Changes to sanitize.css
 
+### 8.0.1 (May 12, 2019)
+
+- Fixed: Typo of `browers` typo to `browsers`
+
 ### 8.0.0 (October 8, 2018)
 
 - Changed: Apply `aria-disabled` disabled styles when `[aria-disabled="true"]`
