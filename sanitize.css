@@ -58,6 +58,7 @@ html {
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
   word-break: break-word; /* 6 */
+  word-wrap: break-word; /* 6 */
 }
 
 /* Sections
