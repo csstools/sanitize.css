@@ -1,6 +1,6 @@
 {
   "name": "sanitize.css",
-  "version": "8.0.1",
+  "version": "9.0.0rc6",
   "description": "A best-practices CSS foundation",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
@@ -14,11 +14,13 @@
   "main": "sanitize.css",
   "style": "sanitize.css",
   "files": [
-    "sanitize.css"
+    "forms.css",
+    "sanitize.css",
+    "typography.css"
   ],
   "scripts": {
     "prepublishOnly": "npm test",
-    "test": "stylelint sanitize.css"
+    "test": "stylelint forms.css sanitize.css typography.css"
   },
   "devDependencies": {
     "stylelint": "^10.0.1",

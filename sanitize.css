@@ -1,18 +1,14 @@
-/*! sanitize.css v8.0.0 | CC0 License | github.com/csstools/sanitize.css */
-
 /* Document
  * ========================================================================== */
 
 /**
- * 1. Remove repeating backgrounds in all browsers (opinionated).
- * 2. Add border box sizing in all browsers (opinionated).
+ * Add border box sizing in all browsers (opinionated).
  */
 
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat; /* 1 */
-  box-sizing: border-box; /* 2 */
+  box-sizing: border-box;
 }
 
 /**
@@ -28,9 +24,9 @@
 
 /**
  * 1. Use the default cursor in all browsers (opinionated).
- * 2. Use the default user interface font in all browsers (opinionated).
- * 3. Correct the line height in all browsers.
- * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 2. Change the line height in all browsers (opinionated).
+ * 3. Use a 4-space tab width in all browsers (opinionated).
+ * 4. Remove the grey highlight on links in iOS (opinionated).
  * 5. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  * 6. Breaks words to prevent overflow in all browsers (opinionated).
@@ -38,23 +34,10 @@
 
 html {
   cursor: default; /* 1 */
-  font-family:
-    system-ui,
-    /* macOS 10.11-10.12 */ -apple-system,
-    /* Windows 6+ */ Segoe UI,
-    /* Android 4+ */ Roboto,
-    /* Ubuntu 10.10+ */ Ubuntu,
-    /* Gnome 3+ */ Cantarell,
-    /* KDE Plasma 5+ */ Noto Sans,
-    /* fallback */ sans-serif,
-    /* macOS emoji */ "Apple Color Emoji",
-    /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol",
-    /* Linux emoji */ "Noto Color Emoji"; /* 2 */
-
-  line-height: 1.15; /* 3 */
-  -moz-tab-size: 4; /* 4 */
-  tab-size: 4; /* 4 */
+  line-height: 1.5; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  -webkit-tap-highlight-color: transparent /* 4 */;
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
   word-break: break-word; /* 6 */
@@ -85,6 +68,23 @@ h1 {
  * ========================================================================== */
 
 /**
+ * Remove the margin on nested lists in Chrome and Safari.
+ */
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/**
  * 1. Add the correct sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
@@ -109,25 +109,16 @@ main {
 nav ol,
 nav ul {
   list-style: none;
+  padding: 0;
 }
 
 /**
- * 1. Use the default monospace user interface font
- *    in all browsers (opinionated).
+ * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
 pre {
-  font-family:
-    /* macOS 10.10+ */ Menlo,
-    /* Windows 6+ */ Consolas,
-    /* Android 4+ */ Roboto Mono,
-    /* Ubuntu 10.10+ */ Ubuntu Monospace,
-    /* KDE Plasma 5+ */ Noto Mono,
-    /* KDE Plasma 4+ */ Oxygen Mono,
-    /* Linux/OpenOffice fallback */ Liberation Mono,
-    /* fallback */ monospace; /* 1 */
-
+  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -161,24 +152,14 @@ strong {
 }
 
 /**
- * 1. Use the default monospace user interface font
- *    in all browsers (opinionated).
+ * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
 code,
 kbd,
 samp {
-  font-family:
-    /* macOS 10.10+ */ Menlo,
-    /* Windows 6+ */ Consolas,
-    /* Android 4+ */ Roboto Mono,
-    /* Ubuntu 10.10+ */ Ubuntu Monospace,
-    /* KDE Plasma 5+ */ Noto Mono,
-    /* KDE Plasma 4+ */ Oxygen Mono,
-    /* Linux/OpenOffice fallback */ Liberation Mono,
-    /* fallback */ monospace; /* 1 */
-
+  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -188,24 +169,6 @@ samp {
 
 small {
   font-size: 80%;
-}
-
-/*
- * Remove the text shadow on text selections in Firefox 61- (opinionated).
- * 1. Restore the coloring undone by defining the text shadow
- *    in all browsers (opinionated).
- */
-
-::-moz-selection {
-  background-color: #b3d4fc; /* 1 */
-  color: #000; /* 1 */
-  text-shadow: none;
-}
-
-::selection {
-  background-color: #b3d4fc; /* 1 */
-  color: #000; /* 1 */
-  text-shadow: none;
 }
 
 /* Embedded content
@@ -243,7 +206,7 @@ audio:not([controls]) {
 }
 
 /**
- * Remove the border on images inside links in IE 10-.
+ * Remove the border on images within links in IE 10-.
  */
 
 img {
@@ -281,20 +244,7 @@ table {
  * ========================================================================== */
 
 /**
- * Inherit styling in all browsers (opinionated).
- */
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/**
- * Remove the margin in Safari.
+ * Remove the margin on controls in Safari.
  */
 
 button,
@@ -314,7 +264,7 @@ button {
 }
 
 /**
- * Correct the inability to style clickable types in iOS and Safari.
+ * Correct the inability to style buttons in iOS and Safari.
  */
 
 button,
@@ -373,7 +323,7 @@ select {
 /**
  * 1. Remove the margin in Firefox and Safari.
  * 2. Remove the default vertical scrollbar in IE.
- * 3. Change the resize direction on textareas in all browsers (opinionated).
+ * 3. Change the resize direction in all browsers (opinionated).
  */
 
 textarea {
@@ -428,7 +378,7 @@ textarea {
 }
 
 /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 
@@ -452,6 +402,14 @@ textarea {
 
 :-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+
+:-moz-ui-invalid {
+  box-shadow: none;
 }
 
 /* Interactive
@@ -582,8 +540,11 @@ textarea,
  * in all browsers (opinionated).
  */
 
+[aria-hidden="false"][hidden] {
+  display: initial;
+}
+
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
-  display: inherit;
   position: absolute;
 }
