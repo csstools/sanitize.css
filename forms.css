@@ -15,5 +15,6 @@ textarea {
   font-family: inherit; /* 2 */
   font-size: inherit; /* 2 */
   line-height: inherit; /* 2 */
+  letter-spacing: inherit; /* 2 */
   padding: 0.25em 0.375em; /* 1 */
 }
