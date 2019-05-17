@@ -1,5 +1,18 @@
 # Changes to sanitize.css
 
+### 9.0.0 (May 16, 2019)
+
+- Removed: Opinionated removal of text shadow on text selections due to bugs in
+  High Contrast mode.
+- Removed: Opinionated removal of repeating backgrounds in all browsers due to
+  form control unstyling.
+- Removed: Opinionated interface typography in all browsers, which is moved to
+  forms.css and typography.css.
+- Changed: Visually hidden content now uses some less aggressive selectors.
+- Added: Opinionated interface typography in all browsers via typography.css.
+- Added: Opinionated standards-like form styling in all browsers via forms.css.
+- Added: Opinionated removal of the grey highlight when tapping links in iOS.
+
 ### 8.0.1 (May 12, 2019)
 
 - Fixed: Typo of `browers` typo to `browsers`

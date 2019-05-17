@@ -3,34 +3,50 @@
 [sanitize.css] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements alongside useful defaults.
 
-## How to get it
+It is developed alongside [normalize.css], which means every normalization
+is included, and every normalization and opinion are clearly marked and
+documented.
 
-**NPM**
+## Usage
+
+```html
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+```
+
+A separate stylesheet normalizes typography using system interface fonts.
+
+```html
+<link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
+```
+
+A separate stylesheet normalizes forms using minimal, standards-like styling.
+
+```html
+<link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
+```
+
+### Install
 
 ```sh
 npm install --save sanitize.css
 ```
 
-**Download**
-
-See https://csstools.github.io/sanitize.css/latest/sanitize.css
-
-**CDN**
-
-see https://cdnjs.com/libraries/10up-sanitize.css
-
-### Usage in npm and webpack
+#### Webpack Usage
 
 Import [sanitize.css] in CSS:
 
 ```css
-@import '~sanitize.css';
+@import 'sanitize.css';
+@import 'sanitize.css/typography.css';
+@import 'sanitize.css/forms.css';
 ```
 
 Alternatively, import [sanitize.css] in JS:
 
 ```js
 import 'sanitize.css';
+import 'sanitize.css/typography.css';
+import 'sanitize.css/forms.css';
 ```
 
 In `webpack.config.js`, be sure to use the appropriate loaders:
@@ -91,23 +107,11 @@ html {
 }
 ```
 
-##### The default font is the system ui font
+##### Text has a comfortable line height in all browsers
 
 ```css
 html {
-  font-family:
-    system-ui,
-    /* macOS 10.11-10.12 */ -apple-system,
-    /* Windows 6+ */ Segoe UI,
-    /* Android 4+ */ Roboto,
-    /* Ubuntu 10.10+ */ Ubuntu,
-    /* Gnome 3+ */ Cantarell,
-    /* KDE Plasma 5+ */ Noto Sans,
-    /* fallback */ sans-serif,
-    /* macOS emoji */ "Apple Color Emoji",
-    /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol",
-    /* Linux emoji */ "Noto Color Emoji";
+  line-height: 1.5;
 }
 ```
 
@@ -140,32 +144,7 @@ body {
 ```css
 nav ol, nav ul {
   list-style: none;
-}
-```
-
-##### Pre-formatted and code-formatted text uses the monospace system ui font
-
-```css
-code, kbd, pre, samp {
-  font-family:
-    /* macOS 10.10+ */ Menlo,
-    /* Windows 6+ */ Consolas,
-    /* Android 4+ */ Roboto Mono,
-    /* Ubuntu 10.10+ */ Ubuntu Monospace,
-    /* KDE Plasma 5+ */ Noto Mono,
-    /* KDE Plasma 4+ */ Oxygen Mono,
-    /* Linux/OpenOffice fallback */ Liberation Mono,
-    /* fallback */ monospace;
-}
-```
-
-##### Text selections do not include text shadows
-
-```css
-::selection {
-  background-color: #b3d4fc;
-  color: #000;
-  text-shadow: none;
+  padding: 0;
 }
 ```
 
@@ -190,16 +169,6 @@ svg:not([fill]) {
 ```css
 table {
   border-collapse: collapse;
-}
-```
-
-##### Form controls are easily style-able
-
-```css
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 ```
 
@@ -239,10 +208,75 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 ##### Visually hidden content remains accessible
 
 ```css
+[aria-hidden="false"][hidden] {
+  display: initial;
+}
+
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
-  display: inherit;
   position: absolute;
+}
+```
+
+### Typography
+
+[sanitize.css] includes a separate stylesheet for normalizing typography using
+system interface fonts.
+
+### Forms
+
+[sanitize.css] includes a separate stylesheet for normalizing forms using
+minimal, standards-like styling.
+
+**Browser**
+
+```html
+<link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
+```
+
+**Download**
+
+See https://csstools.github.io/sanitize.css/latest/typography.css
+
+**CDN**
+
+see https://cdnjs.com/libraries/10up-sanitize.css/typography.css
+
+#### Typography Features
+
+##### The default font is the system ui font
+
+```css
+html {
+  font-family:
+    system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ Segoe UI,
+    /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu,
+    /* Gnome 3+ */ Cantarell,
+    /* KDE Plasma 5+ */ Noto Sans,
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+}
+```
+
+##### Pre-formatted and code-formatted text uses the monospace system ui font
+
+```css
+code, kbd, pre, samp {
+  font-family:
+    /* macOS 10.10+ */ Menlo,
+    /* Windows 6+ */ Consolas,
+    /* Android 4+ */ Roboto Mono,
+    /* Ubuntu 10.10+ */ Ubuntu Monospace,
+    /* KDE Plasma 5+ */ Noto Mono,
+    /* KDE Plasma 4+ */ Oxygen Mono,
+    /* Linux/OpenOffice fallback */ Liberation Mono,
+    /* fallback */ monospace;
 }
 ```
 
