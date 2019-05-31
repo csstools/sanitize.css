@@ -1,0 +1,19 @@
+/**
+ * 1. Use standards-like styling in all browsers (opinionated).
+ * 2. Inherit typography styling in all browsers (opinionated).
+ */
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent; /* 1 */
+  border: 0 solid; /* 1 */
+  border-radius: 0.25em; /* 1 */
+  box-shadow: inset 0 0 0 1px WindowFrame; /* 1 */
+  color: inherit; /* 1 */
+  font-family: inherit; /* 2 */
+  font-size: inherit; /* 2 */
+  line-height: inherit; /* 2 */
+  padding: 0.25em 0.375em; /* 1 */
+}

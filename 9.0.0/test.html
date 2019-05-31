@@ -1,9 +1,7 @@
 <!doctype html>
 <link rel="stylesheet" href="sanitize.css">
-<link rel="stylesheet" href="typography.css">
-<link rel="stylesheet" href="forms.css">
 <title>sanitize.css test</title>
-<body class="Test">
+<main class="Test">
 	<h1 class="Test-title">sanitize.css: ui test</h1>
 
 	<h2 class="Test-describe">Display definitions</h2>
@@ -102,21 +100,22 @@
 	</div>
 	<h3 class="Test-it">Navigation Lists (<code>nav ol</code>, <code>nav ul</code>) do not have list style</h3>
 	<div class="Test-run">
-		<nav style="background-color:#f00;width:5em;">
+		<nav style="background-color:#61b329;color:#ff0000;width:100px;">
 			<ul>
-				<li><div style="background-color:#61b329;height:1em;"></div></li>
+				<li>&nbsp;</li>
 			</ul>
 		</nav>
-		<nav style="background-color:#f00;width:5em;">
+		<nav style="background-color:#61b329;color:#ff0000;width:100px;">
 			<ol>
-				<li><div style="background-color:#61b329;height:1em;"></div></li>
+				<li>&nbsp;</li>
 			</ol>
 		</nav>
 	</div>
 
 	<h2 class="Test-describe">Text-level semantics</h2>
-	<h3 class="Test-it">Abbreviations (<code>abbr[title]</code>) text decoration is dotted</h3>
+	<h3 class="Test-it">Abbreviations (<code>abbr[title]</code>) bottom border is dotted</h3>
 	<div class="Test-run">
+		<span style="color:#ff0000;position:absolute;"><span style="border-bottom:1px dotted;">LOL</span></span>
 		<span style="color:#61b329;position:relative;"><abbr title="laugh out loud">LOL</abbr>
 	</div>
 	<h3 class="Test-it">Bolds (<code>b</code> and <code>strong</code>) are <code>bolder</code> than the surrounding font weight</h3>
@@ -226,13 +225,11 @@
 			<textarea style="background-color:#61b329;width:4em;height:1em;"></textarea>
 		</div>
 	</div>
-</body>
+</main>
 
 <style>
 .Test {
 	counter-reset: test-describe;
-	margin: 0;
-	padding: 1em;
 }
 
 .Test-title {
