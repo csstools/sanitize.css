@@ -13,16 +13,34 @@ documented.
 <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 ```
 
-A separate stylesheet normalizes typography using system interface fonts.
+### Forms
+
+A separate stylesheet that normalizes form controls without side effects.
+
+```html
+<link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
+```
+
+A separate stylesheet that sizes form controls without affecting native styles.
+
+```html
+<link href="https://unpkg.com/sanitize.css/formsize.css" rel="stylesheet" />
+```
+
+### Typography
+
+A separate stylesheet that normalizes typography using system interface fonts.
 
 ```html
 <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
 ```
 
-A separate stylesheet normalizes forms using minimal, standards-like styling.
+### Measure
+
+A separate stylesheet that applies a comfortable measure to the page.
 
 ```html
-<link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/measure.css" rel="stylesheet" />
 ```
 
 ### Install
