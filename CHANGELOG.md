@@ -1,5 +1,23 @@
 # Changes to sanitize.css
 
+### 10.0.0 (June 3, 2019)
+
+- Added: Opinionated page measure via `page.css`.
+- Added: Opinionated `border` normalization on form controls to match UA.
+- Added: Opinionated `font` and `letter-spacing` as `inherit` on form controls.
+- Added: Opinionated normalization of select controls.
+- Added: Opinionated normalization of placeholders in Internet Explorer.
+- Added: Opinionated `border` removal on iframes in all browsers.
+- Removed: Opinionated `border-radius` on form controls.
+- Removed: Opinionated `box-shadow` on form controls to match UA expectations.
+- Fixed: `Edge` comments without `Chrome` are are changed to `Edge 18-`.
+- Fixed: `Chrome` comments without `Edge` have `Edge` added.
+- Fixed: Nested list `dl` normalizations split.
+- Fixed: Logical `margin-block` normalization changed to `margin`.
+- Fixed: Used consistent quotes around typefaces in `typography.css`.
+
+> These fixes were brought in from normalize.css v10.1.0.
+
 ### 9.0.0 (May 16, 2019)
 
 - Removed: Opinionated removal of text shadow on text selections due to bugs in
@@ -29,27 +47,25 @@
 
 ### 7.0.2 (September 4, 2018)
 
-- Restore form control margin normalizations in Firefox
-- Re-order a few rules (opinionated)
+- Fixed: Restored form control margin normalizations in Firefox
+- Updated: Ordering of a few rules (opinionated)
 
 ### 7.0.1 (August 25, 2018)
 
-- Support the 4-space tab width in Firefox (opinionated)
-- Update documentation
+- Added: Support the 4-space tab width in Firefox (opinionated)
 
 ### 7.0.0 (August 22, 2018)
 
-- Use the default user interface font in all browsers (opinionated)
-- Use the default monospace user interface font in all browsers (opinionated)
-- Use a 4-space tab width in all browsers (opinionated)
-- Fix correction of cursor style of increment and decrement buttons
-  in Safari, not Chrome
-- Correct the text style of placeholders in Chrome, Edge, and Safari
-- Remove unnecessary form control margin normalizations in Firefox
-- Remove opinionated fieldset padding in all browsers
-- Remove `::-moz-focus-inner` and `:-moz-focusring` normalizations
-  fixed in Firefox 53
-  https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+- Added: System font in all browsers (opinionated)
+- Added: System monospace user interface font in all browsers (opinionated)
+- Added: 4-space tab width in all browsers (opinionated)
+- Removed: Unnecessary form control margin normalizations in Firefox
+- Removed: Opinionated fieldset padding in all browsers
+- Removed: Normalzations for `::-moz-focus-inner` and `:-moz-focusring` fixed
+  in Firefox 53 (https://bugzilla.mozilla.org/show_bug.cgi?id=140562)
+- Fixed: Correction of cursor style of increment and decrement buttons in
+  Safari, not Chrome
+- Fixed: Text style of placeholders in Chrome, Edge, and Safari
 
 ### 6.0.0 (June 24, 2018)
 
@@ -79,8 +95,7 @@
 - Added: Documentation for each opinionated feature
 - Added: Universal `background-repeat: no-repeat`
 - Removed: Reset of universal `margin` and `padding`
-- Removed: Inheritance of `font-size` on elements
-           (form control elements still have it)
+- Removed: Inheritance of `font-size` on elements (form controls still have it)
 - Removed: Pre-compiled files that used variables
 - Updated: `abbr[title]` styled using `border-bottom` over `text-decoration`
 - Updated: Tests and linting
@@ -166,7 +181,7 @@ accurately indicate your changes coming from your files.
 - Added: `font-style` inheritance
 - Updated: Support for the latest **Firefox**
 - Removed: Redundant inheritance in ::before and ::after
-- Removed: redundant cursor inheritance in anchor and form elements
+- Removed: redundant cursor inheritance in anchor and form controls
 
 ### 1.1.0 (March 20, 2015)
 
