@@ -35,12 +35,12 @@ A separate stylesheet that normalizes typography using system interface fonts.
 <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
 ```
 
-### Measure
+### Page
 
 A separate stylesheet that applies a comfortable measure to the page.
 
 ```html
-<link href="https://unpkg.com/sanitize.css/measure.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/page.css" rel="stylesheet" />
 ```
 
 ### Install
