@@ -1,6 +1,6 @@
 {
   "name": "sanitize.css",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "A best-practices CSS foundation",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
@@ -24,7 +24,7 @@
     "test": "stylelint *.css"
   },
   "devDependencies": {
-    "stylelint": "^10.0.1",
+    "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0"
   },
   "stylelint": {

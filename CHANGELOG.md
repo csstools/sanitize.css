@@ -1,5 +1,10 @@
 # Changes to sanitize.css
 
+### 11.0.0 (June 3, 2019)
+
+- Changed: Opinionated `select` background styling in `forms.css` is no longer
+  applied when `multiple` or `size` attributes are also present.
+
 ### 10.0.0 (June 3, 2019)
 
 - Added: Opinionated page measure via `page.css`.

@@ -179,7 +179,7 @@ No changes to CSS rules can add functionality in a backwards-compatible manner,
 therefore no changes are considered **minor**. For instance, a normalization on
 an element selector may override a user style on a universal selector, or a
 change to `opacity` might cause [inputs to disappear](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/),
-or a change to `background-color` might cause [backgrounds to shrink](https://github.com/jonathantneal/sanitize.css/issues/42).
+or a change to `background-color` might cause [backgrounds to shrink](https://github.com/csstools/sanitize.css/issues/42).
 
 [already been reported]: https://github.com/csstools/sanitize.css/issues
 [fork this project]:     https://github.com/csstools/sanitize.css/fork
