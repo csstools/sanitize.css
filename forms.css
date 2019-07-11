@@ -22,6 +22,7 @@ textarea {
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
+  background: no-repeat right center / 1em;
   border-radius: 0;
   padding-right: 1em;
 }
@@ -31,7 +32,7 @@ select {
  */
 
 select:not([multiple]):not([size]) {
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center / 1em;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
 }
 
 /**
