@@ -13,7 +13,9 @@ documented.
 <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 ```
 
-### Forms
+[Learn more about `sanitize.css`](#features).
+
+#### Forms CSS
 
 A separate stylesheet that normalizes form controls without side effects.
 
@@ -21,13 +23,9 @@ A separate stylesheet that normalizes form controls without side effects.
 <link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
 ```
 
-A separate stylesheet that sizes form controls without affecting native styles.
+[Learn more about `forms.css`](#typography).
 
-```html
-<link href="https://unpkg.com/sanitize.css/formsize.css" rel="stylesheet" />
-```
-
-### Typography
+#### Typography CSS
 
 A separate stylesheet that normalizes typography using system interface fonts.
 
@@ -35,18 +33,20 @@ A separate stylesheet that normalizes typography using system interface fonts.
 <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
 ```
 
-### Page
+[Learn more about `typography.css`](#typography).
 
-A separate stylesheet that applies a comfortable measure to the page.
+#### Page CSS
+
+A separate stylesheet that applies a comfortable measure to plain documents.
 
 ```html
 <link href="https://unpkg.com/sanitize.css/page.css" rel="stylesheet" />
 ```
 
-### Install
+## Install
 
 ```sh
-npm install --save sanitize.css
+npm install sanitize.css --save
 ```
 
 #### Webpack Usage
@@ -54,17 +54,17 @@ npm install --save sanitize.css
 Import [sanitize.css] in CSS:
 
 ```css
-@import 'sanitize.css';
-@import 'sanitize.css/typography.css';
-@import 'sanitize.css/forms.css';
+@import '~sanitize.css';
+@import '~sanitize.css/forms.css';
+@import '~sanitize.css/typography.css';
 ```
 
 Alternatively, import [sanitize.css] in JS:
 
 ```js
 import 'sanitize.css';
-import 'sanitize.css/typography.css';
 import 'sanitize.css/forms.css';
+import 'sanitize.css/typography.css';
 ```
 
 In `webpack.config.js`, be sure to use the appropriate loaders:
@@ -82,12 +82,35 @@ module.exports = {
 }
 ```
 
+**Download**
+
+See https://csstools.github.io/sanitize.css/latest/sanitize.css
+
 ## What does it do?
 
 * Normalizes styles for a wide range of elements.
 * Corrects bugs and common browser inconsistencies.
 * Provides common, useful defaults.
 * Explains what code does using detailed comments.
+
+## Browser support
+
+* Chrome (last 3)
+* Edge (last 3)
+* Firefox (last 3)
+* Firefox ESR
+* Opera (last 3)
+* Safari (last 3)
+* iOS Safari (last 2)
+* Internet Explorer 9+
+
+## Differences
+
+[normalize.css] and [sanitize.css] correct browser bugs while carefully testing
+and documenting changes. normalize.css styles adhere to css specifications.
+sanitize.css styles adhere to common developer expectations and preferences.
+[reset.css] unstyles all elements. Both sanitize.css and normalize.css are
+maintained in sync.
 
 ## Features
 
@@ -236,33 +259,74 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 }
 ```
 
-### Typography
+---
 
-[sanitize.css] includes a separate stylesheet for normalizing typography using
-system interface fonts.
-
-### Forms
+## Forms
 
 [sanitize.css] includes a separate stylesheet for normalizing forms using
 minimal, standards-like styling.
 
-**Browser**
+```html
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
+```
+
+### Forms Features
+
+##### Form controls appear visually consistent and restyle consistently
+
+```css
+button, input, select, textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+}
+```
+
+##### Expandable select controls appear visually consistent
+
+```css
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: no-repeat right center / 1em;
+  border-radius: 0;
+  padding-right: 1em;
+}
+
+select:not([multiple]):not([size]) {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
+}
+
+::-ms-expand {
+  display: none;
+}
+```
+
+##### Placeholders appear visually consistent in Internet Explorer
+
+```css
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.54);
+}
+```
+
+## Typography
+
+[sanitize.css] includes a separate stylesheet for normalizing typography using
+system interface fonts.
 
 ```html
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
 ```
 
-**Download**
+### Typography Features
 
-See https://csstools.github.io/sanitize.css/latest/typography.css
-
-**CDN**
-
-see https://cdnjs.com/libraries/10up-sanitize.css/typography.css
-
-#### Typography Features
-
-##### The default font is the system ui font
+##### Typography uses the default system font
 
 ```css
 html {
@@ -282,7 +346,7 @@ html {
 }
 ```
 
-##### Pre-formatted and code-formatted text uses the monospace system ui font
+##### Pre-formatted and code-formatted text uses the monospace system font
 
 ```css
 code, kbd, pre, samp {
@@ -297,25 +361,6 @@ code, kbd, pre, samp {
     /* fallback */ monospace;
 }
 ```
-
-## Differences
-
-[normalize.css] and [sanitize.css] correct browser bugs while carefully testing
-and documenting changes. normalize.css styles adhere to css specifications.
-sanitize.css styles adhere to common developer expectations and preferences.
-[reset.css] unstyles all elements. Both sanitize.css and normalize.css are
-maintained in sync.
-
-## Browser support
-
-* Chrome (last 3)
-* Edge (last 3)
-* Firefox (last 3)
-* Firefox ESR
-* Opera (last 3)
-* Safari (last 3)
-* iOS Safari (last 2)
-* Internet Explorer 9+
 
 ## Contributing
 
