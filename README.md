@@ -23,7 +23,7 @@ A separate stylesheet that normalizes form controls without side effects.
 <link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
 ```
 
-[Learn more about `forms.css`](#typography).
+[Learn more about `forms.css`](#forms).
 
 #### Typography CSS
 
