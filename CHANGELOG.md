@@ -1,5 +1,11 @@
 # Changes to sanitize.css
 
+### 11.0.1 (May 20, 2020)
+
+- Fixed: Documentation is updated.
+
+> This release is primarily made to update the polyfill used by cdnjs.
+
 ### 11.0.0 (June 3, 2019)
 
 - Changed: Opinionated `select` background styling in `forms.css` is no longer
