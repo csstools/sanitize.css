@@ -213,11 +213,12 @@ table {
 }
 ```
 
-##### Textareas only resize vertically by default
+##### Textareas only resize in the block direction by default
 
 ```css
 textarea {
   resize: vertical;
+  resize: block;
 }
 ```
 

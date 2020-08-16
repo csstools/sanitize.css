@@ -346,6 +346,7 @@ textarea {
   margin: 0; /* 1 */
   overflow: auto; /* 2 */
   resize: vertical; /* 3 */
+  resize: block; /* 3 */
 }
 
 /**
