@@ -1,5 +1,20 @@
 # Changes to sanitize.css
 
+### 12.0.0 (August 20, 2020)
+
+- Added: Correct table border color inheritance in all Chrome, Edge, and Safari.
+- Added: Remove text indentation from table contents in Chrome, Edge, and
+  Safari.
+- Added: Correct the inheritance of horizontal rule border color in Firefox.
+- Added: Prevent overflow of a `pre` container in all browsers (opinionated).
+- Added: Evergreen variations of sanitize.css (basically, without IE support).
+- Added: Reduce animations, scrolling effects, and transitions when requested in
+  all browsers (opinionated) to `reduce-motion.css`.
+- Updated: Move size restrictions (opinionated) in all browsers to `assets.css`.
+- Removed: Tapping delay style, except in IE 10, where it matters.
+- Removed: Border and padding from color and range `input` in all browsers.
+- Fixed: Announce `nav ol, nav ul` list semantics on Safari with VoiceOver.
+
 ### 11.0.1 (May 20, 2020)
 
 - Fixed: Documentation is updated.
