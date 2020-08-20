@@ -123,11 +123,14 @@ nav ul {
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Prevent overflow of the container in all browsers (opinionated).
  */
 
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
+  -ms-overflow-style: scrollbar; /* 3 */
 }
 
 /* Text-level semantics
