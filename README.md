@@ -13,6 +13,12 @@ documented.
 <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 ```
 
+Or to exclusively support evergreen browsers.
+
+```html
+<link href="https://unpkg.com/sanitize.css/evergreen.css" rel="stylesheet" />
+```
+
 [Learn more about `sanitize.css`](#features).
 
 #### Forms CSS
@@ -21,6 +27,12 @@ A separate stylesheet that normalizes form controls without side effects.
 
 ```html
 <link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
+```
+
+Or to exclusively support evergreen browsers.
+
+```html
+<link href="https://unpkg.com/sanitize.css/forms.evergreen.css" rel="stylesheet" />
 ```
 
 [Learn more about `forms.css`](#forms).
@@ -303,6 +315,12 @@ button, input, select, textarea {
   font: inherit;
   letter-spacing: inherit;
   padding: 0.25em 0.375em;
+}
+
+[type="color"],
+[type="range"] {
+  border-width: 0;
+  padding: 0;
 }
 ```
 
