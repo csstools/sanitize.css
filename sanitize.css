@@ -91,13 +91,15 @@ ul ul {
 }
 
 /**
- * 1. Add the correct sizing in Firefox.
- * 2. Show the overflow in Edge 18- and IE.
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Add the correct box sizing in Firefox.
+ * 3. Show the overflow in Edge 18- and IE.
  */
 
 hr {
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
+  overflow: visible; /* 3 */
 }
 
 /**
@@ -247,11 +249,15 @@ svg:not(:root) {
  * ========================================================================== */
 
 /**
- * Collapse border spacing in all browsers (opinionated).
+ * 1. Collapse border spacing in all browsers (opinionated).
+ * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
  */
 
 table {
-  border-collapse: collapse;
+  border-collapse: collapse; /* 1 */
+  border-color: inherit; /* 2 */
+  text-indent: 0; /* 3 */
 }
 
 /* Forms
@@ -346,6 +352,7 @@ textarea {
   margin: 0; /* 1 */
   overflow: auto; /* 2 */
   resize: vertical; /* 3 */
+  resize: block; /* 3 */
 }
 
 /**
