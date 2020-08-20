@@ -45,6 +45,16 @@ A separate stylesheet that normalizes typography using system interface fonts.
 
 [Learn more about `typography.css`](#typography).
 
+#### Reduce Motion CSS
+
+A separate stylesheet that normalizes typography using system interface fonts.
+
+```html
+<link href="https://unpkg.com/sanitize.css/reduce-motion.css" rel="stylesheet" />
+```
+
+[Learn more about `reduce-motion.css`](#reduce-motion).
+
 #### Page CSS
 
 A separate stylesheet that applies a comfortable measure to plain documents.
@@ -394,6 +404,36 @@ code, kbd, pre, samp {
     /* KDE Plasma 4+ */ Oxygen Mono,
     /* Linux/OpenOffice fallback */ Liberation Mono,
     /* fallback */ monospace;
+}
+```
+
+## Reduce Motion
+
+[sanitize.css] includes a separate stylesheet for restricting motion when the
+user has requested this at a system level.
+
+```html
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/reduce-motion.css" rel="stylesheet" />
+```
+
+### Reduce Motion Features
+
+##### Animations, scrolling effects, and transitions are reduced in all browsers
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
 }
 ```
 
