@@ -240,9 +240,9 @@ button {
  */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type="button" i],
+[type="reset" i],
+[type="submit" i] {
   -webkit-appearance: button;
 }
 
@@ -287,7 +287,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type="search"] {
+[type="search" i] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -396,7 +396,7 @@ summary {
  * Change the cursor on busy elements in all browsers (opinionated).
  */
 
-[aria-busy="true"] {
+[aria-busy="true" i] {
   cursor: progress;
 }
 
@@ -413,7 +413,7 @@ summary {
  * inoperable elements in all browsers (opinionated).
  */
 
-[aria-disabled="true"],
+[aria-disabled="true" i],
 [disabled] {
   cursor: not-allowed;
 }
@@ -423,11 +423,11 @@ summary {
  * in all browsers (opinionated).
  */
 
-[aria-hidden="false"][hidden] {
+[aria-hidden="false" i][hidden] {
   display: initial;
 }
 
-[aria-hidden="false"][hidden]:not(:focus) {
+[aria-hidden="false" i][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }

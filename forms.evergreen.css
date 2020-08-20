@@ -39,8 +39,8 @@ select:not([multiple]):not([size]) {
  * Remove the border and padding in all browsers (opinionated).
  */
 
-[type="color"],
-[type="range"] {
+[type="color" i],
+[type="range" i] {
   border-width: 0;
   padding: 0;
 }
