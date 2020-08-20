@@ -503,9 +503,7 @@ template {
  * ========================================================================== */
 
 /*
- * 1. Remove the tapping delay in IE 10.
- * 2. Remove the tapping delay on clickable elements
-      in all browsers (opinionated).
+ * Remove the tapping delay in IE 10.
  */
 
 a,
@@ -517,8 +515,7 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation; /* 1 */
-  touch-action: manipulation; /* 2 */
+  -ms-touch-action: manipulation;
 }
 
 /**
