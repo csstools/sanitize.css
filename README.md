@@ -25,6 +25,16 @@ A separate stylesheet that normalizes form controls without side effects.
 
 [Learn more about `forms.css`](#forms).
 
+#### Assets CSS
+
+A separate stylesheet that applies a comfortable measure to plain documents.
+
+```html
+<link href="https://unpkg.com/sanitize.css/assets.css" rel="stylesheet" />
+```
+
+[Learn more about `assets.css`](#assets).
+
 #### Typography CSS
 
 A separate stylesheet that normalizes typography using system interface fonts.
@@ -311,6 +321,31 @@ select:not([multiple]):not([size]) {
 ```css
 :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.54);
+}
+```
+
+## Assets
+
+[sanitize.css] includes a separate stylesheet for normalizing restricting the
+size of assets in all browsers.
+
+```html
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/assets.css" rel="stylesheet" />
+```
+
+### Assets Features
+
+##### Assets use a comfortable measure in all browsers
+
+```css
+iframe,
+img,
+input,
+select,
+textarea {
+  height: auto;
+  max-width: 100%;
 }
 ```
 
