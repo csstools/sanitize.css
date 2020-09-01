@@ -59,7 +59,7 @@ A separate stylesheet that normalizes typography using system interface fonts.
 
 #### Reduce Motion CSS
 
-A separate stylesheet that normalizes typography using system interface fonts.
+A separate stylesheet for restricting motion when the user has requested this at system level.
 
 ```html
 <link href="https://unpkg.com/sanitize.css/reduce-motion.css" rel="stylesheet" />
