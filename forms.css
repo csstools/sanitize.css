@@ -32,7 +32,7 @@ select {
  */
 
 select[multiple] {
-    background-image: none;
+  background-image: none;
 }
 
 /**
