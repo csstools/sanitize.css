@@ -2,13 +2,15 @@
  * ========================================================================== */
 
 /**
- * Add border box sizing in all browsers (opinionated).
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Backgrounds do not repeat by default (opinionated).
  */
 
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  background-repeat: no-repeat; /* 2 */
 }
 
 /**
