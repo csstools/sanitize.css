@@ -1,13 +1,13 @@
-/**
- * Use a comfortable measure in all browsers (opinionated).
- */
-
-html {
-  padding: 1em;
+@media (prefers-color-scheme: light) {
+  :where(:root) {
+    background-color: white;
+    color: black;
+  }
 }
 
-@media (min-width: 34em) {
-  html {
-    padding: 1em calc(50% - 16em);
+@media (prefers-color-scheme: dark) {
+  :where(:root) {
+    background-color: black;
+    color: white;
   }
 }

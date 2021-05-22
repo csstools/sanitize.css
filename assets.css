@@ -2,12 +2,7 @@
  * Restrict sizing to the page width in all browsers (opinionated).
  */
 
-iframe,
-img,
-input,
-video,
-select,
-textarea {
+:where(iframe, img, input, video, select, textarea) {
   height: auto;
   max-width: 100%;
 }

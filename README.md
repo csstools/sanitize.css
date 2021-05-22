@@ -127,12 +127,12 @@ See https://csstools.github.io/sanitize.css/latest/sanitize.css
 
 ## Browser support
 
-* Chrome (last 3)
-* Edge (last 3)
-* Firefox (last 3)
+* Chrome (last 2)
+* Edge (last 2)
+* Firefox (last 2)
 * Firefox ESR
-* Opera (last 3)
-* Safari (last 3)
+* Opera (last 2)
+* Safari (last 2)
 * iOS Safari (last 2)
 * Internet Explorer 9+
 

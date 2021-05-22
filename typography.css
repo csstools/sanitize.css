@@ -27,6 +27,7 @@ kbd,
 samp,
 pre {
   font-family:
+    ui-monospace,
     /* macOS 10.10+ */ "Menlo",
     /* Windows 6+ */ "Consolas",
     /* Android 4+ */ "Roboto Mono",
