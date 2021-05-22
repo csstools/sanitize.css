@@ -39,7 +39,7 @@
   overflow-wrap: break-word; /* 3 */
   -moz-tab-size: 4; /* 4 */
   tab-size: 4; /* 4 */
-  -webkit-tap-highlight-color: transparent /* 5 */;
+  -webkit-tap-highlight-color: transparent; /* 5 */
   -webkit-text-size-adjust: 100%; /* 6 */
 }
 
