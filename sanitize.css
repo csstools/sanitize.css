@@ -186,13 +186,13 @@
 
 /**
  * 1. Collapse border spacing in all browsers (opinionated).
- * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 2. Correct table border color in Chrome, Edge, and Safari.
  * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
  */
 
 :where(table) {
   border-collapse: collapse; /* 1 */
-  border-color: inherit; /* 2 */
+  border-color: currentColor; /* 2 */
   text-indent: 0; /* 3 */
 }
 
