@@ -47,11 +47,15 @@
  * ========================================================================== */
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * 1. Fill the viewport block in all browsers (opinionated).
+ * 2. Remove the margin in all browsers (opinionated).
  */
 
 :where(body) {
-  margin: 0;
+  block-size: -moz-available; /* 1 */
+  block-size: -webkit-fill-available; /* 1 */
+  block-size: stretch; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
