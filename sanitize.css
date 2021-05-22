@@ -25,22 +25,26 @@
 }
 
 /**
- * 1. Use the default cursor in all browsers (opinionated).
- * 2. Change the line height in all browsers (opinionated).
- * 3. Breaks words to prevent overflow in all browsers (opinionated).
- * 4. Use a 4-space tab width in all browsers (opinionated).
- * 5. Remove the grey highlight on links in iOS (opinionated).
- * 6. Prevent adjustments of font size after orientation changes in iOS.
+ * 1. Fill the viewport block in all browsers (opinionated).
+ * 2. Use the default cursor in all browsers (opinionated).
+ * 3. Change the line height in all browsers (opinionated).
+ * 4. Breaks words to prevent overflow in all browsers (opinionated).
+ * 5. Use a 4-space tab width in all browsers (opinionated).
+ * 6. Remove the grey highlight on links in iOS (opinionated).
+ * 7. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 :where(:root) {
-  cursor: default; /* 1 */
-  line-height: 1.5; /* 2 */
-  overflow-wrap: break-word; /* 3 */
-  -moz-tab-size: 4; /* 4 */
-  tab-size: 4; /* 4 */
-  -webkit-tap-highlight-color: transparent /* 5 */;
-  -webkit-text-size-adjust: 100%; /* 6 */
+  block-size: -moz-available; /* 1 */
+  block-size: -webkit-fill-available; /* 1 */
+  block-size: stretch; /* 1 */
+  cursor: default; /* 2 */
+  line-height: 1.5; /* 3 */
+  overflow-wrap: break-word; /* 4 */
+  -moz-tab-size: 4; /* 5 */
+  tab-size: 4; /* 5 */
+  -webkit-tap-highlight-color: transparent /* 6 */;
+  -webkit-text-size-adjust: 100%; /* 7 */
 }
 
 /* Sections
