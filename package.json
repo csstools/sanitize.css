@@ -16,6 +16,8 @@
   "files": [
     "assets.css",
     "evergreen.css",
+    "font-system-ui.css",
+    "font-ui-monospace.css",
     "forms.css",
     "forms.evergreen.css",
     "page.css",
@@ -28,8 +30,8 @@
     "test": "stylelint *.css"
   },
   "devDependencies": {
-    "stylelint": "^13.6.1",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
