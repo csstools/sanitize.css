@@ -43,7 +43,7 @@
   overflow-wrap: break-word; /* 4 */
   -moz-tab-size: 4; /* 5 */
   tab-size: 4; /* 5 */
-  -webkit-tap-highlight-color: transparent /* 6 */;
+  -webkit-tap-highlight-color: transparent; /* 6 */
   -webkit-text-size-adjust: 100%; /* 7 */
 }
 
