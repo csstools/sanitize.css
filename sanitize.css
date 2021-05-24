@@ -199,6 +199,14 @@
   text-indent: 0; /* 3 */
 }
 
+/**
+ * Remove the padding on table cells in Firefox.
+ */
+
+:where(td, th) {
+  padding: 0;
+}
+
 /* Forms
  * ========================================================================== */
 
