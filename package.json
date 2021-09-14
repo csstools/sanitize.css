@@ -15,15 +15,12 @@
   "style": "sanitize.css",
   "files": [
     "assets.css",
-    "evergreen.css",
-    "font-system-ui.css",
-    "font-ui-monospace.css",
     "forms.css",
-    "forms.evergreen.css",
-    "page.css",
     "reduce-motion.css",
     "sanitize.css",
-    "typography.css"
+    "system-ui.css",
+    "typography.css",
+    "ui-monospace.css"
   ],
   "scripts": {
     "prepublishOnly": "npm test",

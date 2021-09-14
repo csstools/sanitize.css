@@ -3,20 +3,16 @@
 [sanitize.css] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements alongside useful defaults.
 
-It is developed alongside [normalize.css], which means every normalization
-is included, and every normalization and opinion are clearly marked and
-documented.
+**sanitize.css** is developed alongside [normalize.css], which means every
+normalization is included, and every normalization and opinion are clearly
+marked and documented.
+
+**sanitize.css** wraps styles in zero-specificity selectors using `:where()`.
 
 ## Usage
 
 ```html
-<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-```
-
-Or to exclusively support evergreen browsers.
-
-```html
-<link href="https://unpkg.com/sanitize.css/evergreen.css" rel="stylesheet" />
+<link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
 ```
 
 [Learn more about `sanitize.css`](#features).
@@ -27,12 +23,6 @@ A separate stylesheet that normalizes form controls without side effects.
 
 ```html
 <link href="https://unpkg.com/sanitize.css/forms.css" rel="stylesheet" />
-```
-
-Or to exclusively support evergreen browsers.
-
-```html
-<link href="https://unpkg.com/sanitize.css/forms.evergreen.css" rel="stylesheet" />
 ```
 
 [Learn more about `forms.css`](#forms).
@@ -67,12 +57,20 @@ A separate stylesheet for restricting motion when the user has requested this at
 
 [Learn more about `reduce-motion.css`](#reduce-motion).
 
-#### Page CSS
+#### System-UI
 
-A separate stylesheet that applies a comfortable measure to plain documents.
+A separate stylesheet that adds support for using `system-ui` in Firefox.
 
 ```html
-<link href="https://unpkg.com/sanitize.css/page.css" rel="stylesheet" />
+<link href="https://unpkg.com/sanitize.css/system-ui.css" rel="stylesheet" />
+```
+
+#### UI-Monospace
+
+A separate stylesheet that adds support for using `ui-monospace` in Chrome, Edge, and Firefox.
+
+```html
+<link href="https://unpkg.com/sanitize.css/ui-monospace.css" rel="stylesheet" />
 ```
 
 ## Install
