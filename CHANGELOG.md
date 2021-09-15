@@ -4,13 +4,10 @@
 
 - Added: `:where` too all selectors, reducing specificity to nearly zero.
 - Added: All elements now use `background-repeat: no repeat`.
-
 - Removed: Overly specific `select` selector.
 - Removed: Unnecessary focus outline fix previously used in Firefox.
 - Removed: Unnecessary `evergreen.css`, `forms.evergreen.css`, and `pages.css`.
-
 - Fixed: Prevent zero-width space from consuming space in Safari.
-
 - Changed: Browser support from "last three versions" to "last two versions".
 
 #### assets.css
