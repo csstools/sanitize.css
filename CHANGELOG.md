@@ -1,5 +1,9 @@
 # Changes to sanitize.css
 
+### 13.0.1 (September 28, 2021)
+
+- Fixed: Prevent zero-width space from consuming space in Safari.
+
 ### 13.0.0 (September 14, 2021)
 
 - Added: `:where` too all selectors, reducing specificity to nearly zero.
