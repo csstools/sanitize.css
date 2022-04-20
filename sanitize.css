@@ -101,7 +101,7 @@
 
 :where(nav li)::before {
   content: "\200B";
-  postion: absolute;
+  position: absolute;
 }
 
 /**
