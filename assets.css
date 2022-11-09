@@ -2,7 +2,33 @@
  * Restrict sizing to the page width in all browsers (opinionated).
  */
 
-:where(iframe, img, input, video, select, textarea) {
+:where(iframe, input, video, select, textarea) {
   height: auto;
   max-width: 100%;
+}
+
+/**
+ * Do not stretch image or grow bigger than parent
+ */
+
+:where(img) {
+  max-width: 100%;
+}
+
+/**
+ * Preserve aspect ratio
+ */
+
+:where(img[width][height]) {
+  height: auto;
+}
+
+/**
+ * Let SVG scale without boundaries
+ */
+
+:where(img[src$=".svg"]) {
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
