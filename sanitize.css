@@ -12,7 +12,7 @@
 ::after {
   box-sizing: border-box; /* 1 */
   background-repeat: no-repeat; /* 2 */
-  mask-repeat: no-repeat /* 3 */
+  mask-repeat: no-repeat; /* 3 */
 }
 
 /**
