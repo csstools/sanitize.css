@@ -2,16 +2,7 @@
  * Restrict sizing to the page width in all browsers (opinionated).
  */
 
-:where(iframe, input, video, select, textarea) {
-  height: auto;
-  max-width: 100%;
-}
-
-/**
- * Do not stretch image or grow bigger than parent
- */
-
-:where(img) {
+:where(iframe, img, input, video, select, textarea) {
   max-width: 100%;
 }
 
@@ -19,6 +10,6 @@
  * Preserve aspect ratio
  */
 
-:where(img[width][height]) {
+:where(iframe, img[width][height], input, video, select, textarea) {
   height: auto;
 }
