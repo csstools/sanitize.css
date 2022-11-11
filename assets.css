@@ -22,13 +22,3 @@
 :where(img[width][height]) {
   height: auto;
 }
-
-/**
- * Let SVG scale without boundaries
- */
-
-:where(img[src$=".svg"]) {
-  width: 100%;
-  height: auto;
-  max-width: none;
-}
