@@ -77,13 +77,11 @@
 }
 
 /**
- * 1. Correct the inheritance of border color in Firefox.
- * 2. Add the correct box sizing in Firefox.
+ * Add the correct box sizing in Firefox.
  */
 
 :where(hr) {
-  color: inherit; /* 1 */
-  height: 0; /* 2 */
+  height: 0;
 }
 
 /**
