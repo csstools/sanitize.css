@@ -3,6 +3,13 @@
  */
 
 :where(iframe, img, input, video, select, textarea) {
-  height: auto;
   max-width: 100%;
+}
+
+/**
+ * Preserve aspect ratio
+ */
+
+:where(iframe, img[width][height], input, video, select, textarea) {
+  height: auto;
 }
