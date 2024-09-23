@@ -216,6 +216,14 @@
 }
 
 /**
+ * Ensure that clicks on buttons with SVGs or other elements always register on the button itself and not its children.
+ */
+
+:where(button *, [type="button" i] *, [type="reset" i] *, [type="submit" i] *) {
+  pointer-events: none;
+}
+
+/**
  * Change the inconsistent appearance in all browsers (opinionated).
  */
 
