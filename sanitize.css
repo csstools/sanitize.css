@@ -337,7 +337,7 @@
  * inoperable elements in all browsers (opinionated).
  */
 
-:where([aria-disabled="true" i], [disabled]) {
+:where([aria-disabled="true" i], [disabled]):not([disabled="false"]) {
   cursor: not-allowed;
 }
 
