@@ -161,7 +161,7 @@
  * Change the alignment on media elements in all browsers (opinionated).
  */
 
-:where(audio, canvas, iframe, img, svg, video) {
+:where(img, svg, video, audio, canvas, iframe, embed, object) {
   vertical-align: middle;
 }
 
