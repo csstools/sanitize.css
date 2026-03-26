@@ -71,14 +71,6 @@
  * ========================================================================== */
 
 /**
- * Remove the margin on nested lists in Chrome, Edge, and Safari.
- */
-
-:where(dl, ol, ul) :where(dl, ol, ul) {
-  margin: 0;
-}
-
-/**
  * Add the correct box sizing in Firefox.
  */
 
