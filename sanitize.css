@@ -4,6 +4,7 @@
 /**
  * 1. Add border box sizing in all browsers (opinionated).
  * 2. Backgrounds do not repeat by default (opinionated).
+ * 3. Masks do not repeat by default (opinionated).
  */
 
 *,
@@ -11,6 +12,7 @@
 ::after {
   box-sizing: border-box; /* 1 */
   background-repeat: no-repeat; /* 2 */
+  mask-repeat: no-repeat; /* 3 */
 }
 
 /**
