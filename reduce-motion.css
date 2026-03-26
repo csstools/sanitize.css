@@ -3,6 +3,7 @@
  * 2. Remove fixed background attachments when motion is reduced (opinionated).
  * 3. Remove timed scrolling behaviors when motion is reduced (opinionated).
  * 4. Remove transitions when motion is reduced (opinionated).
+ * 5. Remove view-transitions when motion is reduced (opinionated).
  */
 
 @media (prefers-reduced-motion: reduce) {
@@ -16,5 +17,9 @@
     scroll-behavior: auto !important; /* 3 */
     transition-delay: 0s !important; /* 4 */
     transition-duration: 0s !important; /* 4 */
+  }
+
+  @view-transition {
+    navigation: none !important; /* 5 */
   }
 }
